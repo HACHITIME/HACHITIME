@@ -14,7 +14,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
@@ -153,5 +153,13 @@
             app:layout_constraintEnd_toEndOf="@+id/stampButton"
             app:layout_constraintStart_toStartOf="@+id/stampButton"
             tools:layout_editor_absoluteY="428dp" />
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/whitebox"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="571dp" />
 
 </android.support.constraint.ConstraintLayout>
