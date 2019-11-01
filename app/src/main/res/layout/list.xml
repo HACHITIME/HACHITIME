@@ -11,14 +11,14 @@
             android:layout_height="82dp"
             android:background="@drawable/flame_style"
 
-            android:contentDescription="@string/todo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/school_btn" />
+            app:srcCompat="@drawable/school_btn"
+            android:contentDescription="TODO" />
 
     <ImageButton
             android:id="@+id/map_btn"
@@ -26,7 +26,6 @@
             android:layout_height="82dp"
             android:background="@drawable/flame_style"
 
-            android:contentDescription="@string/todo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.249"
@@ -47,8 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/stamp_btn"
-            android:contentDescription="@string/todo" />
+            app:srcCompat="@drawable/stamp_btn" />
 
     <ImageButton
             android:id="@+id/info_btn"
@@ -62,8 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/info_btn"
-            android:contentDescription="@string/todo" />
+            app:srcCompat="@drawable/info_btn" />
 
     <ImageButton
             android:id="@+id/bus_btn"
@@ -71,7 +68,6 @@
             android:layout_height="82dp"
             android:background="@drawable/flame_style"
 
-            android:contentDescription="@string/todo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.996"
@@ -90,7 +86,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.082"
-            app:srcCompat="@drawable/modoru_btn" />
+            app:srcCompat="@drawable/modoru_btn"
+            android:contentDescription="TODO" />
 
     <TextView
             android:id="@+id/tytle"
@@ -98,7 +95,7 @@
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Infomation"
+            android:text="@string/infomation"
             android:textSize="30sp"
             android:color="black"
             android:textStyle="bold"
