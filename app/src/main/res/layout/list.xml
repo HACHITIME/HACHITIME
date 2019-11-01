@@ -101,7 +101,7 @@
             android:gravity="center"
             android:text="@string/infomation"
             android:textSize="30sp"
-            android:color="black"
+            android:color="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
