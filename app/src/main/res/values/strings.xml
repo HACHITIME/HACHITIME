@@ -2,4 +2,10 @@
     <string name="app_name">TestApp</string>
     <string name="hello">けもフレ３やろう</string>
     <string name="infomation">Infomation</string>
+    <string name="school_btn">TODO</string>
+    <string name="map_btn">TODO</string>
+    <string name="stamp_btn">TODO</string>
+    <string name="modol_btn">TODO</string>
+    <string name="bus_btn">TODO</string>
+    <string name="info_btn">TODO</string>
 </resources>
