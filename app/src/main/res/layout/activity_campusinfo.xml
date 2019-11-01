@@ -6,43 +6,56 @@
         android:layout_width="match_parent" android:layout_height="match_parent">
 
     <Button
-            android:id="@+id/button2"
+            android:id="@+id/ivent_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
+            android:background="@drawable/campusinfo_style"
+
             android:text="イベント一覧"
+
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.403" />
+            app:layout_constraintVertical_bias="0.415" />
 
     <Button
-            android:id="@+id/button3"
+            android:id="@+id/subject_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
+            android:background="@drawable/campusinfo_style"
             android:text="学科紹介"
+
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.51" />
+            app:layout_constraintVertical_bias="0.522" />
 
     <Button
-            android:id="@+id/button4"
+            android:id="@+id/interview_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
+            android:background="@drawable/campusinfo_style"
             android:text="在校生のインタビュー"
+
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.618" />
+            app:layout_constraintVertical_bias="0.63" />
 
     <Button
-            android:id="@+id/button5"
+            android:id="@+id/document_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
+            android:background="@drawable/campusinfo_style"
             android:text="資料請求"
+
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.725" />
+            app:layout_constraintVertical_bias="0.737" />
 
 </android.support.constraint.ConstraintLayout>
