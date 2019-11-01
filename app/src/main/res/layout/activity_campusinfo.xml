@@ -17,7 +17,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.415" />
+            app:layout_constraintVertical_bias="0.392" />
 
     <Button
             android:id="@+id/subject_btn"
@@ -30,7 +30,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.522" />
+            app:layout_constraintVertical_bias="0.516" />
 
     <Button
             android:id="@+id/interview_btn"
@@ -43,7 +43,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.63" />
+            app:layout_constraintVertical_bias="0.639" />
 
     <Button
             android:id="@+id/document_btn"
@@ -56,6 +56,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.737" />
+            app:layout_constraintVertical_bias="0.768" />
 
 </android.support.constraint.ConstraintLayout>

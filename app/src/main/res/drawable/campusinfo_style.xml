@@ -13,6 +13,14 @@
             android:width="3dp"
             android:color="#00b489" />
 
+    <!-- グラデーション -->
+    <!-- angle:角度、type:linear(=線形) -->
+    <gradient
+            android:angle="90"
+            android:endColor="#21ffd3"
+            android:startColor="#ffffff"
+            android:type="linear" />
+
 
 
 
