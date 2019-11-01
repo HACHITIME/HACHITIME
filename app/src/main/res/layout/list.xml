@@ -17,7 +17,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/school_btn"
+            app:srcCompat="@drawable/list_school_btn"
             android:contentDescription="TODO" />
 
     <ImageButton
@@ -32,7 +32,7 @@
             app:layout_constraintStart_toStartOf="@+id/school_btn"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/map_btn" />
+            app:srcCompat="@drawable/list_map_btn" />
 
     <ImageButton
             android:id="@+id/stamp_btn"
@@ -46,7 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/stamp_btn" />
+            app:srcCompat="@drawable/list_stamp_btn" />
 
     <ImageButton
             android:id="@+id/info_btn"
@@ -60,7 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/info_btn" />
+            app:srcCompat="@drawable/list_info_btn" />
 
     <ImageButton
             android:id="@+id/bus_btn"
@@ -74,7 +74,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/bus_btn" />
+            app:srcCompat="@drawable/list_bus_btn" />
 
     <ImageView
             android:id="@+id/modol_btn"
@@ -86,7 +86,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.082"
-            app:srcCompat="@drawable/modoru_btn"
+            app:srcCompat="@drawable/list_modoru_btn"
             android:contentDescription="TODO" />
 
     <TextView
