@@ -80,34 +80,48 @@
             app:srcCompat="@drawable/list_bus_btn"
             android:contentDescription="@string/bus_btn" />
 
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="409dp"
+            android:layout_height="95dp"
+            android:background="@drawable/list_toolbar_style"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+
+            app:layout_constraintBottom_toBottomOf="@+id/stamp_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
             android:id="@+id/modol_btn"
             android:layout_width="33dp"
             android:layout_height="37dp"
+            android:contentDescription="@string/modol_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintHorizontal_bias="0.084"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.082"
-            app:srcCompat="@drawable/list_modoru_btn"
-            android:contentDescription="@string/modol_btn" />
+            app:layout_constraintVertical_bias="0.057"
+            app:srcCompat="@drawable/list_modoru_btn" />
 
     <TextView
             android:id="@+id/tytle"
             android:layout_width="164dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
+            android:color="#000000"
             android:gravity="center"
             android:text="@string/infomation"
             android:textSize="30sp"
-            android:color="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.049" />
+            app:layout_constraintVertical_bias="0.016" />
 
 </android.support.constraint.ConstraintLayout>
