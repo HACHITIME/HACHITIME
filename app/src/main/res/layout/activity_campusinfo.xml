@@ -12,7 +12,7 @@
             android:background="@drawable/campusinfo_style"
             android:text="学科紹介"
 
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
 
             android:text="イベント一覧"
 
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +39,7 @@
             android:background="@drawable/campusinfo_style"
 
             android:text="資料請求"
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -52,7 +52,7 @@
             android:background="@drawable/campusinfo_style"
             android:text="在校生のインタビュー"
 
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
