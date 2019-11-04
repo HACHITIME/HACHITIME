@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <Button
+            android:id="@+id/subject_btn"
+            android:layout_width="412dp"
+            android:layout_height="71dp"
+            android:background="@drawable/campusinfo_style"
+            android:text="学科紹介"
+
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.513" />
 
     <Button
             android:id="@+id/ivent_btn"
@@ -17,20 +30,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.392" />
+            app:layout_constraintVertical_bias="0.389" />
 
     <Button
-            android:id="@+id/subject_btn"
+            android:id="@+id/document_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
             android:background="@drawable/campusinfo_style"
-            android:text="学科紹介"
 
+            android:text="資料請求"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.516" />
+            app:layout_constraintVertical_bias="0.757" />
 
     <Button
             android:id="@+id/interview_btn"
@@ -43,19 +56,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.639" />
-
-    <Button
-            android:id="@+id/document_btn"
-            android:layout_width="412dp"
-            android:layout_height="71dp"
-            android:background="@drawable/campusinfo_style"
-            android:text="資料請求"
-
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.768" />
+            app:layout_constraintVertical_bias="0.636" />
 
 </android.support.constraint.ConstraintLayout>
