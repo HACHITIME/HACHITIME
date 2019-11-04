@@ -6,19 +6,6 @@
         android:layout_height="match_parent">
 
     <Button
-            android:id="@+id/subject_btn"
-            android:layout_width="412dp"
-            android:layout_height="71dp"
-            android:background="@drawable/campusinfo_style"
-            android:text="学科紹介"
-
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.513" />
-
-    <Button
             android:id="@+id/ivent_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
@@ -33,17 +20,17 @@
             app:layout_constraintVertical_bias="0.389" />
 
     <Button
-            android:id="@+id/document_btn"
+            android:id="@+id/subject_btn"
             android:layout_width="412dp"
             android:layout_height="71dp"
             android:background="@drawable/campusinfo_style"
+            android:text="学科紹介"
 
-            android:text="資料請求"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.757" />
+            app:layout_constraintVertical_bias="0.513" />
 
     <Button
             android:id="@+id/interview_btn"
@@ -57,5 +44,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.636" />
+
+    <Button
+            android:id="@+id/document_btn"
+            android:layout_width="412dp"
+            android:layout_height="71dp"
+            android:background="@drawable/campusinfo_style"
+
+            android:text="資料請求"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.757" />
 
 </android.support.constraint.ConstraintLayout>
