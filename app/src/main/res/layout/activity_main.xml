@@ -31,6 +31,19 @@
             app:layout_constraintVertical_bias="0.222"
             app:srcCompat="@drawable/home_hachitime" />
 
+    <ImageView
+            android:id="@+id/whitebox1"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/home"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/home"
+            app:layout_constraintTop_toTopOf="@+id/home"
+            app:layout_constraintVertical_bias="0.56"
+            app:srcCompat="@drawable/whitebox" />
+
     <ImageButton
             android:id="@+id/sisetsuButton"
             android:layout_width="120dp"
@@ -44,6 +57,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.525"
             app:srcCompat="@drawable/home_greenbutton" />
+
+    <ImageView
+            android:id="@+id/whitebox2"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toBottomOf="@+id/home"
+            app:layout_constraintEnd_toEndOf="@+id/home"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="@+id/home"
+            app:layout_constraintTop_toBottomOf="@+id/whitebox1"
+            app:layout_constraintVertical_bias="0.00999999"
+            app:srcCompat="@drawable/whitebox" />
 
     <ImageButton
             android:id="@+id/mapbutton"
