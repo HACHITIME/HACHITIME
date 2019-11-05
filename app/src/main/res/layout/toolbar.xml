@@ -9,7 +9,7 @@
             android:id="@+id/school_btn"
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
+            android:background="@drawable/toolbar_flame_style"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -17,14 +17,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_school_btn"
+            app:srcCompat="@drawable/toolbar_school_btn"
             android:contentDescription="@string/school_btn" />
 
     <ImageButton
             android:id="@+id/map_btn"
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
+            android:background="@drawable/toolbar_flame_style"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,14 +32,14 @@
             app:layout_constraintStart_toStartOf="@+id/school_btn"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_map_btn"
+            app:srcCompat="@drawable/toolbar_map_btn"
             android:contentDescription="@string/map_btn" />
 
     <ImageButton
             android:id="@+id/stamp_btn"
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
+            android:background="@drawable/toolbar_flame_style"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -47,14 +47,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_stamp_btn"
+            app:srcCompat="@drawable/toolbar_stamp_btn"
             android:contentDescription="@string/stamp_btn" />
 
     <ImageButton
             android:id="@+id/info_btn"
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
+            android:background="@drawable/toolbar_flame_style"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,14 +62,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_info_btn"
+            app:srcCompat="@drawable/toolbar_info_btn"
             android:contentDescription="@string/info_btn" />
 
     <ImageButton
             android:id="@+id/bus_btn"
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
+            android:background="@drawable/toolbar_flame_style"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,14 +77,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_bus_btn"
+            app:srcCompat="@drawable/toolbar_bus_btn"
             android:contentDescription="@string/bus_btn" />
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="409dp"
             android:layout_height="95dp"
-            android:background="@drawable/list_toolbar_style"
+            android:background="@drawable/toolbar_style"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
 
@@ -106,7 +106,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.057"
-            app:srcCompat="@drawable/list_modoru_btn" />
+            app:srcCompat="@drawable/toolbar_modoru_btn" />
 
     <TextView
             android:id="@+id/tytle"
