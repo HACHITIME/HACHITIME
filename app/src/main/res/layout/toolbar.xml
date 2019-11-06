@@ -11,14 +11,14 @@
             android:layout_height="82dp"
             android:background="@drawable/toolbar_flame_style"
 
+            android:contentDescription="@string/school_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_school_btn"
-            android:contentDescription="@string/school_btn" />
+            app:srcCompat="@drawable/toolbar_school_btn_white " />
 
     <ImageButton
             android:id="@+id/map_btn"
