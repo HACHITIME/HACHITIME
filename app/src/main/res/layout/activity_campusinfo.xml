@@ -2,60 +2,73 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <Button
-            android:id="@+id/ivent_btn"
-            android:layout_width="412dp"
-            android:layout_height="71dp"
-            android:background="@drawable/campusinfo_style"
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            android:text="イベント一覧"
+        <Button
+                android:id="@+id/interview_btn"
+                android:layout_width="180dp"
+                android:layout_height="165dp"
+                android:background="@drawable/campusinfo_style"
 
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.389" />
+                android:text="在校生のインタビュー"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.747" />
 
-    <Button
-            android:id="@+id/subject_btn"
-            android:layout_width="412dp"
-            android:layout_height="71dp"
-            android:background="@drawable/campusinfo_style"
-            android:text="学科紹介"
+        <Button
+                android:id="@+id/document_btn"
+                android:layout_width="180dp"
+                android:layout_height="165dp"
+                android:background="@drawable/campusinfo_style"
 
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.513" />
+                android:text="資料請求"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.747" />
 
-    <Button
-            android:id="@+id/interview_btn"
-            android:layout_width="412dp"
-            android:layout_height="71dp"
-            android:background="@drawable/campusinfo_style"
-            android:text="在校生のインタビュー"
+        <Button
+                android:id="@+id/subject_btn"
+                android:layout_width="180dp"
+                android:layout_height="165dp"
+                android:background="@drawable/campusinfo_style"
 
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.636" />
+                android:text="学科紹介"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.395" />
 
-    <Button
-            android:id="@+id/document_btn"
-            android:layout_width="412dp"
-            android:layout_height="71dp"
-            android:background="@drawable/campusinfo_style"
+        <Button
+                android:id="@+id/ivent_btn"
+                android:layout_width="180dp"
+                android:layout_height="165dp"
 
-            android:text="資料請求"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.757" />
+                android:background="@drawable/campusinfo_style"
+
+                android:text="イベント一覧"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.395" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
