@@ -11,14 +11,14 @@
             android:layout_height="82dp"
             android:background="@drawable/toolbar_flame_style"
 
+            android:contentDescription="@string/school_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_school_btn"
-            android:contentDescription="@string/school_btn" />
+            app:srcCompat="@drawable/school" />
 
     <ImageButton
             android:id="@+id/map_btn"
@@ -26,14 +26,14 @@
             android:layout_height="82dp"
             android:background="@drawable/toolbar_flame_style"
 
+            android:contentDescription="@string/map_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.249"
             app:layout_constraintStart_toStartOf="@+id/school_btn"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_map_btn"
-            android:contentDescription="@string/map_btn" />
+            app:srcCompat="@drawable/map" />
 
     <ImageButton
             android:id="@+id/stamp_btn"
@@ -41,14 +41,14 @@
             android:layout_height="82dp"
             android:background="@drawable/toolbar_flame_style"
 
+            android:contentDescription="@string/stamp_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_stamp_btn"
-            android:contentDescription="@string/stamp_btn" />
+            app:srcCompat="@drawable/stamp" />
 
     <ImageButton
             android:id="@+id/info_btn"
@@ -56,14 +56,14 @@
             android:layout_height="82dp"
             android:background="@drawable/toolbar_flame_style"
 
+            android:contentDescription="@string/info_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.747"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_info_btn"
-            android:contentDescription="@string/info_btn" />
+            app:srcCompat="@drawable/info" />
 
     <ImageButton
             android:id="@+id/bus_btn"
@@ -71,14 +71,14 @@
             android:layout_height="82dp"
             android:background="@drawable/toolbar_flame_style"
 
+            android:contentDescription="@string/bus_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.996"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_bus_btn"
-            android:contentDescription="@string/bus_btn" />
+            app:srcCompat="@drawable/bus" />
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -106,7 +106,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.057"
-            app:srcCompat="@drawable/toolbar_modoru_btn" />
+            app:srcCompat="@drawable/modoru" />
 
     <TextView
             android:id="@+id/tytle"

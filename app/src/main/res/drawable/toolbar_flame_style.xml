@@ -7,7 +7,7 @@
         <shape android:shape="rectangle">
 
             <!-- 背景色 -->
-            <solid android:color="#ffffff" />
+            <solid android:color="#008000" />
 
             <!-- 角の丸み -->
             <corners android:radius="5dp" />
@@ -19,11 +19,13 @@
 
             <!-- グラデーション -->
             <!-- angle:角度、type:linear(=線形) -->
+            <!--
             <gradient
                     android:angle="90"
                     android:endColor="#008000 "
                     android:startColor="#ffffff"
                     android:type="linear" />
+                    -->
 
         </shape>
     </item>
