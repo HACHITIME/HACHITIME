@@ -5,6 +5,20 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <FrameLayout
+            android:id="@+id/whitearea"
+            android:layout_width="407dp"
+            android:layout_height="97dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
+
     <ImageButton
             android:id="@+id/school_btn"
             android:layout_width="82dp"
@@ -82,8 +96,8 @@
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="409dp"
-            android:layout_height="95dp"
+            android:layout_width="413dp"
+            android:layout_height="94dp"
             android:background="@drawable/toolbar_style"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
@@ -124,5 +138,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.037" />
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/stamp_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.865" />
 
 </android.support.constraint.ConstraintLayout>
