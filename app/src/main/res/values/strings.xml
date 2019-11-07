@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TestApp</string>
     <string name="hello">けもフレ３やろう</string>
-    <string name="infomation">Infomation</string>
+    <string name="information">Information</string>
     <string name="school_btn">TODO</string>
     <string name="map_btn">TODO</string>
     <string name="stamp_btn">TODO</string>
