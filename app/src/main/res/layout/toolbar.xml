@@ -33,7 +33,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/school" />
+            app:srcCompat="@drawable/toolbar_school" />
 
     <ImageButton
             android:id="@+id/map_btn"
@@ -48,7 +48,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/map" />
+            app:srcCompat="@drawable/toolbar_map" />
 
     <ImageButton
             android:id="@+id/stamp_btn"
@@ -62,7 +62,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/whitearea"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/stamp" />
+            app:srcCompat="@drawable/toolbar_stamp" />
 
     <ImageButton
             android:id="@+id/info_btn"
@@ -78,7 +78,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/info" />
+            app:srcCompat="@drawable/toolbar_info" />
 
     <ImageButton
             android:id="@+id/bus_btn"
@@ -94,7 +94,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/bus" />
+            app:srcCompat="@drawable/toolbar_bus" />
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -122,7 +122,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.057"
-            app:srcCompat="@drawable/modol_" />
+            app:srcCompat="@drawable/toolbar_modol" />
 
     <TextView
             android:id="@+id/tytle"
