@@ -36,7 +36,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
+        //val sydney = LatLng(-34.0, 151.0)
+        val sydney = LatLng(35.625760, 139.341594)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }
