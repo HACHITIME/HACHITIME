@@ -46,13 +46,13 @@
             <!-- 枠線 width:線の幅、color:線の色 -->
             <stroke
                     android:width="3dp"
-                    android:color="#00b489" />
+                    android:color="#008000" />
 
             <!-- グラデーション -->
             <!-- angle:角度、type:linear(=線形) -->
             <gradient
                     android:angle="90"
-                    android:endColor="#4169e1"
+                    android:endColor="#008000"
                     android:startColor="#000000"
                     android:type="linear" />
 
