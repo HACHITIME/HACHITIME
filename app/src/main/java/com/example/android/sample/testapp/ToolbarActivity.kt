@@ -27,7 +27,7 @@ class ToolbarActivity : AppCompatActivity() {
         }
 
         info_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
+            val intent = Intent(this, InfoActivity::class.java)
             startActivity(intent)
         }
 

@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         modol_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
+            onBackPressed()
             startActivity(intent)
         }
 

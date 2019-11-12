@@ -10,37 +10,8 @@ class FacilityListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility_list)
-        setContentView(R.layout.toolbar)
+        //setContentView(R.layout.toolbar)
 
-        school_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
-            startActivity(intent)
-        }
-
-        map_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
-            startActivity(intent)
-        }
-
-        stamp_btn.setOnClickListener {
-            val intent = Intent(this, StampActivity::class.java)
-            startActivity(intent)
-        }
-
-        info_btn.setOnClickListener {
-            val intent = Intent(this, InfoActivity::class.java)
-            startActivity(intent)
-        }
-
-        bus_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
-            startActivity(intent)
-        }
-
-        modol_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
-            startActivity(intent)
-        }
     }
 
 
