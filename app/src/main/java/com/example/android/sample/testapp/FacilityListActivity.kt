@@ -13,6 +13,35 @@ class FacilityListActivity : AppCompatActivity() {
         setContentView(R.layout.toolbar)
         tytle.text = "施設一覧"
 
+        school_btn.setOnClickListener {
+            val intent = Intent(this, FacilityListActivity::class.java)
+            startActivity(intent)
+        }
+
+        map_btn.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+        }
+
+        stamp_btn.setOnClickListener {
+            val intent = Intent(this, StampActivity::class.java)
+            startActivity(intent)
+        }
+
+        info_btn.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            startActivity(intent)
+        }
+
+        bus_btn.setOnClickListener {
+            val intent = Intent(this, BustimeActivity::class.java)
+            startActivity(intent)
+        }
+
+        modol_btn.setOnClickListener {
+            super.onBackPressed()
+        }
+
     }
 
 

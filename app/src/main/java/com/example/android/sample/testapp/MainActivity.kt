@@ -6,13 +6,13 @@ import android.content.Intent
 import android.view.KeyEvent
 import kotlinx.android.synthetic.main.toolbar.*
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.toolbar)
 
-        school_btn.setOnClickListener {
+         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
             startActivity(intent)
         }
@@ -38,8 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         modol_btn.setOnClickListener {
-            onBackPressed()
-            startActivity(intent)
+            super.onBackPressed( )
         }
 
 
