@@ -4,14 +4,13 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.toolbar.*
 
-class InfoActivity : AppCompatActivity() {
+class MapActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.campasinfo)
         setContentView(R.layout.toolbar)
-        tytle.text = "Information"
-        AppCompatActivity()
+        tytle.text = "Map"
     }
 
 

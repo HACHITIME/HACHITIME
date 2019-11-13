@@ -10,7 +10,8 @@ class FacilityListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility_list)
-        //setContentView(R.layout.toolbar)
+        setContentView(R.layout.toolbar)
+        tytle.text = "施設一覧"
 
     }
 

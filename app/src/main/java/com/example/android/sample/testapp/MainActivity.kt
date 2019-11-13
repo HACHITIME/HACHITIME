@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         map_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
+            val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
 
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         bus_btn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
+            val intent = Intent(this, BustimeActivity::class.java)
             startActivity(intent)
         }
 
