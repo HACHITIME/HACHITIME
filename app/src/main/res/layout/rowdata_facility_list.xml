@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".FacilityListActivity">
+    <ImageView
+    android:id="@+id/facilityImage"
+    android:layout_width="wrap_content"
+    android:layout_height="160dp"
+    android:scaleType="center"
+    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+    tools:srcCompat="@drawable/facilitylist_bijyutukan"/>
+    <TextView
+    android:id="@+id/facilityName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:textAlignment="center"
+    android:textAllCaps="false"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textColor="@android:color/background_light" android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" tools:text="施設画像"/>
+</android.support.constraint.ConstraintLayout>
+
+<!--
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+-->
