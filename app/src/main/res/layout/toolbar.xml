@@ -8,7 +8,7 @@
 
     <FrameLayout
             android:id="@+id/whitearea"
-            android:layout_width="407dp"
+            android:layout_width="0dp"
             android:layout_height="97dp"
             android:background="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
