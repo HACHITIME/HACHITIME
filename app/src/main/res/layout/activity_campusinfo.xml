@@ -7,12 +7,14 @@
 
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-98dp">
 
         <Button
                 android:id="@+id/interview_btn"
-                android:layout_width="180dp"
-                android:layout_height="165dp"
+                android:layout_width="208dp"
+                android:layout_height="280dp"
                 android:background="@drawable/campusinfo_style"
 
                 android:text="在校生のインタビュー"
@@ -20,15 +22,15 @@
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.747" />
+                app:layout_constraintVertical_bias="0.842" />
 
         <Button
                 android:id="@+id/document_btn"
-                android:layout_width="180dp"
-                android:layout_height="165dp"
+                android:layout_width="208dp"
+                android:layout_height="280dp"
                 android:background="@drawable/campusinfo_style"
 
                 android:gravity="center"
@@ -37,15 +39,15 @@
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.747" />
+                app:layout_constraintVertical_bias="0.842" />
 
         <Button
                 android:id="@+id/subject_btn"
-                android:layout_width="180dp"
-                android:layout_height="165dp"
+                android:layout_width="208dp"
+                android:layout_height="280dp"
                 android:background="@drawable/campusinfo_style"
 
                 android:text="学科紹介"
@@ -53,15 +55,15 @@
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.395" />
+                app:layout_constraintVertical_bias="0.221" />
 
         <Button
                 android:id="@+id/ivent_btn"
-                android:layout_width="180dp"
-                android:layout_height="165dp"
+                android:layout_width="208dp"
+                android:layout_height="280dp"
 
                 android:background="@drawable/campusinfo_style"
 
@@ -70,10 +72,10 @@
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.395" />
+                app:layout_constraintVertical_bias="0.221" />
 
     </android.support.constraint.ConstraintLayout>
 
