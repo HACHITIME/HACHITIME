@@ -7,14 +7,16 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import android.view.LayoutInflater
+import android.util.Log
 
 
 class FacilityListAdapter(
-    private val context: Context
+    private val context: Context,
+    private val facilityNam: ArrayList<String>,
+    private val facilityImag: ArrayList<String>
 ) : BaseAdapter() {
-
     val facilityName = arrayOf("研究棟Ｂ","片柳記念ホール","厚生棟","図書館")
-    val facilityImage = arrayOf("facilityList_bijyutukan","facilityList_bijyutukan","facilityList_bijyutukan","facilityList_bijyutukan")
+    // val facilityImage = arrayOf("facilityList_bijyutukan","facilityList_bijyutukan","facilityList_bijyutukan","facilityList_bijyutukan")
 
     private class ViewHolder(view: View) {
         val facilityName = view.findViewById<TextView>(R.id.facilityName)
@@ -35,8 +37,9 @@ class FacilityListAdapter(
         val view = convertView ?: createView(parent)
         val viewHolder = view.tag as ViewHolder
         // 施設名と施設画像を配置
+        Log.d("TAG", "来とるで")
         viewHolder.facilityName.text = facilityName[position]
-        viewHolder.facilityImage.setImageResource(R.drawable.facilitylist_bijyutukan)
+        viewHolder.facilityImage.setImageResource(R.drawable.facility_list_bijyutukan)
         return view
     }
 
