@@ -6,12 +6,12 @@
     <solid android:color="#ffffff" />
 
     <!-- 角の丸み -->
-    <corners android:radius="5dp" />
+    <corners android:radius="40dp" />
 
     <!-- 枠線 width:線の幅、color:線の色 -->
     <stroke
             android:width="5dp"
-            android:color="#eee8aa" />
+            android:color="#FFCC33" />
 
     <!-- グラデーション -->
     <!-- angle:角度、type:linear(=線形) -->

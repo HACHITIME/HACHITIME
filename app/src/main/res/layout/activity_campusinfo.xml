@@ -14,68 +14,84 @@
         <Button
                 android:id="@+id/interview_btn"
                 android:layout_width="208dp"
-                android:layout_height="280dp"
+                android:layout_height="272dp"
                 android:background="@drawable/campusinfo_style"
 
-                android:text="在校生のインタビュー"
-                android:textSize="24sp"
-                android:textStyle="bold|italic"
+                android:paddingTop="140dp"
+                android:text="インタビュー"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.842" />
+                app:layout_constraintVertical_bias="0.782" />
 
         <Button
                 android:id="@+id/document_btn"
                 android:layout_width="208dp"
-                android:layout_height="280dp"
+                android:layout_height="272dp"
                 android:background="@drawable/campusinfo_style"
 
-                android:gravity="center"
+                android:paddingTop="140dp"
                 android:text="資料請求"
-                android:textSize="24sp"
-                android:textStyle="bold|italic"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.842" />
+                app:layout_constraintVertical_bias="0.782" />
 
         <Button
                 android:id="@+id/subject_btn"
                 android:layout_width="208dp"
-                android:layout_height="280dp"
+                android:layout_height="272dp"
                 android:background="@drawable/campusinfo_style"
 
+                android:paddingTop="140dp"
                 android:text="学科紹介"
-                android:textSize="24sp"
-                android:textStyle="bold|italic"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.221" />
+                app:layout_constraintVertical_bias="0.19" />
 
         <Button
                 android:id="@+id/ivent_btn"
                 android:layout_width="208dp"
-                android:layout_height="280dp"
+                android:layout_height="272dp"
 
                 android:background="@drawable/campusinfo_style"
-
+                android:freezesText="false"
+                android:paddingTop="140dp"
                 android:text="イベント一覧"
-                android:textSize="24sp"
-                android:textStyle="bold|italic"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.221" />
+                app:layout_constraintVertical_bias="0.187" />
+
+        <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="1dp">
+
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="409dp"
+                android:layout_height="97dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="631dp">
+
+        </FrameLayout>
 
     </android.support.constraint.ConstraintLayout>
 
