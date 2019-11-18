@@ -1,6 +1,7 @@
 package com.example.android.sample.testapp
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -8,14 +9,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.view.LayoutInflater
 import android.util.Log
+import android.R.drawable
+
+
 
 
 class FacilityListAdapter(
     private val context: Context,
-    private val facilityNam: ArrayList<String>,
-    private val facilityImag: ArrayList<String>
+    private val name: ArrayList<String>,
+    private val image: ArrayList<String>
 ) : BaseAdapter() {
-    val facilityName = arrayOf("研究棟Ｂ","片柳記念ホール","厚生棟","図書館")
+    // val facilityName = arrayOf("研究棟Ｂ","片柳記念ホール","厚生棟","図書館")
     // val facilityImage = arrayOf("facilityList_bijyutukan","facilityList_bijyutukan","facilityList_bijyutukan","facilityList_bijyutukan")
 
     private class ViewHolder(view: View) {
@@ -36,15 +40,15 @@ class FacilityListAdapter(
         // ビューの作成
         val view = convertView ?: createView(parent)
         val viewHolder = view.tag as ViewHolder
+        // val drawable = getResources().getDrawable(image[position])
         // 施設名と施設画像を配置
-        Log.d("TAG", "来とるで")
-        viewHolder.facilityName.text = facilityName[position]
+        viewHolder.facilityName.text = name[position]
         viewHolder.facilityImage.setImageResource(R.drawable.facility_list_bijyutukan)
         return view
     }
 
     override fun getItem(position: Int): Any {
-        return facilityName[position]
+        return name[position]
     }
 
     override fun getItemId(position: Int): Long {
@@ -52,7 +56,7 @@ class FacilityListAdapter(
     }
 
     override fun getCount(): Int {
-        return facilityName.size
+        return name.size
     }
 
 }

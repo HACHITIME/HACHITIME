@@ -34,17 +34,14 @@ class FacilityListActivity : AppCompatActivity() {
                     facilityName.add(obj.getString("facilityName"))
                     facilityImage.add(obj.getString("facilityImage"))
                 }
+                // GridView「facilityList」のIDを取得
+                val list = findViewById<GridView>(R.id.facilityList)
+                // adapterを作成
+                val adapter = FacilityListAdapter(this, facilityName, facilityImage)
+                // facilityListにadapterをセット
+                list.adapter = adapter
             }
         }
-        val testView = findViewById<TextView>(R.id.testView)
-        // textView.
-
-        // GridView「facilityList」のIDを取得
-        val list = findViewById<GridView>(R.id.facilityList)
-        // adapterを作成
-        val adapter = FacilityListAdapter(this, facilityName, facilityImage)
-        // facilityListにadapterをセット
-        list.adapter = adapter
 
     }
 }

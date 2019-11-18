@@ -15,19 +15,19 @@
     app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
     tools:srcCompat="@drawable/facility_list_bijyutukan"/>
     <TextView
-    android:id="@+id/facilityName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:textAlignment="center"
-    android:textAllCaps="false"
-    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-    android:textColor="@android:color/background_light" android:textSize="18sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" tools:text="施設画像"/>
+            android:id="@+id/facilityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/background_light" android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" tools:text="施設画像"/>
 </android.support.constraint.ConstraintLayout>
 
 <!--
