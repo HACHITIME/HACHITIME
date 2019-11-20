@@ -17,6 +17,7 @@ class FacilityListActivity : AppCompatActivity() {
 
         val facilityName = arrayListOf<String>()    // 施設名を入れる配列
         val facilityImage = arrayListOf<String>() // 施設画像名を入れる配列
+        // val id = resources.getIdentifier("facility_list_bijyutukan", "drawable", packageName)
 
         // 初期化
         NCMB.initialize(applicationContext,
