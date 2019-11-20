@@ -14,28 +14,68 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <Button
-                android:id="@+id/interview_btn"
+                android:id="@+id/ivent_btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/campusinfo_style"
+                android:drawableTop="@drawable/calendar_"
+                android:freezesText="false"
+                android:paddingTop="40dp"
+                android:text="イベント一覧"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/document_btn"
+                app:layout_constraintEnd_toEndOf="@+id/interview_btn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/subject_btn"
                 android:layout_width="204dp"
                 android:layout_height="272dp"
 
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/campusinfo_style"
+                android:drawableTop="@drawable/subject"
+                android:paddingTop="40dp"
+                android:text="学科紹介"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/document_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.985"
+                app:layout_constraintStart_toStartOf="@id/interview_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+                android:id="@+id/interview_btn"
+                android:layout_width="0dp"
+                android:layout_height="272dp"
+
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="84dp"
                 android:background="@drawable/campusinfo_style"
                 android:drawableTop="@drawable/interview"
                 android:paddingTop="40dp"
                 android:text="インタビュー"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintEnd_toStartOf="@+id/subject_btn"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.81" />
+                app:layout_constraintTop_toBottomOf="@+id/subject_btn" />
 
         <Button
                 android:id="@+id/document_btn"
                 android:layout_width="204dp"
                 android:layout_height="272dp"
-                android:layout_marginStart="228dp"
 
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="84dp"
                 android:background="@drawable/campusinfo_style"
                 android:drawableTop="@drawable/siryou"
                 android:paddingTop="40dp"
@@ -43,45 +83,9 @@
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/interview_btn"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.81" />
-
-        <Button
-                android:id="@+id/subject_btn"
-                android:layout_width="204dp"
-                android:layout_height="272dp"
-
-                android:background="@drawable/campusinfo_style"
-                android:drawableTop="@drawable/subject"
-                android:paddingTop="40dp"
-                android:text="学科紹介"
-                android:textSize="30sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.217" />
-
-        <Button
-                android:id="@+id/ivent_btn"
-                android:layout_width="204dp"
-                android:layout_height="272dp"
-
-                android:background="@drawable/campusinfo_style"
-                android:drawableTop="@drawable/calendar_"
-                android:freezesText="false"
-                android:paddingTop="40dp"
-                android:text="イベント一覧"
-                android:textSize="30sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.217" />
+                app:layout_constraintVertical_bias="1.0" />
 
     </android.support.constraint.ConstraintLayout>
 
