@@ -6,97 +6,6 @@
         android:layout_height="match_parent"
         android:animateLayoutChanges="false">
 
-    <FrameLayout
-            android:id="@+id/whitearea"
-            android:layout_width="0dp"
-            android:layout_height="97dp"
-            android:background="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
-
-    </FrameLayout>
-
-    <ImageButton
-            android:id="@+id/school_btn"
-            android:layout_width="71dp"
-            android:layout_height="71dp"
-
-            android:layout_marginStart="2dp"
-            android:background="@drawable/toolbar_flame_style"
-            android:contentDescription="@string/school_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_school" />
-
-    <ImageButton
-            android:id="@+id/map_btn"
-            android:layout_width="71dp"
-            android:layout_height="71dp"
-
-            android:background="@drawable/toolbar_flame_style"
-            android:contentDescription="@string/map_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_map" />
-
-    <ImageButton
-            android:id="@+id/stamp_btn"
-            android:layout_width="71dp"
-            android:layout_height="71dp"
-
-            android:background="@drawable/toolbar_flame_style"
-            android:contentDescription="@string/stamp_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/whitearea"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_stamp" />
-
-    <ImageButton
-            android:id="@+id/info_btn"
-            android:layout_width="71dp"
-            android:layout_height="71dp"
-
-            android:layout_marginTop="16dp"
-            android:background="@drawable/toolbar_flame_style"
-            android:contentDescription="@string/info_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.75"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_info" />
-
-    <ImageButton
-            android:id="@+id/bus_btn"
-            android:layout_width="71dp"
-            android:layout_height="71dp"
-
-            android:layout_marginEnd="2dp"
-            android:background="@drawable/toolbar_flame_style"
-            android:contentDescription="@string/bus_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/toolbar_bus" />
-
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="0dp"
@@ -128,6 +37,95 @@
             app:srcCompat="@drawable/toolbar_modol" />
      -->
 
+        <FrameLayout
+            android:id="@+id/whitearea"
+            android:layout_width="0dp"
+            android:layout_height="97dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+        </FrameLayout>
+
+        <ImageButton
+                android:id="@+id/school_btn"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+
+                android:layout_marginStart="2dp"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/school_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/toolbar_school" />
+
+        <ImageButton
+                android:id="@+id/map_btn"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/map_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/toolbar_map" />
+
+        <ImageButton
+                android:id="@+id/stamp_btn"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/stamp_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/toolbar_stamp" />
+
+        <ImageButton
+                android:id="@+id/info_btn"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+
+                android:layout_marginTop="16dp"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/info_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/toolbar_info" />
+
+        <ImageButton
+                android:id="@+id/bus_btn"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/bus_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/toolbar_bus" />
+
+
     <ImageButton
             android:id="@+id/modol_btn"
             android:layout_width="41dp"
@@ -141,6 +139,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.785"
             app:srcCompat="@drawable/toolbar_modoru" />
+
 
     <TextView
             android:id="@+id/tytle"
