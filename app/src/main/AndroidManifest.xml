@@ -11,7 +11,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".CalenderActivity"></activity>
+        <activity android:name=".InterviewActivity"></activity>
+        <activity android:name=".DocumentActivity" />
+        <activity android:name=".SubjectActivity" />
+        <activity android:name=".CalenderActivity" />
         <activity android:name=".FacilityListActivity" />
         <activity android:name=".StampActivity" />
         <activity android:name=".BustimeActivity" />

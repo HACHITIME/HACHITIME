@@ -21,20 +21,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         subject_btn.setOnClickListener {
-            val uri = Uri.parse("https://www.neec.ac.jp/department/")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
+            val intent = Intent(this, SubjectActivity::class.java)
             startActivity(intent)
         }
 
         interview_btn.setOnClickListener {
-            val uri = Uri.parse("https://www.neec.ac.jp/contact/")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
+            val intent = Intent(this, InterviewActivity::class.java)
             startActivity(intent)
         }
 
         document_btn.setOnClickListener {
-            val uri = Uri.parse("https://www.neec.ac.jp/cgi-bin/requests.php?type=0")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
+            val intent = Intent(this, DocumentActivity::class.java)
             startActivity(intent)
         }
     }

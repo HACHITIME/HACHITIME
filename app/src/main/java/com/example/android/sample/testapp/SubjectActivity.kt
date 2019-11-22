@@ -3,22 +3,17 @@ package com.example.android.sample.testapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
-import kotlinx.android.synthetic.main.activity_calender.*
 import android.webkit.WebViewClient
+import kotlinx.android.synthetic.main.activity_calender.*
 
-
-
-
-class CalenderActivity : AppCompatActivity() {
+class SubjectActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calender)
+        setContentView(R.layout.activity_subject)
 
         webview.setWebViewClient(WebViewClient())
-        webview.loadUrl("https://www.neec.ac.jp/facility/calendar/")
-
-
+        webview.loadUrl("https://www.neec.ac.jp/department/")
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
