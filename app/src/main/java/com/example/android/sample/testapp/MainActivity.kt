@@ -13,6 +13,7 @@ open class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.toolbar)
 
+
          school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
             startActivity(intent,
