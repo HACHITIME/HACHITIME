@@ -5,6 +5,10 @@ import android.os.Bundle
 import android.content.Intent
 import android.net.Uri
 import kotlinx.android.synthetic.main.activity_campusinfo.*
+import android.webkit.WebViewClient
+import android.webkit.WebView
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             val uri = Uri.parse("https://www.neec.ac.jp/facility/calendar/")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
+
         }
 
         subject_btn.setOnClickListener {
