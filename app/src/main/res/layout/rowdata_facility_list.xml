@@ -5,7 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".FacilityListActivity">
+        tools:context=".FacilityListActivity"
+        android:background="@drawable/facility_list_image">
 
     <ImageView
             android:id="@+id/facilityImage"
@@ -16,7 +17,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/facility_list_honbuto" />
+            tools:srcCompat="@drawable/facility_list_bijyutukan" />
 
     <TextView
             android:id="@+id/facilityName"

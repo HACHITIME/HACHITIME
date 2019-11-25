@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FacilityDetaileActivity">
+
+    <ImageView
+            android:id="@+id/facilityImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/facilityName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/facility_list_bijyutukan" />
+
+    <TextView
+            android:id="@+id/facilityName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="施設名" />
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facilityName" />
+
+    <TextView
+            android:id="@+id/facilityDetaile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/mapMoveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:text="施設詳細" />
+
+    <Button
+            android:id="@+id/mapMoveButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/facility_detaile_button"
+            android:text="@string/map_move_button"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+            android:id="@+id/paccieIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/facilityImage"
+            app:layout_constraintTop_toTopOf="@+id/facilityImage"
+            app:srcCompat="@drawable/facility_list_paccieicon" />
+
+</android.support.constraint.ConstraintLayout>
