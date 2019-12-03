@@ -11,7 +11,7 @@
             android:layout_height="82dp"
             android:background="@drawable/flame_style"
 
-            android:contentDescription="@string/todo"
+            android:contentDescription="TODO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -26,7 +26,7 @@
             android:layout_height="82dp"
             android:background="@drawable/flame_style"
 
-            android:contentDescription="@string/todo"
+            android:contentDescription="TODO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.249"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/stamp_btn"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="TODO" />
 
     <ImageButton
             android:id="@+id/info_btn"
@@ -63,7 +63,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/info_btn"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="TODO" />
 
     <ImageButton
             android:id="@+id/bus_btn"
@@ -71,7 +71,7 @@
             android:layout_height="82dp"
             android:background="@drawable/flame_style"
 
-            android:contentDescription="@string/todo"
+            android:contentDescription="TODO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.996"
@@ -100,7 +100,7 @@
             android:gravity="center"
             android:text="Infomation"
             android:textSize="30sp"
-            android:color="black"
+            android:color="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
