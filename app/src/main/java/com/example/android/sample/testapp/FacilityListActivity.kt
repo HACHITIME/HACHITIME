@@ -2,16 +2,12 @@ package com.example.android.sample.testapp
 
 import android.app.ActivityOptions
 import android.content.Intent
-import android.media.Image
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.GridView
-import android.widget.TextView
-import android.widget.Toast
 import com.nifcloud.mbaas.core.*
-import kotlinx.android.synthetic.main.activity_facility_list.*
-import java.util.*
 
 
 class FacilityListActivity : AppCompatActivity() {
@@ -56,11 +52,10 @@ class FacilityListActivity : AppCompatActivity() {
 
         // facilityListの要素取選択時の処理
         list.setOnItemClickListener { adapterView, _, position, _ ->
-            /* テスト用
-             Toast.makeText(this, "${adapterView.getItemAtPosition(position)} が選択されました", Toast.LENGTH_SHORT).show()
-             */
-            // 「facilityDetaile」へ遷移、施設情報を渡す
             val intent = Intent(application, FacilityDetaileActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP)
+            // 施設情報を渡す
             intent.putExtra("PICK_ID", facilityId[position])
             intent.putExtra("PICK_NAME", facilityName[position])
             intent.putExtra("PICK_IMAGE", facilityImage[position])

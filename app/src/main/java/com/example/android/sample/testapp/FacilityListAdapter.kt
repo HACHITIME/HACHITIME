@@ -1,16 +1,12 @@
 package com.example.android.sample.testapp
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import android.view.LayoutInflater
-import android.util.Log
-import android.R.drawable
-import android.service.autofill.ImageTransformation
 
 
 class FacilityListAdapter(
@@ -28,7 +24,7 @@ class FacilityListAdapter(
     // 与えられた情報からViewを作成し返す
     private fun createView(parent: ViewGroup?) : View {
         val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.rowdata_facility_list, parent, false)
+        val view = inflater.inflate(R.layout.facility_list_view, parent, false)
         view.tag = ViewHolder(view)
 
         return view

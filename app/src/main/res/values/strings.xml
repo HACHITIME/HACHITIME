@@ -3,7 +3,7 @@
     <string name="hello">けもフレ３やろう</string>
     <string name="test">追加したよ！</string>
     <string name="map_move_button">マップで見る</string>
-    <string name="getText">獲得できるスタンプがあるよ！</string>
+    <string name="get_message">獲得できるスタンプがあるよ！</string>
     <string name="move_map">マップ</string>
     <string name="move_stamp">スタンプ一覧</string>
 </resources>

@@ -31,5 +31,5 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView"
-            tools:listitem="@layout/rowdata_facility_list" />
+            tools:listitem="@layout/facility_list_view" />
 </android.support.constraint.ConstraintLayout>
