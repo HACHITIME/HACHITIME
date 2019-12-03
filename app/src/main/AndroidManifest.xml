@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.android.sample.testapp">
+        package="com.example.android.sample.testapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
             android:allowBackup="true"
@@ -9,19 +11,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".FacilityDetaileActivity"></activity>
         <activity android:name=".FacilityListActivity">
-        </activity>
-        <activity android:name=".StampActivity"/>
-        <activity android:name=".BustimeActivity"/>
-        <activity android:name=".activity_stamp"/>
-        <activity android:name=".stamp"/>
-        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StampActivity" />
+        <activity android:name=".BustimeActivity" />
+        <activity android:name=".activity_stamp" />
+        <activity android:name=".stamp" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
