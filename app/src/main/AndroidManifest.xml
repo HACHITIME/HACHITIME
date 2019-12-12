@@ -11,15 +11,16 @@
             android:theme="@style/AppTheme">
         <activity android:name=".FacilityListActivity"/>
         <activity android:name=".MapActivity"/>
-        <activity android:name=".StampActivity"/>
+        <activity android:name=".StampActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        </activity>
         <activity android:name=".BustimeActivity"/>
         <activity android:name=".InfoActivity"/>
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
     </application>
 
