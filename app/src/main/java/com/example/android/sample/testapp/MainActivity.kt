@@ -14,6 +14,9 @@ open class MainActivity : AppCompatActivity() {
         imageView7.setOnClickListener {
             // スタンプ詳細ダイアログをを表示
             val dialog = HopupDialog()
+            // スタンプ詳細を渡す
+            val args = Bundle()
+            dialog.setArguments(args)
             dialog.show(supportFragmentManager, "simple")
 
         }
