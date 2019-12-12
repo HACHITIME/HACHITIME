@@ -12,7 +12,10 @@ open class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_stamp)
 
         imageView7.setOnClickListener {
-            setContentView(R.layout.map_hopup)
+            // スタンプ詳細ダイアログをを表示
+            val dialog = HopupDialog()
+            dialog.show(supportFragmentManager, "simple")
+
         }
 
 
