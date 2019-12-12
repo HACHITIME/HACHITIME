@@ -11,6 +11,10 @@ open class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stamp)
 
+        imageView7.setOnClickListener {
+            setContentView(R.layout.map_hopup)
+        }
+
 
 
 
