@@ -6,4 +6,6 @@
     <string name="get_message">獲得できるスタンプがあるよ！</string>
     <string name="move_map">マップ</string>
     <string name="move_stamp">スタンプ一覧</string>
+    <string name="text_name">Name</string>
+    <string name="text_subject">Subject</string>
 </resources>
