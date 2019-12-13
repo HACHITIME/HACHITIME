@@ -65,10 +65,11 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         tools:text="所属学科" />
+
             </LinearLayout>
         </LinearLayout>
 
-        <GridView
+        <ListView
                 android:id="@+id/interviewDetaileList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

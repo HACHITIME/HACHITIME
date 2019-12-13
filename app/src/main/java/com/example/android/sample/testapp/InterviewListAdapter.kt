@@ -5,10 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.GridView
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import com.nifcloud.mbaas.core.NCMBObject
 import com.nifcloud.mbaas.core.NCMBQuery
 
@@ -17,9 +14,10 @@ class InterviewListAdapter(
     private val context: Context,
     private val image: ArrayList<String>,
     private val name: ArrayList<String>,
-    private val subject: ArrayList<String>
+    private val subject: ArrayList<String>,
+    private val id: ArrayList<String>
+
 ) : BaseAdapter() {
-    val questionNo = arrayListOf<Int>()
     val question = arrayListOf<String>()
     val answer = arrayListOf<String>()
 
@@ -28,7 +26,7 @@ class InterviewListAdapter(
         val studentImage = view.findViewById<ImageView>(R.id.studentImage)
         val studentName = view.findViewById<TextView>(R.id.studentName)
         val studentSubject = view.findViewById<TextView>(R.id.studentSubject)
-        val interviewDetaileList = view.findViewById<GridView>(R.id.interviewDetaileList)
+        val interviewDetaileList = view.findViewById<ListView>(R.id.interviewDetaileList)
     }
 
 
@@ -49,12 +47,14 @@ class InterviewListAdapter(
 
         // 施設名と施設画像を配置
         val imgId = context.resources.getIdentifier("interview_list_" + image[position], "drawable", context.packageName) // 施設画像のIDを取得
-        viewHolder.studentImage.setImageResource(imgId) // 施設画像を配置
-        viewHolder.studentName.text = name[position] // 施設名を配置
-        viewHolder.studentSubject.text = subject[position]
+        viewHolder.studentImage.setImageResource(imgId) // 質問Noを配置
+        viewHolder.studentName.text = name[position] // 質問内容を配置
+        viewHolder.studentSubject.text = subject[position] // 回答内容を表示
 
         // FacilityMasterから施設情報を取得する
         val queryInterviewDetaile = NCMBQuery<NCMBObject>("InterviewDetaile")
+        queryInterviewDetaile.whereEqualTo("studentObjectId", id[position]) // 条件：対象学生のインタビュー詳細を指定
+        queryInterviewDetaile.addOrderByAscending("questionNo") // 質問Noの昇順
         queryInterviewDetaile.findInBackground { objects, e ->
             if (e != null) {
                 // エラー
@@ -63,14 +63,13 @@ class InterviewListAdapter(
                 // 成功
                 for (obj in objects) {
                     // DBからの取得情報を配列へ追加
-                    questionNo.add(obj.getInt("questionNo"))
                     question.add(obj.getString("question"))
                     answer.add(obj.getString("answer"))
                 }
                 // interviewDetaileListのadapterを作成
-                val adapterInterviewDetaileList = InterviewListDetaileAdapter(context, questionNo, question, answer)
+                val adapterInterviewDetaileList = InterviewListDetaileAdapter(context, question, answer)
                 // facilityDetaileListにadapterをセット
-                viewHolder.interviewDetaileList.findViewById<GridView>(R.id.interviewDetaileList).adapter = adapterInterviewDetaileList
+                viewHolder.interviewDetaileList.adapter = adapterInterviewDetaileList
             }
         }
 
@@ -78,7 +77,7 @@ class InterviewListAdapter(
     }
 
 
-    override fun getItem(position: Int): Any {
+        override fun getItem(position: Int): Any {
         return image[position]
     }
 
