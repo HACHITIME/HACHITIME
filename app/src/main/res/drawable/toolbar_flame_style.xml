@@ -50,7 +50,7 @@
             <!-- angle:角度、type:linear(=線形) -->
             <gradient
                     android:angle="90"
-                    android:endColor="#4169e1"
+                    android:endColor="#3cb371"
                     android:startColor="#000000"
                     android:type="linear" />
 
