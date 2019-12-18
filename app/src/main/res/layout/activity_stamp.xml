@@ -42,11 +42,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.427"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:srcCompat="@drawable/desain" />
 
     <ImageView
             android:id="@+id/imageView6"
@@ -54,11 +54,11 @@
             android:layout_height="44dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.796"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.794"
+            app:srcCompat="@drawable/iryou" />
 
     <ImageView
             android:id="@+id/imageView4"
@@ -66,11 +66,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.796"
+            app:layout_constraintHorizontal_bias="0.814"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.799"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:srcCompat="@drawable/sports" />
 
     <ImageView
             android:id="@+id/imageView5"
@@ -82,7 +82,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.728"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:srcCompat="@drawable/music" />
 
     <ImageView
             android:id="@+id/imageView2"
@@ -90,11 +90,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.469"
+            app:layout_constraintHorizontal_bias="0.453"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.654"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.67"
+            app:srcCompat="@drawable/curieita" />
 
     <ImageView
             android:id="@+id/imageView3"
@@ -102,11 +102,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintHorizontal_bias="0.622"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.711"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.71"
+            app:srcCompat="@drawable/it" />
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -260,13 +260,13 @@
             android:id="@+id/imageView"
             android:layout_width="85dp"
             android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
+            app:layout_constraintBottom_toBottomOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.372"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.604"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintHorizontal_bias="0.389"
+            app:layout_constraintStart_toEndOf="@id/MapImage"
+            app:layout_constraintTop_toTopOf="@+id/MapImage"
+            app:layout_constraintVertical_bias="0.37"
+            app:srcCompat="@drawable/tecnoroji" />
 
 
 </android.support.constraint.ConstraintLayout>

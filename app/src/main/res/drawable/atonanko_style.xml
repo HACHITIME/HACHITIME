@@ -3,7 +3,7 @@
         android:shape="rectangle">
 
     <!-- 背景色 -->
-    <solid android:color="#00ff00" />
+    <solid android:color="#1e90ff" />
 
     <!-- 角の丸み -->
     <corners android:radius="30dp" />
@@ -12,7 +12,7 @@
 
     <stroke
             android:width="4dp"
-            android:color="#adff2f" />
+            android:color="#afeeee" />
 
     <!-- グラデーション -->
     <!-- angle:角度、type:linear(=線形) -->
