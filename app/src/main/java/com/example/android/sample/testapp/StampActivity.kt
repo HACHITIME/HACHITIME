@@ -23,7 +23,7 @@ open class StampActivity : AppCompatActivity() {
             val args = Bundle(0)
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[0])
-            args.putInt("stamp_image", "@drawable/tecnoroji")
+            args.putString("stamp_image", stampImage[0])
             dialog.show(supportFragmentManager, "simple")
 
         }
