@@ -42,11 +42,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintHorizontal_bias="0.54"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.427"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.422"
+            app:srcCompat="@drawable/fukidasi_desain" />
 
     <ImageView
             android:id="@+id/imageView6"
@@ -54,11 +54,11 @@
             android:layout_height="44dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintHorizontal_bias="0.522"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.796"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.782"
+            app:srcCompat="@drawable/fikidasai_iryou" />
 
     <ImageView
             android:id="@+id/imageView4"
@@ -66,23 +66,25 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.796"
+            app:layout_constraintHorizontal_bias="0.78"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.799"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.74"
+            app:srcCompat="@drawable/fukidasaisports" />
 
     <ImageView
             android:id="@+id/imageView5"
             android:layout_width="85dp"
             android:layout_height="53dp"
+            android:background="#00FFFFFF"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.348"
+            app:layout_constraintHorizontal_bias="0.326"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.728"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.721"
+            app:srcCompat="@drawable/fukidasimusic" />
 
     <ImageView
             android:id="@+id/imageView2"
@@ -90,11 +92,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.469"
+            app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.654"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.667"
+            app:srcCompat="@drawable/fukidasi_crepachii" />
 
     <ImageView
             android:id="@+id/imageView3"
@@ -102,11 +104,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintHorizontal_bias="0.61"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.711"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.735"
+            app:srcCompat="@drawable/fukidasiit" />
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -243,7 +245,7 @@
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:background="#00BCD4"
+            android:background="#17BBF1"
             android:gravity="center"
             android:text="あと7個 手に入れよう！"
             android:textColor="#FFFFFF"
@@ -251,21 +253,32 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <ImageView
             android:id="@+id/imageView"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
+            android:layout_width="87dp"
+            android:layout_height="54dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintHorizontal_bias="0.349"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.604"
-            app:srcCompat="@drawable/desain_paccie" />
+            app:layout_constraintVertical_bias="0.562"
+            app:srcCompat="@drawable/fukidasitecno" />
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="88dp"
+            android:text="デバック用裏技ボタン"
+            app:layout_constraintBottom_toBottomOf="@+id/MapImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
