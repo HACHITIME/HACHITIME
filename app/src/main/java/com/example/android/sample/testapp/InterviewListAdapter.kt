@@ -1,13 +1,13 @@
 package com.example.android.sample.testapp
 
 import android.content.Context
-import android.util.Log
+import android.support.constraint.ConstraintLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.nifcloud.mbaas.core.NCMBObject
-import com.nifcloud.mbaas.core.NCMBQuery
+import kotlin.collections.ArrayList
 
 
 class InterviewListAdapter(
@@ -15,18 +15,23 @@ class InterviewListAdapter(
     private val image: ArrayList<String>,
     private val name: ArrayList<String>,
     private val subject: ArrayList<String>,
-    private val id: ArrayList<String>
-
+    private val interviewDetaile: ArrayList<InterviewListDetaileAdapter>,
+    private val objects: List<NCMBObject>,
+    private val question: ArrayList<String>, // 質問内容
+    private val answer: ArrayList<String>, // 回答内容
+    private val interviewStudentIds: ArrayList<String>
 ) : BaseAdapter() {
-    val question = arrayListOf<String>()
-    val answer = arrayListOf<String>()
+    val studentImages = arrayListOf<String>() // 画像
+    val studentNames = arrayListOf<String>() // 氏名
+    val studentSubjects = arrayListOf<String>() // 学科
+
 
     // ビューホルダー
     private class ViewHolder(view: View) {
         val studentImage = view.findViewById<ImageView>(R.id.studentImage)
         val studentName = view.findViewById<TextView>(R.id.studentName)
         val studentSubject = view.findViewById<TextView>(R.id.studentSubject)
-        val interviewDetaileList = view.findViewById<ListView>(R.id.interviewDetaileList)
+        // val interviewDetaileList = view.findViewById<ListView>(R.id.interviewDetaileList)
     }
 
 
@@ -50,7 +55,35 @@ class InterviewListAdapter(
         viewHolder.studentImage.setImageResource(imgId) // 質問Noを配置
         viewHolder.studentName.text = name[position] // 質問内容を配置
         viewHolder.studentSubject.text = subject[position] // 回答内容を表示
+        // viewHolder.interviewDetaileList.adapter = interviewDetaile[position]
 
+        val interviewList = view.findViewById<LinearLayout>(R.id.interviewDetaileList)
+        val interviewDetaileList = view.findViewById<ConstraintLayout>(R.id.linearLayout3)
+        interviewList.addView(interviewDetaileList)
+
+
+
+        for (obj in objects) {
+            val targetQuestion = arrayListOf<String>() // 対象学生の質問内容
+            val targetAnswer = arrayListOf<String>() // 対象学生の回答内容
+            // DBからの取得情報を配列へ追加
+            studentImages.add(obj.getString("studentImage"))
+            studentNames.add(obj.getString("studentName"))
+            studentSubjects.add(obj.getString("subject"))
+            // 対象の質問内容と回答内容を取得
+            for (i in 0..question.size-1) {
+                if (interviewStudentIds[i] == obj.getString("objectId")) {
+                    targetQuestion.add(question[i])
+                    targetAnswer.add(answer[i])
+                }
+            }
+            // インタビュー詳細のアダプタを作成
+            val adapterInterviewDetaileList = InterviewListDetaileAdapter(context, targetQuestion, targetAnswer)
+            // interviewDetailes.add(adapterInterviewDetaileList)
+            // viewHolder.interviewDetaileList.adapter = adapterInterviewDetaileList
+        }
+
+        /*
         // FacilityMasterから施設情報を取得する
         val queryInterviewDetaile = NCMBQuery<NCMBObject>("InterviewDetaile")
         queryInterviewDetaile.whereEqualTo("studentObjectId", id[position]) // 条件：対象学生のインタビュー詳細を指定
@@ -72,12 +105,13 @@ class InterviewListAdapter(
                 viewHolder.interviewDetaileList.adapter = adapterInterviewDetaileList
             }
         }
+        */
 
         return view
     }
 
 
-        override fun getItem(position: Int): Any {
+    override fun getItem(position: Int): Any {
         return image[position]
     }
 
