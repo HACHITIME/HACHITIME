@@ -16,7 +16,9 @@ open class HopupDialog : DialogFragment() {
         // ダイアログの作成
         val dialog = Dialog(getActivity())
         dialog.setContentView(R.layout.stamp_hopup)
+        //施設名取得
         dialog.findViewById<TextView>(R.id.Facility_Name).setText(arguments!!.getString("stamp_name"))
+        //画像取得
         dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(arguments!!.getInt("stamp_image"))
 
         // 「X」ボタン投下時の処理

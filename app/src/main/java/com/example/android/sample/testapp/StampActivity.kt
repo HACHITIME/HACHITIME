@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_stamp.*
 open class StampActivity : AppCompatActivity() {
 
     val stampName = arrayListOf<String>("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟")
-    val stampImage= arrayListOf<String>("@drawable/tecnoroji","2","3","4","5","6","7" )
+    val stampImage= arrayListOf<String>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ open class StampActivity : AppCompatActivity() {
             val args = Bundle(0)
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[0])
-            args.putString("stamp_image", stampImage[0])
+            args.putInt("stamp_image", "@drawable/tecnoroji")
             dialog.show(supportFragmentManager, "simple")
 
         }
