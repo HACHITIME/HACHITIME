@@ -7,6 +7,9 @@ import kotlinx.android.synthetic.main.activity_stamp.*
 
 open class StampActivity : AppCompatActivity() {
 
+    val ImageId = arrayListOf<String>("1","2","3","4","5","6","7" )
+    val stampName = arrayListOf<String>("a","b","c","d","e","f","g")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,6 +80,7 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // スタンプ詳細を渡す
             val args = Bundle()
+            args.putString("stamp_name", stampName[0])
             dialog.setArguments(args)
             dialog.show(supportFragmentManager, "simple")
 
