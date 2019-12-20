@@ -10,14 +10,14 @@ import kotlinx.android.synthetic.main.activity_stamp.*
 
 
 open class StampActivity : AppCompatActivity() {
-    var itcare = 0
-    var desain =0
-    var kanngo=0
-    var kurieita=0
-    var music =0
-    var sports=0
-    var technology =0
-    var goukei =0
+    var itcare = 1
+    var desain =1
+    var kanngo=1
+    var kurieita=1
+    var music =1
+    var sports=1
+    var technology =1
+    var goukei =itcare+desain+kanngo+kurieita+music+sports+technology
     val stampName = arrayListOf("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟")
 
 
@@ -140,11 +140,18 @@ open class StampActivity : AppCompatActivity() {
             dialog.setArguments(args)
             dialog.show(supportFragmentManager, "simple")
         }
+        if(goukei==0){
+            textView2.setText("特典画像をGET!!")
+//半透明にする処理
+        }else{
+            //ちゃんと表示させる
 
+            textView2.setText("あとスタンプを"+goukei+"個ゲット")
+        }
 
 
         // ITぱっちぃの表示
-        if (itcare==0){
+        if (itcare==1){
             val imageView3 = findViewById<ImageView>(R.id.imageView3)
             imageView3.setImageResource(R.drawable.unknown_it)
 
@@ -154,7 +161,7 @@ open class StampActivity : AppCompatActivity() {
         }
 
         //デザインぱっちぃの表示
-        if ( desain==0){
+        if ( desain==1){
             val imageView7 = findViewById<ImageView>(R.id.imageView7)
             imageView7.setImageResource(R.drawable.unknown_desain)
 //半透明にする処理
@@ -163,7 +170,7 @@ open class StampActivity : AppCompatActivity() {
             imageView2.setImageResource(R.drawable.fukidasi_desain)
         }
 //看護ぱっちぃの表示
-        if ( kanngo==0){
+        if ( kanngo==1){
             val imageView6 = findViewById<ImageView>(R.id.imageView6)
             imageView6.setImageResource(R.drawable.unknown_iryou)
 
@@ -172,7 +179,7 @@ open class StampActivity : AppCompatActivity() {
             imageView6.setImageResource(R.drawable.fikidasai_iryou)
         }
         //クリエイティブぱっちぃの表示
-        if ( kurieita==0){
+        if ( kurieita==1){
             val imageView2 = findViewById<ImageView>(R.id.imageView2)
             imageView2.setImageResource(R.drawable.unknown_crepachii)
 
@@ -181,7 +188,7 @@ open class StampActivity : AppCompatActivity() {
             imageView2.setImageResource(R.drawable.fukidasi_crepachii)
         }
         //音楽ぱっちぃの表示
-        if ( music==0){
+        if ( music==1){
             val imageView5 = findViewById<ImageView>(R.id.imageView5)
             imageView5.setImageResource(R.drawable.unknown_music)
 
@@ -190,7 +197,7 @@ open class StampActivity : AppCompatActivity() {
             imageView5.setImageResource(R.drawable.fukidasimusic)
         }
         //スポーツぱっちぃの表示
-        if ( sports==0){
+        if ( sports==1){
             val imageView4 = findViewById<ImageView>(R.id.imageView4)
             imageView4.setImageResource(R.drawable.unknown_sports)
 
@@ -199,7 +206,7 @@ open class StampActivity : AppCompatActivity() {
             imageView2.setImageResource(R.drawable.fukidasaisports)
         }
         //テクノロジーぱっちぃの表示
-        if ( technology==0){
+        if ( technology==1){
             val imageView = findViewById<ImageView>(R.id.imageView)
             imageView.setImageResource(R.drawable.unknown_tecno)
 
@@ -212,134 +219,7 @@ open class StampActivity : AppCompatActivity() {
 
 
 
-        //スタンプ７個を押した時のアクション
-        imageView.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "tecnoroji",
-                "drawable",
-                packageName
-            )
 
-            // スタンプ詳細を渡す
-            val args = Bundle(0)
-            dialog.setArguments(args)
-            args.putString("stamp_name", stampName[0])
-            args.putInt("stamp_image", imgId)
-            dialog.show(supportFragmentManager, "simple")
-
-        }
-
-        imageView2.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "curieita",
-                "drawable",
-                packageName
-            )
-            // スタンプ詳細を渡す
-            val args = Bundle()
-            dialog.setArguments(args)
-            args.putString("stamp_name", stampName[1])
-            args.putInt("stamp_image", imgId)
-            dialog.show(supportFragmentManager, "simple")
-
-        }
-
-        imageView3.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "it",
-                "drawable",
-                packageName
-            )
-            // スタンプ詳細を渡す
-            val args = Bundle()
-            dialog.setArguments(args)
-            args.putString("stamp_name", stampName[2])
-            args.putInt("stamp_image", imgId)
-            dialog.show(supportFragmentManager, "simple")
-
-        }
-
-        imageView4.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "sports",
-                "drawable",
-                packageName
-            )
-            // スタンプ詳細を渡す
-            val args = Bundle()
-            dialog.setArguments(args)
-            args.putString("stamp_name", stampName[3])
-            args.putInt("stamp_image", imgId)
-            dialog.show(supportFragmentManager, "simple")
-
-        }
-
-        imageView5.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "music",
-                "drawable",
-                packageName
-            )
-            // スタンプ詳細を渡す
-            val args = Bundle()
-            dialog.setArguments(args)
-            args.putString("stamp_name", stampName[4])
-            args.putInt("stamp_image", imgId)
-            dialog.show(supportFragmentManager, "simple")
-
-        }
-
-        imageView6.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "music",
-                "drawable",
-                packageName
-            )
-            // スタンプ詳細を渡す
-            val args = Bundle()
-            dialog.setArguments(args)
-            args.putString("stamp_name", stampName[5])
-            args.putInt("stamp_image", imgId)
-            dialog.show(supportFragmentManager, "simple")
-
-        }
-
-        imageView7.setOnClickListener {
-            // スタンプ詳細ダイアログをを表示
-            val dialog = HopupDialog()
-            // 画像をidに変換
-            val imgId = resources.getIdentifier(
-                "desain",
-                "drawable",
-                packageName
-            )
-            // スタンプ詳細を渡す
-            val args = Bundle()
-            args.putString("stamp_name", stampName[6])
-            args.putInt("stamp_image", imgId)
-            dialog.setArguments(args)
-            dialog.show(supportFragmentManager, "simple")
-
-
-        }
         button.setOnClickListener {
             // スタンプ詳細ダイアログをを表示
             desain =1
@@ -351,12 +231,7 @@ open class StampActivity : AppCompatActivity() {
                 //ちゃんと表示させる
                 imageView2.setImageResource(R.drawable.fukidasi_desain)
             }
-            if(desain==0&&kanngo==0&&kurieita==0&&music==0&&sports==0&&technology==0){
 
-//半透明にする処理
-            }else{
-                //ちゃんと表示させる
-            }
 
 
         }
