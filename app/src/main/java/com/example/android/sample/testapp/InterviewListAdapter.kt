@@ -7,39 +7,45 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.nifcloud.mbaas.core.NCMBObject
+import kotlinx.android.synthetic.main.interview_list_view.view.*
+import org.w3c.dom.Text
 import kotlin.collections.ArrayList
 
 
 class InterviewListAdapter(
     private val context: Context,
-    private val image: ArrayList<String>,
-    private val name: ArrayList<String>,
-    private val subject: ArrayList<String>,
-    private val interviewDetaile: ArrayList<InterviewListDetaileAdapter>,
-    private val objects: List<NCMBObject>,
-    private val question: ArrayList<String>, // 質問内容
-    private val answer: ArrayList<String>, // 回答内容
-    private val interviewStudentIds: ArrayList<String>
+    private val objects: List<NCMBObject>, // 選択カレッジのインタビュー情報
+    private val studentIds: ArrayList<String>, // 対象の学生ID
+    private val questions: ArrayList<String>, // 質問内容
+    private val answers: ArrayList<String> // 回答内容
 ) : BaseAdapter() {
-    val studentImages = arrayListOf<String>() // 画像
-    val studentNames = arrayListOf<String>() // 氏名
-    val studentSubjects = arrayListOf<String>() // 学科
-
+    // 変数・配列の作成
 
     // ビューホルダー
     private class ViewHolder(view: View) {
         val studentImage = view.findViewById<ImageView>(R.id.studentImage)
         val studentName = view.findViewById<TextView>(R.id.studentName)
         val studentSubject = view.findViewById<TextView>(R.id.studentSubject)
-        // val interviewDetaileList = view.findViewById<ListView>(R.id.interviewDetaileList)
+        val interviewDetaileList = view.findViewById<LinearLayout>(R.id.interviewDetaileList)
     }
 
 
     // 与えられた情報からViewを作成し返す
-    private fun createView(parent: ViewGroup?) : View {
+    private fun createView(parent: ViewGroup?, position: Int) : View {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.interview_list_view, parent, false)
         view.tag = ViewHolder(view)
+
+        /*for (i in 0..studentIds.size-1) {
+            if (studentIds[i] == objects[position].getString("objectId")) {
+                // インタビュー内容を表示するためのViewを作成
+                val interviewDetaile = inflater.inflate(R.layout.interview_list_detaile_view, parent, false)
+                // interviewDetaile.findViewById<TextView>(R.id.question).text = questions[i]
+                // interviewDetaile.findViewById<TextView>(R.id.answer).text = answers[i]
+                view.interviewDetaileList.addView(interviewDetaile)
+
+            }
+        }*/
 
         return view
     }
@@ -47,72 +53,40 @@ class InterviewListAdapter(
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         // ビューの作成
-        val view = convertView ?: createView(parent)
+        val view = convertView ?: createView(parent, position)
         val viewHolder = view.tag as ViewHolder
 
-        // 施設名と施設画像を配置
-        val imgId = context.resources.getIdentifier("interview_list_" + image[position], "drawable", context.packageName) // 施設画像のIDを取得
-        viewHolder.studentImage.setImageResource(imgId) // 質問Noを配置
-        viewHolder.studentName.text = name[position] // 質問内容を配置
-        viewHolder.studentSubject.text = subject[position] // 回答内容を表示
-        // viewHolder.interviewDetaileList.adapter = interviewDetaile[position]
+        // 学生画像・氏名・学科を配置
+        val studentImage = "interview_list_" + objects[position].getString("studentImage")
+        val studentName = objects[position].getString("studentName")
+        val studentSubject = objects[position].getString("subject")
 
-        val interviewList = view.findViewById<LinearLayout>(R.id.interviewDetaileList)
-        val interviewDetaileList = view.findViewById<ConstraintLayout>(R.id.linearLayout3)
-        interviewList.addView(interviewDetaileList)
+        view.interviewDetaileList.removeAllViews()
 
+        for (i in 0..studentIds.size-1) {
+            if (studentIds[i] == objects[position].getString("objectId")) {
+                // インタビュー内容を表示するためのViewを作成
+                val inflater = LayoutInflater.from(context)
+                val interviewDetaile = inflater.inflate(R.layout.interview_list_detaile_view, parent, false)
+                interviewDetaile.findViewById<TextView>(R.id.question).text = questions[i]
+                interviewDetaile.findViewById<TextView>(R.id.answer).text = answers[i]
+                view.interviewDetaileList.addView(interviewDetaile)
 
-
-        for (obj in objects) {
-            val targetQuestion = arrayListOf<String>() // 対象学生の質問内容
-            val targetAnswer = arrayListOf<String>() // 対象学生の回答内容
-            // DBからの取得情報を配列へ追加
-            studentImages.add(obj.getString("studentImage"))
-            studentNames.add(obj.getString("studentName"))
-            studentSubjects.add(obj.getString("subject"))
-            // 対象の質問内容と回答内容を取得
-            for (i in 0..question.size-1) {
-                if (interviewStudentIds[i] == obj.getString("objectId")) {
-                    targetQuestion.add(question[i])
-                    targetAnswer.add(answer[i])
-                }
-            }
-            // インタビュー詳細のアダプタを作成
-            val adapterInterviewDetaileList = InterviewListDetaileAdapter(context, targetQuestion, targetAnswer)
-            // interviewDetailes.add(adapterInterviewDetaileList)
-            // viewHolder.interviewDetaileList.adapter = adapterInterviewDetaileList
-        }
-
-        /*
-        // FacilityMasterから施設情報を取得する
-        val queryInterviewDetaile = NCMBQuery<NCMBObject>("InterviewDetaile")
-        queryInterviewDetaile.whereEqualTo("studentObjectId", id[position]) // 条件：対象学生のインタビュー詳細を指定
-        queryInterviewDetaile.addOrderByAscending("questionNo") // 質問Noの昇順
-        queryInterviewDetaile.findInBackground { objects, e ->
-            if (e != null) {
-                // エラー
-                Log.d("[Error]", e.toString())
-            } else {
-                // 成功
-                for (obj in objects) {
-                    // DBからの取得情報を配列へ追加
-                    question.add(obj.getString("question"))
-                    answer.add(obj.getString("answer"))
-                }
-                // interviewDetaileListのadapterを作成
-                val adapterInterviewDetaileList = InterviewListDetaileAdapter(context, question, answer)
-                // facilityDetaileListにadapterをセット
-                viewHolder.interviewDetaileList.adapter = adapterInterviewDetaileList
             }
         }
-        */
+
+        // 学生画像・氏名・学科を配置
+        val imgId = context.resources.getIdentifier(studentImage, "drawable", context.packageName) // 施設画像のIDを取得
+        viewHolder.studentImage.setImageResource(imgId) // 画像を配置
+        viewHolder.studentName.text = studentName // 氏名を配置
+        viewHolder.studentSubject.text = studentSubject // 学科を表示
 
         return view
     }
 
 
     override fun getItem(position: Int): Any {
-        return image[position]
+        return objects[position]
     }
 
 
@@ -122,7 +96,11 @@ class InterviewListAdapter(
 
 
     override fun getCount(): Int {
-        return image.size
+        return objects.size
+    }
+
+    override fun isEnabled(position: Int): Boolean {
+        return false
     }
 
 }
