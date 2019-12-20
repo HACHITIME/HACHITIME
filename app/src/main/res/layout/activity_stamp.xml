@@ -5,7 +5,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".StampActivity">
-
     <!--
     <ImageView
             android:id="@+id/modol_btn"
@@ -22,7 +21,6 @@
             app:srcCompat="@drawable/toolbar_modol" />
      -->
 
-
     <ImageView
             android:id="@+id/MapImage"
             android:layout_width="0dp"
@@ -32,7 +30,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:srcCompat="@drawable/map_image" />
 
@@ -46,7 +43,7 @@
             app:layout_constraintStart_toEndOf="@id/MapImage"
             app:layout_constraintTop_toTopOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.37"
-            app:srcCompat="@drawable/tecnoroji" />
+            app:srcCompat="@drawable/fukidasitecno" />
 
     <ImageView
             android:id="@+id/imageView2"
@@ -58,7 +55,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.67"
-            app:srcCompat="@drawable/curieita" />
+            app:srcCompat="@drawable/fukidasi_desain" />
 
     <ImageView
             android:id="@+id/imageView3"
@@ -70,7 +67,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.71"
-            app:srcCompat="@drawable/it" />
+            app:srcCompat="@drawable/fukidasiit" />
 
     <ImageView
             android:id="@+id/imageView4"
@@ -78,11 +75,11 @@
             android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.814"
+            app:layout_constraintHorizontal_bias="0.782"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.799"
-            app:srcCompat="@drawable/sports" />
+            app:srcCompat="@drawable/fukidasaisports" />
 
     <ImageView
             android:id="@+id/imageView5"
@@ -94,19 +91,20 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.728"
-            app:srcCompat="@drawable/music" />
+            app:srcCompat="@drawable/fukidasimusic" />
+
 
     <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="64dp"
-            android:layout_height="44dp"
+            android:layout_width="85dp"
+            android:layout_height="53dp"
             app:layout_constraintBottom_toTopOf="@+id/MapImage"
             app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.794"
-            app:srcCompat="@drawable/iryou" />
+            app:layout_constraintVertical_bias="0.799"
+            app:srcCompat="@drawable/fikidasai_iryou" />
 
     <ImageView
             android:id="@+id/imageView7"
@@ -118,13 +116,11 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.427"
-            app:srcCompat="@drawable/desain" />
-
+            app:srcCompat="@drawable/fukidasi_desain" />
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="60dp"
-
             android:background="@drawable/toolbar_style"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
@@ -134,7 +130,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
-
     <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -147,67 +142,52 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             app:layout_constraintVertical_bias="1.0">
-
         <ImageButton
                 android:id="@+id/school_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_weight="1"
                 android:background="@drawable/toolbar_flame_style"
                 android:contentDescription="@string/school_btn"
                 app:srcCompat="@drawable/toolbar_school" />
-
         <ImageButton
                 android:id="@+id/map_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/toolbar_flame_style"
                 android:contentDescription="@string/school_btn"
                 app:srcCompat="@drawable/toolbar_map" />
-
         <ImageButton
                 android:id="@+id/stamp_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/toolbar_flame_style"
                 android:contentDescription="@string/school_btn"
                 app:srcCompat="@drawable/toolbar_stamp" />
-
         <ImageButton
                 android:id="@+id/info_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/toolbar_flame_style"
                 android:contentDescription="@string/school_btn"
                 app:srcCompat="@drawable/toolbar_info" />
-
         <ImageButton
                 android:id="@+id/bus_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/toolbar_flame_style"
                 android:contentDescription="@string/school_btn"
                 app:srcCompat="@drawable/toolbar_bus" />
-
-
     </LinearLayout>
-
-
     <ImageButton
             android:id="@+id/modol_btn"
             android:layout_width="41dp"
@@ -221,7 +201,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.785"
             app:srcCompat="@drawable/toolbar_modoru" />
-
     <TextView
             android:id="@+id/tytle"
             android:layout_width="195dp"
@@ -237,7 +216,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.025" />
-
     <View
             android:id="@+id/view"
             android:layout_width="fill_parent"
@@ -250,7 +228,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
     <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
@@ -268,5 +245,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 </android.support.constraint.ConstraintLayout>
