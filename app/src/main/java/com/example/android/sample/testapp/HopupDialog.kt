@@ -17,6 +17,7 @@ open class HopupDialog : DialogFragment() {
         dialog.findViewById<TextView>(R.id.Facility_Name).setText(arguments!!.getString("stamp_name"))
         //画像取得
         dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(arguments!!.getInt("stamp_image"))
+
         // 「X」ボタン投下時の処理
         dialog.findViewById<Button>(R.id.close_btn).setOnClickListener(View.OnClickListener {
             // ダイアログを閉じる
