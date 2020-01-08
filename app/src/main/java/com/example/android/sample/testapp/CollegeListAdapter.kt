@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 
 class CollegeListAdapter(
@@ -14,7 +15,7 @@ class CollegeListAdapter(
 
     // ビューホルダー
     private class ViewHolder(view: View) {
-        val collegeName = view.findViewById<TextView>(R.id.collegeName)
+        val collegeImage = view.findViewById<ImageView>(R.id.collegeImage)
     }
 
 
@@ -33,10 +34,9 @@ class CollegeListAdapter(
         val view = convertView ?: createView(parent)
         val viewHolder = view.tag as ViewHolder
 
-        // 施設名を指定
-        viewHolder.collegeName.text = name[position]
-        viewHolder.collegeName.setBackgroundResource(R.drawable.interview_list_listitem)
-        // viewHolder.collegeName.setBackgroundColor(Color.parseColor("RED"))
+        // 施設画像を配置
+        val imgId = context.resources.getIdentifier("college_list_" + name[position], "drawable", context.packageName) // 施設画像のIDを取得
+        viewHolder.collegeImage.setImageResource(imgId)
 
         return view
     }

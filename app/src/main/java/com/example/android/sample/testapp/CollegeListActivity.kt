@@ -14,11 +14,11 @@ class CollegeListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_college_list_activity)
+        setContentView(R.layout.activity_college_list)
 
         /** 変数・配列の作成 **/
         val collegeId = arrayListOf<String>()
-        val collegeName = arrayListOf<String>()
+        val collegeImage = arrayListOf<String>()
 
         /** パーツの取得 **/
         val collegeList = findViewById<GridView>(R.id.collegeList) // カレッジ名
@@ -39,10 +39,10 @@ class CollegeListActivity : AppCompatActivity() {
                 for (obj in objects) {
                     // DBからの取得情報を配列へ追加
                     collegeId.add(obj.getString("objectId"))
-                    collegeName.add(obj.getString("collegeName") + "\nカレッジ")
+                    collegeImage.add(obj.getString("collegeImage"))
                 }
                 // adapterを作成
-                val adapter = CollegeListAdapter(this, collegeName)
+                val adapter = CollegeListAdapter(this, collegeImage)
                 // facilityListにadapterをセット
                 collegeList.adapter = adapter
             }

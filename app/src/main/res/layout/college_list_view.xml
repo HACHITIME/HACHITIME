@@ -3,15 +3,27 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/college_list_listitem">
 
+    <ImageView
+            android:id="@+id/collegeImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/college_list_desain" />
+
+    <!--
     <TextView
             android:id="@+id/collegeName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/interview_list_listitem"
-            android:paddingTop="40dp"
-            android:paddingBottom="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/white"
@@ -22,4 +34,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="カレッジ名" />
+    -->
+
 </android.support.constraint.ConstraintLayout>
