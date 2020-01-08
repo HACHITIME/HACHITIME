@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_stamp.*
+import kotlinx.android.synthetic.main.map_hopup.*
+import kotlinx.android.synthetic.main.stamp_hopup.*
 
 
 open class StampActivity : AppCompatActivity() {
@@ -19,6 +21,10 @@ open class StampActivity : AppCompatActivity() {
     var technology =1
     var goukei =itcare+desain+kanngo+kurieita+music+sports+technology
     val stampName = arrayListOf("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟")
+    val syutoku= arrayListOf("獲得状況：未取得", "取得状況：取得済み")
+    var syutoku_id=0
+
+
 
 
 
@@ -26,14 +32,14 @@ open class StampActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stamp)
-        //furuya
+
         //スタンプ７個を押した時のアクション
         imageView.setOnClickListener {
             // スタンプ詳細ダイアログをを表示
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
-                "tecnoroji",
+                "namami_unknown_tecnoo",
                 "drawable",
                 packageName
             )
@@ -42,6 +48,9 @@ open class StampActivity : AppCompatActivity() {
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[0])
             args.putInt("stamp_image", imgId)
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
+
             dialog.show(supportFragmentManager, "simple")
         }
         imageView2.setOnClickListener {
@@ -49,15 +58,28 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
+                "namami_unknown_cre",
+                "drawable",
+                packageName)
+
+            val imgId2 = resources.getIdentifier(
                 "curieita",
                 "drawable",
-                packageName
-            )
+                packageName)
+
             // スタンプ詳細を渡す
             val args = Bundle()
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[1])
-            args.putInt("stamp_image", imgId)
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
+
+            //取得id判定　1なら明るい画像を出す
+            if(syutoku_id==0) {
+                args.putInt("stamp_image", imgId)
+            }else{
+                args.putInt("stamp_image", imgId2)
+            }
             dialog.show(supportFragmentManager, "simple")
         }
         imageView3.setOnClickListener {
@@ -65,7 +87,7 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
-                "it",
+                "namami_unknown_it",
                 "drawable",
                 packageName
             )
@@ -74,6 +96,9 @@ open class StampActivity : AppCompatActivity() {
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[2])
             args.putInt("stamp_image", imgId)
+
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
             dialog.show(supportFragmentManager, "simple")
         }
         imageView4.setOnClickListener {
@@ -81,7 +106,7 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
-                "sports",
+                "namami_unknown_sports",
                 "drawable",
                 packageName
             )
@@ -90,6 +115,8 @@ open class StampActivity : AppCompatActivity() {
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[3])
             args.putInt("stamp_image", imgId)
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
             dialog.show(supportFragmentManager, "simple")
         }
         imageView5.setOnClickListener {
@@ -97,7 +124,7 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
-                "music",
+                "namami_unknown_music",
                 "drawable",
                 packageName
             )
@@ -106,6 +133,8 @@ open class StampActivity : AppCompatActivity() {
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[4])
             args.putInt("stamp_image", imgId)
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
             dialog.show(supportFragmentManager, "simple")
         }
         imageView6.setOnClickListener {
@@ -113,7 +142,7 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
-                "iryou",
+                "namami_unknown_iryou",
                 "drawable",
                 packageName
             )
@@ -122,6 +151,8 @@ open class StampActivity : AppCompatActivity() {
             dialog.setArguments(args)
             args.putString("stamp_name", stampName[5])
             args.putInt("stamp_image", imgId)
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
             dialog.show(supportFragmentManager, "simple")
         }
         imageView7.setOnClickListener {
@@ -129,15 +160,17 @@ open class StampActivity : AppCompatActivity() {
             val dialog = HopupDialog()
             // 画像をidに変換
             val imgId = resources.getIdentifier(
-                "desain",
+                "namami_unknown_desain",
                 "drawable",
                 packageName
             )
             // スタンプ詳細を渡す
             val args = Bundle()
+            dialog.setArguments(args)
             args.putString("stamp_name", stampName[6])
             args.putInt("stamp_image", imgId)
-            dialog.setArguments(args)
+            //取得状況を渡す
+            args.putString("syutoku", syutoku[syutoku_id])
             dialog.show(supportFragmentManager, "simple")
         }
         if(goukei==0){
@@ -230,6 +263,14 @@ open class StampActivity : AppCompatActivity() {
             }else{
                 //ちゃんと表示させる
                 imageView2.setImageResource(R.drawable.fukidasi_desain)
+                //取得IDを１にする（未取得から取得済み状態にする）
+                syutoku_id=1
+
+
+
+
+
+
             }
 
 

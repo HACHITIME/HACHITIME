@@ -1,66 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-<LinearLayout
-        android:id="@+id/Hopup"
-        android:layout_width="290dp"
-        android:layout_height="360dp"
-        android:background="@drawable/map_hopup_style"
-        android:orientation="vertical"
-        android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    <TextView
-            android:id="@+id/Hopup_tytle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/map_hopup_style"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="スタンプ確認"
-            android:textSize="30dp" />
-    <ImageView
-            android:id="@+id/ImageViewArea"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:srcCompat="@drawable/desain_paccie" />
-    <TextView
-            android:id="@+id/Facility_Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="@string/facility_name2"
-            android:textSize="30dp" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
-            android:id="@+id/button_area"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:orientation="horizontal"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp">
+            android:id="@+id/Hopup"
+            android:layout_width="290dp"
+            android:layout_height="360dp"
+            android:background="@drawable/map_hopup_style"
+            android:orientation="vertical"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-                android:id="@+id/textView"
+                android:id="@+id/Hopup_tytle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/map_hopup_style"
+                android:fontFamily="sans-serif"
                 android:gravity="center"
-                android:text="スタンプ未取得or取得" />
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="スタンプ獲得"
+                android:textSize="30dp" />
+
+        <ImageView
+                android:id="@+id/ImageViewArea"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/desain_paccie" />
+
+        <TextView
+                android:id="@+id/Facility_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/facility_name"
+                android:textSize="30dp" />
+
+        <LinearLayout
+                android:id="@+id/button_area"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+            <FrameLayout
+                    android:id="@+id/Blank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"></FrameLayout>
+
+            <Button
+                    android:id="@+id/direction_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/map_hopupbtn_style"
+                    android:text="道案内"
+                    android:textSize="14dp" />
+
+            <FrameLayout
+                    android:id="@+id/Blank2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+            </FrameLayout>
+
+            <Button
+                    android:id="@+id/facilityDetail_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/map_hopupbtn_style"
+                    android:text="施設詳細画面へ"
+                    android:textSize="14dp" />
+
+            <FrameLayout
+                    android:id="@+id/Blank3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/close_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/presence_offline" />
+
     </LinearLayout>
-    <Button
-            android:id="@+id/close_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@android:drawable/presence_offline" />
-</LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
