@@ -1,113 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="false">
 
-    <ImageButton
-            android:id="@+id/school_btn"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
 
+            android:background="@drawable/toolbar_style"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <!--
+    <ImageView
+            android:id="@+id/modol_btn"
+            android:layout_width="30dp"
+            android:layout_height="34dp"
+            android:background="@drawable/toolbar_flame_style"
+            android:contentDescription="@string/modol_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.705"
+            app:srcCompat="@drawable/toolbar_modol" />
+     -->
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_school_btn"
-            android:contentDescription="@string/school_btn" />
+
+            app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+                android:id="@+id/school_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/school_btn"
+                app:srcCompat="@drawable/toolbar_school" />
+
+        <ImageButton
+                android:id="@+id/map_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="3.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/school_btn"
+                app:srcCompat="@drawable/toolbar_map" />
+
+        <ImageButton
+                android:id="@+id/stamp_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="3.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/school_btn"
+                app:srcCompat="@drawable/toolbar_stamp" />
+
+        <ImageButton
+                android:id="@+id/info_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="3.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/school_btn"
+                app:srcCompat="@drawable/toolbar_info" />
+
+        <ImageButton
+                android:id="@+id/bus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="3.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_flame_style"
+                android:contentDescription="@string/school_btn"
+                app:srcCompat="@drawable/toolbar_bus" />
+
+
+    </LinearLayout>
 
     <ImageButton
-            android:id="@+id/map_btn"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.249"
-            app:layout_constraintStart_toStartOf="@+id/school_btn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_map_btn"
-            android:contentDescription="@string/map_btn" />
-
-    <ImageButton
-            android:id="@+id/stamp_btn"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_stamp_btn"
-            android:contentDescription="@string/stamp_btn" />
-
-    <ImageButton
-            android:id="@+id/info_btn"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.747"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_info_btn"
-            android:contentDescription="@string/info_btn" />
-
-    <ImageButton
-            android:id="@+id/bus_btn"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
-            android:background="@drawable/list_flame_style"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.996"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/list_bus_btn"
-            android:contentDescription="@string/bus_btn" />
-
-    <ImageView
             android:id="@+id/modol_btn"
-            android:layout_width="33dp"
-            android:layout_height="37dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="41dp"
+            android:layout_height="32dp"
+            android:background="@drawable/toolbar_modoru_style"
+            android:contentDescription="@string/modol_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.082"
-            app:srcCompat="@drawable/list_modoru_btn"
-            android:contentDescription="@string/modol_btn" />
+            app:layout_constraintVertical_bias="0.785"
+            app:srcCompat="@drawable/toolbar_modoru" />
+
 
     <TextView
             android:id="@+id/tytle"
-            android:layout_width="164dp"
-            android:layout_height="45dp"
+            android:layout_width="195dp"
+            android:layout_height="42dp"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/infomation"
-            android:textSize="30sp"
             android:color="#000000"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.049" />
+            app:layout_constraintVertical_bias="0.025" />
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="456dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
