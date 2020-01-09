@@ -15,7 +15,7 @@ class MapActivity : AppCompatActivity() {
         tytle.text = "Map"
 
 
-        
+
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
             startActivity(intent,
