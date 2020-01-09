@@ -6,13 +6,13 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.toolbar.*
 
-class BustimeActivity : AppCompatActivity() {
+class MapActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bustime)
+        setContentView(R.layout.campasinfo)
         setContentView(R.layout.toolbar)
-        tytle.text = "BusTime"
+        tytle.text = "Map"
 
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
@@ -58,4 +58,6 @@ class BustimeActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+
+
 }

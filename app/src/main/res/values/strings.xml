@@ -8,4 +8,11 @@
     <string name="move_stamp">スタンプ一覧</string>
     <string name="text_name">Name</string>
     <string name="text_subject">Subject</string>
+    <string name="information">Information</string>
+    <string name="school_btn">TODO</string>
+    <string name="map_btn">TODO</string>
+    <string name="stamp_btn">TODO</string>
+    <string name="modol_btn">TODO</string>
+    <string name="bus_btn">TODO</string>
+    <string name="info_btn">TODO</string>
 </resources>

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.GridView
 import com.nifcloud.mbaas.core.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 
 class FacilityListActivity : AppCompatActivity() {
@@ -61,6 +62,52 @@ class FacilityListActivity : AppCompatActivity() {
             intent.putExtra("PICK_IMAGE", facilityImage[position])
             intent.putExtra("PICK_DETAILE", facilityDetaile[position])
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        // ツールバーのボタン
+        // 投下時の処理
+        school_btn.setOnClickListener {
+            val intent = Intent(this, FacilityListActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        map_btn.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        stamp_btn.setOnClickListener {
+            val intent = Intent(this, StampActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        info_btn.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        bus_btn.setOnClickListener {
+            val intent = Intent(this, BustimeActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        modol_btn.setOnClickListener {
+            super.onBackPressed()
         }
     }
 }
