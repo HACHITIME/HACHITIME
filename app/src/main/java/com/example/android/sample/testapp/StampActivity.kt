@@ -22,6 +22,7 @@ open class StampActivity : AppCompatActivity() {
     var goukei =itcare+desain+kanngo+kurieita+music+sports+technology
     val stampName = arrayListOf("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟")
     val syutoku= arrayListOf("獲得状況：未取得", "取得状況：取得済み")
+    //interview(1)~(7)
     var syutoku_id=0
     var syutoku_id2=0
     var syutoku_id3=0
