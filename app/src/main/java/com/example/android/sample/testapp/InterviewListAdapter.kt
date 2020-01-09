@@ -20,6 +20,7 @@ class InterviewListAdapter(
     private val answers: ArrayList<String> // 回答内容
 ) : BaseAdapter() {
     // 変数・配列の作成
+    val interviewListAdapter = arrayListOf<String>()
 
     // ビューホルダー
     private class ViewHolder(view: View) {
@@ -61,6 +62,7 @@ class InterviewListAdapter(
         val studentName = objects[position].getString("studentName")
         val studentSubject = objects[position].getString("subject")
 
+        // viewの初期化
         view.interviewDetaileList.removeAllViews()
 
         for (i in 0..studentIds.size-1) {
@@ -79,7 +81,7 @@ class InterviewListAdapter(
         val imgId = context.resources.getIdentifier(studentImage, "drawable", context.packageName) // 施設画像のIDを取得
         viewHolder.studentImage.setImageResource(imgId) // 画像を配置
         viewHolder.studentName.text = studentName // 氏名を配置
-        viewHolder.studentSubject.text = studentSubject // 学科を表示
+        viewHolder.studentSubject.text = studentSubject // 学科名を配置
 
         return view
     }
