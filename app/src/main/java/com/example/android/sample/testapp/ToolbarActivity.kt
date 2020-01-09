@@ -37,7 +37,7 @@ class ToolbarActivity : AppCompatActivity() {
         }
 
         info_btn.setOnClickListener {
-            val intent = Intent(this, InfoActivity::class.java)
+            val intent = Intent(this, CampusInfoActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent,

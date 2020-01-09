@@ -30,7 +30,7 @@
                 app:layout_constraintEnd_toStartOf="@id/frameLayout"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
         <Button
                 android:id="@+id/subject_btn"
@@ -54,14 +54,13 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:layout_marginBottom="3dp"
                 android:background="@drawable/campusinfo_style"
                 android:drawableTop="@drawable/interview"
                 android:paddingTop="40dp"
                 android:text="インタビュー"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tl2"
+                app:layout_constraintBottom_toTopOf="@id/frameLayout3"
                 app:layout_constraintEnd_toStartOf="@+id/document_btn"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,19 +71,18 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:layout_marginBottom="1dp"
                 android:background="@drawable/campusinfo_style"
                 android:drawableTop="@drawable/docment"
                 android:paddingTop="40dp"
                 android:text="資料請求"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tl2"
+                app:layout_constraintBottom_toTopOf="@id/frameLayout3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/frameLayout3"
                 app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
-                app:layout_constraintVertical_bias="0.077" />
+                app:layout_constraintVertical_bias="1.0" />
 
         <FrameLayout
                 android:id="@+id/frameLayout"
@@ -94,7 +92,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.13">
+                app:layout_constraintVertical_bias="0.18">
 
         </FrameLayout>
 
@@ -118,7 +116,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88">
+                app:layout_constraintVertical_bias="0.82">
 
         </FrameLayout>
 
@@ -133,43 +131,6 @@
                 app:layout_constraintTop_toTopOf="parent">
 
         </FrameLayout>
-
-        <FrameLayout
-                android:id="@+id/tl"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/frameLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-        </FrameLayout>
-
-        <FrameLayout
-                android:id="@+id/tl2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/frameLayout3">
-
-        </FrameLayout>
-
-        <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="0dp"
-                android:layout_height="65dp"
-
-                android:background="@drawable/toolbar_style"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:layout_constraintBottom_toTopOf="@+id/view"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
 
         <!--
         <ImageView
@@ -187,6 +148,22 @@
                 app:srcCompat="@drawable/toolbar_modol" />
          -->
 
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/toolbar_style"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toTopOf="@+id/ivent_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
         <LinearLayout
                 android:id="@+id/linearLayout"
