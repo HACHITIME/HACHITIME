@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ボタンが押されていない状態 -->
+    <item android:state_pressed="false">
+        <!-- shape:rectangle(=四角形) -->
+        <shape android:shape="rectangle">
+
+            <!-- 背景色 -->
+            <solid android:background="@null" />
+
+            <!-- 角の丸み -->
+            <corners android:radius="5dp" />
+
+            <!-- 枠線 width:線の幅、color:線の色 -->
+            <!--
+            <stroke
+                    android:width="3dp"
+                    android:color="#ffffff" />
+                    -->
+
+            <!-- グラデーション -->
+            <!-- angle:角度、type:linear(=線形) -->
+            <!--
+            <gradient
+                    android:angle="90"
+                    android:endColor="#008000 "
+                    android:startColor="#ffffff"
+                    android:type="linear" />
+                    -->
+
+        </shape>
+    </item>
+
+    <!-- ボタンが押された状態 -->
+    <item android:state_pressed="true">
+        <!-- shape:rectangle(=四角形) -->
+        <shape android:shape="rectangle">
+
+            <!-- 背景色 -->
+            <solid android:background="@null" />
+
+            <!-- 角の丸み -->
+            <corners android:radius="5dp" />
+
+            <!-- 枠線 width:線の幅、color:線の色 -->
+            <stroke
+                    android:width="3dp"
+                    android:color="#008000" />
+
+            <!-- グラデーション -->
+            <!-- angle:角度、type:linear(=線形) -->
+            <gradient
+                    android:angle="90"
+                    android:endColor="#008000"
+                    android:startColor="#000000"
+                    android:type="linear" />
+
+        </shape>
+    </item>
+</selector>
