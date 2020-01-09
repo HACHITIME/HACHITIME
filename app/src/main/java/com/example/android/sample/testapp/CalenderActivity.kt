@@ -1,12 +1,18 @@
 package com.example.android.sample.testapp
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import kotlinx.android.synthetic.main.activity_calender.*
 import android.webkit.WebViewClient
-
-
+import kotlinx.android.synthetic.main.activity_calender.bus_btn
+import kotlinx.android.synthetic.main.activity_calender.info_btn
+import kotlinx.android.synthetic.main.activity_calender.map_btn
+import kotlinx.android.synthetic.main.activity_calender.modol_btn
+import kotlinx.android.synthetic.main.activity_calender.stamp_btn
+import kotlinx.android.synthetic.main.activity_campusinfo.*
 
 
 class CalenderActivity : AppCompatActivity() {
@@ -17,6 +23,43 @@ class CalenderActivity : AppCompatActivity() {
 
         webview.setWebViewClient(WebViewClient())
         webview.loadUrl("https://www.neec.ac.jp/facility/calendar/")
+
+        //ツールバー
+        map_btn.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        stamp_btn.setOnClickListener {
+            val intent = Intent(this, StampActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        info_btn.setOnClickListener {
+            val intent = Intent(this, CampusInfoActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        bus_btn.setOnClickListener {
+            val intent = Intent(this, BustimeActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        modol_btn.setOnClickListener {
+            super.onBackPressed()
+        }
 
 
     }
