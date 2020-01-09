@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_bustime2.*
-import kotlinx.android.synthetic.main.activity_main.time_textview
+
 import java.util.*
 import kotlin.concurrent.schedule
 
