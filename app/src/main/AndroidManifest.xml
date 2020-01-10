@@ -13,27 +13,25 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".InterviewListActivity" />
-        <activity android:name=".CollegeListActivity">
 
-        </activity>
-        <activity android:name=".FacilityDetaileActivity" />
-        <activity android:name=".FacilityListActivity" />
-        <activity android:name=".StampActivity" />
-        <activity android:name=".BustimeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".InterviewListActivity" />
+        <activity android:name=".CollegeListActivity" />
+        <activity android:name=".FacilityDetaileActivity" />
+        <activity android:name=".FacilityListActivity" />
+        <activity android:name=".StampActivity" />
+        <activity android:name=".BustimeActivity" />
+        <activity android:name=".MapActivity"/>
         <activity android:name=".InterviewActivity" />
         <activity android:name=".DocumentActivity" />
         <activity android:name=".SubjectActivity" />
         <activity android:name=".CalenderActivity" />
-        <activity android:name=".MapActivity" />
         <activity android:name=".CampusInfoActivity" />
-        <activity android:name=".InfoActivity"/>
         <activity android:name=".ToolbarActivity" />
     </application>
 

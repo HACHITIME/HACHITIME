@@ -33,7 +33,6 @@ class FacilityDetaileDialog : DialogFragment() {
         /* ---ボタン投下時の処理-- */
         // 「マップ」ボタン投下時の処理
         dialog.findViewById<Button>(R.id.mapButton).setOnClickListener(View.OnClickListener {
-            /** 「マップ画面」完成後に実装 **/
             // マップ画面へ遷移
             val intent = Intent(context, FacilityListActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
@@ -45,7 +44,7 @@ class FacilityDetaileDialog : DialogFragment() {
         dialog.findViewById<Button>(R.id.stampButton).setOnClickListener(View.OnClickListener {
             /** 「スタンプ画面」完成後に実装 **/
             // スタンプ画面へ遷移
-            val intent = Intent(context, FacilityListActivity::class.java)
+            val intent = Intent(context, StampActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
