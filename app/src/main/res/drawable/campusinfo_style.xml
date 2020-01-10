@@ -10,7 +10,7 @@
 
     <!-- 枠線 width:線の幅、color:線の色 -->
     <stroke
-            android:width="30dp"
+            android:width="5dp"
             android:color="#00fa9a" />
 
     <!-- グラデーション -->
