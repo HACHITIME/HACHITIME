@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景色 -->
+    <solid android:color="#ffffff" />
+
+    <!-- 角の丸み -->
+    <corners android:radius="0dp" />
+
+    <!-- 枠線 width:線の幅、color:線の色 -->
+    <stroke
+            android:width="5dp"
+            android:color="#00fa9a" />
+
+    <!-- グラデーション -->
+    <!-- angle:角度、type:linear(=線形) -->
+    <gradient
+            android:angle="90"
+            android:endColor="#add8e6"
+            android:startColor="#ffffff"
+            android:type="linear" />
+
+
+
+n
+</shape>
+
+

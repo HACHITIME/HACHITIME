@@ -1,16 +1,37 @@
 package com.example.android.sample.testapp
 
 import android.app.ActivityOptions
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
-import kotlinx.android.synthetic.main.toolbar.*
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_campusinfo.*
 
-class ToolbarActivity : AppCompatActivity() {
-
+class CampusInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.toolbar)
+        setContentView(R.layout.activity_campusinfo)
+        tytle.text = "学校内の情報"
+
+        //各ボタンの遷移
+        ivent_btn.setOnClickListener {
+            val intent = Intent(this, CalenderActivity::class.java)
+            startActivity(intent)
+        }
+
+        subject_btn.setOnClickListener {
+            val intent = Intent(this, SubjectActivity::class.java)
+            startActivity(intent)
+        }
+
+        interview_btn.setOnClickListener {
+            val intent = Intent(this, CollegeListActivity::class.java)
+            startActivity(intent)
+        }
+
+        document_btn.setOnClickListener {
+            val intent = Intent(this, DocumentActivity::class.java)
+            startActivity(intent)
+        }
 
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
@@ -20,6 +41,7 @@ class ToolbarActivity : AppCompatActivity() {
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
+        //ツールバー
         map_btn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
@@ -56,6 +78,4 @@ class ToolbarActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
-
-
 }

@@ -39,7 +39,7 @@ open class MainActivity : AppCompatActivity() {
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
         home_infobtn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
+            val intent = Intent(this, CampusInfoActivity::class.java)
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
