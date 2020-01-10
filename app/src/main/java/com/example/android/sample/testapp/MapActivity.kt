@@ -14,6 +14,9 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -26,7 +29,21 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.toolbar.*
 
-class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
+class SchoolInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWindowAdapter {
+    override fun getInfoContents(marker: Marker): View? = null
+    override fun getInfoWindow(marker: Marker): View? = setupWindow(marker)
+
+    private fun setupWindow(marker: Marker): View =
+        LayoutInflater.from(context).inflate(R.layout.map_hopup, null, false).apply {
+            //val station = marker.tag as Station
+
+            //findViewById<ImageView>(R.id.ImageViewArea).setImageResource(station.imageResId)
+            findViewById<TextView>(R.id.Facility_Name).text = marker.title
+            //findViewById<TextView>(R.id.textSnippet).text = marker.snippet
+        }
+}
+
+class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
 
     private lateinit var mMap: GoogleMap
@@ -210,7 +227,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
 
 
         val kenkyutoB = LatLng(35.625, 139.34180090000005)
-        mMap.addMarker(MarkerOptions().position(kenkyutoB).title("Marker 研究棟B"))
+        mMap.addMarker(MarkerOptions().position(kenkyutoB).title("研究棟B"))
 
         val kenkyutoC = LatLng(35.624902, 139.343719)
         mMap.addMarker(MarkerOptions().position(kenkyutoC).title("Marker 研究棟C"))
@@ -266,10 +283,15 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
         val monozkurikobo = LatLng(35.623355, 139.34100)
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("Marker ものづくり工房"))
 
+       // override fun onMarkerClick(p0: Marker?) = false{
+
+        //}
         //mMap.addMarker(MarkerOptions().position().title())
 
         //mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
         //    override fun onMarkerClick(p0: Marker?): Boolean {}
         //})
     }
+
 }
+
