@@ -18,6 +18,7 @@
         <activity android:name=".FacilityListActivity" />
         <activity android:name=".StampActivity" />
         <activity android:name=".BustimeActivity" />
+        <activity android:name=".MapActivity" />
         <activity android:name=".activity_stamp" />
         <activity android:name=".stamp" />
         <activity android:name=".CampusInfoActivity" >
