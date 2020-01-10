@@ -9,12 +9,15 @@ import android.widget.GridView
 import com.nifcloud.mbaas.core.NCMB
 import com.nifcloud.mbaas.core.NCMBObject
 import com.nifcloud.mbaas.core.NCMBQuery
+import kotlinx.android.synthetic.main.toolbar.*
 
 class CollegeListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_college_list)
+        // タイトルを指定
+        tytle.text = "カレッジ選択"
 
         /** 変数・配列の作成 **/
         val collegeId = arrayListOf<String>()
@@ -49,13 +52,58 @@ class CollegeListActivity : AppCompatActivity() {
         }
 
         // collegeListの要素取選択時の処理
-        collegeList.setOnItemClickListener { adapterView, _, position, _ ->
+        collegeList.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(application, InterviewListActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             // 施設情報を渡す
             intent.putExtra("PICK_ID", collegeId[position])
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        // ツールバータップ時の処理
+        school_btn.setOnClickListener {
+            val intent = Intent(this, FacilityListActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        map_btn.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        stamp_btn.setOnClickListener {
+            val intent = Intent(this, StampActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        info_btn.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        bus_btn.setOnClickListener {
+            val intent = Intent(this, BustimeActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+
+        modol_btn.setOnClickListener {
+            super.onBackPressed()
         }
     }
 }

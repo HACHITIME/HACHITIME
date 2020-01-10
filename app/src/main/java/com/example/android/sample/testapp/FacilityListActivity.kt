@@ -16,6 +16,8 @@ class FacilityListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility_list)
+        // タイトルを指定
+        tytle.text = "施設一覧"
 
         // 変数・配列の作成
         val facilityId = arrayListOf<String>() // 施設ID
@@ -52,7 +54,7 @@ class FacilityListActivity : AppCompatActivity() {
         }
 
         // facilityListの要素取選択時の処理
-        list.setOnItemClickListener { adapterView, _, position, _ ->
+        list.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(application, FacilityDetaileActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP)
@@ -64,8 +66,7 @@ class FacilityListActivity : AppCompatActivity() {
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
-        // ツールバーのボタン
-        // 投下時の処理
+        // ツールバータップ時の処理
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
