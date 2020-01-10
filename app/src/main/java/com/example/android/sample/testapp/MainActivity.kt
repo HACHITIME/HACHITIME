@@ -44,7 +44,7 @@ open class MainActivity : AppCompatActivity() {
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
         home_busbtn.setOnClickListener {
-            val intent = Intent(this, FacilityListActivity::class.java)
+            val intent = Intent(this, BustimeActivity::class.java)
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }

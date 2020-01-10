@@ -15,4 +15,7 @@
     <string name="modol_btn">TODO</string>
     <string name="bus_btn">TODO</string>
     <string name="info_btn">TODO</string>
+    <string name="title_activity_bustime">bustimeActivity</string>
+
+
 </resources>
