@@ -11,7 +11,6 @@ class MapActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.campasinfo)
-        setContentView(R.layout.toolbar)
         tytle.text = "Map"
 
         school_btn.setOnClickListener {
