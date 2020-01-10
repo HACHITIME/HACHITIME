@@ -11,6 +11,7 @@
             android:id="@+id/home"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -20,85 +21,133 @@
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/home_title" />
 
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+                android:id="@+id/home_schoolbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/home_school1"
+                android:adjustViewBounds="true"/>
+
+        <ImageButton
+                android:id="@+id/home_mapbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintVertical_bias="0.58000004"
+                app:srcCompat="@drawable/home_map1"
+                android:adjustViewBounds="true"/>
+
+        <ImageButton
+                android:id="@+id/home_stampbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintVertical_bias="0.58"
+                app:srcCompat="@drawable/home_stamp1"
+                android:adjustViewBounds="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+                android:id="@+id/zero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.75"
+                android:background="@null"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="@+id/home_schoolbtn"
+                app:layout_constraintTop_toBottomOf="@+id/home_mapbtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+                android:id="@+id/home_infobtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintHorizontal_bias="0.214"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/home_gakunai1" />
+
+        <ImageButton
+                android:id="@+id/home_busbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="@+id/home_schoolbtn"
+                app:layout_constraintTop_toBottomOf="@+id/home_mapbtn"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/home_bus1" />
+
+        <ImageButton
+                android:id="@+id/zero3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.75"
+                android:background="@null"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="@+id/home_schoolbtn"
+                app:layout_constraintTop_toBottomOf="@+id/home_mapbtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+    </LinearLayout>
+
     <ImageView
-            android:id="@+id/Hachitime"
+            android:id="@+id/home_hachitime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/home"
             app:layout_constraintEnd_toEndOf="@+id/home"
-            app:layout_constraintStart_toStartOf="@+id/home"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.222"
-            app:srcCompat="@drawable/home_hachitime" />
-
-    <ImageButton
-            android:id="@+id/home_mapbtn"
-            android:layout_width="140dp"
-            android:layout_height="171dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="@+id/home"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.58000004"
-            app:srcCompat="@drawable/home_map1" />
-
-    <ImageButton
-            android:id="@+id/home_stampbtn"
-            android:layout_width="140dp"
-            android:layout_height="171dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.53"
-            app:layout_constraintStart_toEndOf="@+id/home_mapbtn"
+            app:layout_constraintHorizontal_bias="0.63"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
             app:layout_constraintTop_toTopOf="@+id/home"
-            app:layout_constraintVertical_bias="0.58"
-            app:srcCompat="@drawable/home_stamp1" />
-
-    <ImageButton
-            android:id="@+id/home_schoolbtn"
-            android:layout_width="140dp"
-            android:layout_height="171dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="@+id/home"
-            app:layout_constraintEnd_toStartOf="@+id/home_mapbtn"
-            app:layout_constraintHorizontal_bias="0.437"
-            app:layout_constraintStart_toStartOf="@+id/home"
-            app:layout_constraintTop_toTopOf="@+id/home"
-            app:layout_constraintVertical_bias="0.58"
-            app:srcCompat="@drawable/home_school1" />
-
-    <ImageButton
-            android:id="@+id/home_infobtn"
-            android:layout_width="150dp"
-            android:layout_height="171dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="@+id/home"
-            app:layout_constraintEnd_toEndOf="@+id/home"
-            app:layout_constraintHorizontal_bias="0.214"
-            app:layout_constraintStart_toStartOf="@+id/home"
-            app:layout_constraintTop_toBottomOf="@+id/home_mapbtn"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/home_gakunai1" />
-
-    <ImageButton
-            android:id="@+id/home_busbtn"
-            android:layout_width="150dp"
-            android:layout_height="171dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="@+id/home"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.79"
-            app:layout_constraintStart_toStartOf="@+id/home_schoolbtn"
-            app:layout_constraintTop_toBottomOf="@+id/home_mapbtn"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/home_bus1" />
+            app:srcCompat="@drawable/hachitime" />
 
 </android.support.constraint.ConstraintLayout>
