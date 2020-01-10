@@ -1,5 +1,6 @@
 package com.example.android.sample.testapp
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -19,7 +20,7 @@ open class StampActivity : AppCompatActivity() {
     var music =0
     var sports=0
     var technology =0
-    var goukei = 7-itcare+desain+kanngo+kurieita+music+sports+technology
+    var goukei = 7-itcare-desain-kanngo-kurieita-music-sports-technology
     val stampName = arrayListOf("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟")
     val syutoku= arrayListOf("獲得状況：未取得","取得状況：取得済み")
     /*interview(1)~(7)
@@ -36,6 +37,47 @@ open class StampActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stamp)
+        tytle.text = "Stamp"
+
+        //下のツールバー処理・戻るボタン処理
+        school_btn.setOnClickListener {
+            val intent = Intent(this, FacilityListActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+        map_btn.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+        stamp_btn.setOnClickListener {
+            val intent = Intent(this, StampActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+        info_btn.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+        bus_btn.setOnClickListener {
+            val intent = Intent(this, BustimeActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+        modol_btn.setOnClickListener {
+            super.onBackPressed()
+        }
 
         //スタンプ７個を押した時のアクション
         imageView.setOnClickListener {
@@ -242,12 +284,12 @@ open class StampActivity : AppCompatActivity() {
             }
             dialog.show(supportFragmentManager, "simple")
         }
+
         if(goukei==0){
             textView2.setText("特典画像をGET!!")
-//半透明にする処理
+        //半透明にする処理
         }else{
             //ちゃんと表示させる
-
             textView2.setText("あとスタンプを"+goukei+"個ゲット")
         }
 
@@ -328,6 +370,10 @@ open class StampActivity : AppCompatActivity() {
             if ( kurieita==1){
                 //ちゃんと表示させる
                 imageView2.setImageResource(R.drawable.fukidasi_crepachii)
+                //合計値の更新
+                goukei = 7-itcare-desain-kanngo-kurieita-music-sports-technology
+                textView2.setText("あとスタンプを"+goukei+"個ゲット")
+                //
                 //取得IDを１にする（未取得から取得済み状態にする）それぞれに適応したsyutoku_idを入れる
                 //syutoku_id2=1
 //半透明にする処理
