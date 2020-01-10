@@ -45,7 +45,7 @@ class CampusInfoActivity : AppCompatActivity() {
         map_btn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
