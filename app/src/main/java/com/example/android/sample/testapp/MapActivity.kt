@@ -22,6 +22,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -59,8 +60,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
-
 
         //setContentView(R.layout.campasinfo)
         //setContentView(R.layout.toolbar)
@@ -181,6 +180,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
 
     override fun onMapReady(googleMap: GoogleMap) {
 
+
         mMap = googleMap
         val builder = CameraPosition.Builder()
         // 地図の倍率を指定。
@@ -207,6 +207,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
 
         val kenkyutoA = LatLng(35.62535, 139.342350000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoA).title("Marker 研究棟A"))
+
 
         val kenkyutoB = LatLng(35.625, 139.34180090000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoB).title("Marker 研究棟B"))
@@ -265,9 +266,10 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener {
         val monozkurikobo = LatLng(35.623355, 139.34100)
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("Marker ものづくり工房"))
 
-
-
         //mMap.addMarker(MarkerOptions().position().title())
-    }
 
+        //mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
+        //    override fun onMarkerClick(p0: Marker?): Boolean {}
+        //})
+    }
 }
