@@ -6,13 +6,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.toolbar.*
 
-class FacilityListActivity : AppCompatActivity() {
+
+class InfoActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_facility_list)
+        setContentView(R.layout.campasinfo)
         setContentView(R.layout.toolbar)
-        tytle.text = "施設一覧"
+        tytle.text = "Information"
 
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
@@ -57,8 +58,6 @@ class FacilityListActivity : AppCompatActivity() {
         modol_btn.setOnClickListener {
             super.onBackPressed()
         }
-
     }
-
-
 }
+
