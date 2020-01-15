@@ -16,12 +16,12 @@ class FacilityDetaileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility_detaile)
+
         // タイトルを指定
         tytle.text = "施設詳細"
-
         // 変数・配列の作成
-        val stampImage = arrayListOf<String>()
-        val stampName = arrayListOf<String>()
+        val stampImage = arrayListOf<String>() // 取得したスタンプ画像
+        val stampName = arrayListOf<String>() // 取得したスタンプ名
         // パーツ を取得
         val facilityImage = findViewById<ImageView>(R.id.facilityImage) // 施設画像
         val facilityName = findViewById<TextView>(R.id.facilityName) // 施設名称
