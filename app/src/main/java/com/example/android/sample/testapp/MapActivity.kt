@@ -303,7 +303,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
 
         mMap!!.setOnMarkerClickListener { marker ->
-            val dialog = HopupDialog()
+            val dialog = MapActivityDialog()
             // スタンプ詳細を渡す
             val args = Bundle()
             dialog.setArguments(args)
@@ -311,12 +311,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
             //取得状況を渡す
             //args.putString("syutoku", syutoku[desain])
             dialog.show(supportFragmentManager, "simple")
-            /*AlertDialog.Builder(this@MapActivity)
-                .setTitle(marker.title)
-                .setView(R.layout.map_hopup)
-                .show()
-
-             */
             false
         }
         // override fun onMarkerClick(p0: Marker?) = false{

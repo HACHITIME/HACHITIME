@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-open class HopupDialog : DialogFragment() {
+open class MapActivityDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         // ダイアログの作成
         val dialog = Dialog(getActivity())
