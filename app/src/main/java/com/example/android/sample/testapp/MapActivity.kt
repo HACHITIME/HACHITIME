@@ -1,7 +1,9 @@
 package com.example.android.sample.testapp
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.ActivityOptions
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -16,9 +18,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -27,7 +27,10 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_bustime.*
+import kotlinx.android.synthetic.main.map_hopup.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class SchoolInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWindowAdapter {
     override fun getInfoContents(marker: Marker): View? = null
@@ -78,44 +81,54 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        //------------------------------------------------------------------------------
         //setContentView(R.layout.campasinfo)
         //setContentView(R.layout.toolbar)
         tytle.text = "Map"
 
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
-            startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
         }
 
         map_btn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
-            startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
         }
 
         stamp_btn.setOnClickListener {
             val intent = Intent(this, StampActivity::class.java)
-            startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
         }
 
         info_btn.setOnClickListener {
             val intent = Intent(this, InfoActivity::class.java)
-            startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
         }
 
         bus_btn.setOnClickListener {
             val intent = Intent(this, BustimeActivity::class.java)
-            startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
         }
 
         modol_btn.setOnClickListener {
             super.onBackPressed()
         }
-
 
 
     }
@@ -135,9 +148,16 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
             startActivity(settingsIntent)
             Log.d("debug", "not gpsEnable, startActivity")
         }
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1000)
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                1000
+            )
             Log.d("debug", "checkSelfPermission false")
             return
         }
@@ -179,6 +199,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
             }
         }
     }
+
     override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
     override fun onLocationChanged(location: Location) {}
     override fun onProviderEnabled(provider: String) {}
@@ -195,15 +216,14 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
      */
 
 
+    @SuppressLint("WrongViewCast")
     override fun onMapReady(googleMap: GoogleMap) {
-
-
         mMap = googleMap
         val builder = CameraPosition.Builder()
         // 地図の倍率を指定。
         builder.zoom(17f)
         // 地図の表示位置を指定。
-        builder.target(LatLng(35.625760,139.3416947))
+        builder.target(LatLng(35.625760, 139.3416947))
         // 地図の傾きを指定。
         // builder.tilt(50f)
         // 地図の回転角を指定。
@@ -224,7 +244,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         val kenkyutoA = LatLng(35.62535, 139.342350000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoA).title("Marker 研究棟A"))
-
 
         val kenkyutoB = LatLng(35.625, 139.34180090000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoB).title("研究棟B"))
@@ -279,11 +298,21 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         val tenjito = LatLng(35.625526, 139.339987)
         mMap.addMarker(MarkerOptions().position(tenjito).title("Marker 展示棟"))
-
         val monozkurikobo = LatLng(35.623355, 139.34100)
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("Marker ものづくり工房"))
 
-       // override fun onMarkerClick(p0: Marker?) = false{
+
+        mMap!!.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
+            override fun onMarkerClick(marker: Marker): Boolean {
+                
+                AlertDialog.Builder(this@MapActivity)
+                    .setTitle(marker.title)
+                    .setView(R.layout.map_hopup)
+                    .show()
+                return false
+            }
+        })
+        // override fun onMarkerClick(p0: Marker?) = false{
 
         //}
         //mMap.addMarker(MarkerOptions().position().title())
@@ -291,6 +320,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         //mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
         //    override fun onMarkerClick(p0: Marker?): Boolean {}
         //})
+
+
     }
 
 }

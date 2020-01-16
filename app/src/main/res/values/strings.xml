@@ -9,6 +9,6 @@
     <string name="bus_btn">TODO</string>
     <string name="info_btn">TODO</string>
 
-    <string name="facility_name"><u>研究棟B</u></string>
+    <string name="facility_name"><u></u></string>
     <string name="title_activity_map">Map</string>
 </resources>
