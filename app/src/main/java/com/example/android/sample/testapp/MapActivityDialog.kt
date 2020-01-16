@@ -12,17 +12,17 @@ open class MapActivityDialog : DialogFragment() {
         val dialog = Dialog(getActivity())
         dialog.setContentView(R.layout.map_hopup)
         //施設名取得
-        dialog.findViewById<TextView>(R.id.Facility_Name).setText(arguments!!.getString("marker_title"))
+        dialog.findViewById<TextView>(R.id.Facility_Name).text = arguments!!.getString("marker_title")
         //画像取得
         //dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(arguments!!.getInt("stamp_image"))
         //獲得ID
         //dialog.findViewById<TextView>(R.id.HanteiArea).setText(arguments!!.getInt("hantei"))
         //dialog.findViewById<TextView>(R.id.Facility_Name).setText(arguments!!.getString("syutoku"))
         // 「X」ボタン投下時の処理
-        dialog.findViewById<Button>(R.id.close_btn).setOnClickListener(View.OnClickListener {
+        dialog.findViewById<Button>(R.id.close_btn).setOnClickListener {
             // ダイアログを閉じる
             dismiss()
-        })
+        }
         return dialog
     }
 }

@@ -1,9 +1,7 @@
 package com.example.android.sample.testapp
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.ActivityOptions
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -16,45 +14,20 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.widget.*
+import android.widget.Toast
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import kotlinx.android.synthetic.main.activity_bustime.*
-import kotlinx.android.synthetic.main.map_hopup.*
 import kotlinx.android.synthetic.main.toolbar.*
-import kotlinx.android.synthetic.main.activity_main.*
-
-class SchoolInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWindowAdapter {
-    override fun getInfoContents(marker: Marker): View? = null
-    override fun getInfoWindow(marker: Marker): View? = setupWindow(marker)
-
-    private fun setupWindow(marker: Marker): View =
-        LayoutInflater.from(context).inflate(R.layout.map_hopup, null, false).apply {
-            //val station = marker.tag as Station
-
-            //findViewById<ImageView>(R.id.ImageViewArea).setImageResource(station.imageResId)
-            findViewById<TextView>(R.id.Facility_Name).text = marker.title
-            //findViewById<TextView>(R.id.textSnippet).text = marker.snippet
-        }
-}
 
 class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
-
-
     private lateinit var mMap: GoogleMap
-
     private var locationManager: LocationManager? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         if (ContextCompat.checkSelfPermission(
                 this,
@@ -63,7 +36,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         ) {
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                 1000
             )
         } else {
@@ -82,6 +55,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         mapFragment.getMapAsync(this)
 
         //------------------------------------------------------------------------------
+
+        //-------------------------
         //setContentView(R.layout.campasinfo)
         //setContentView(R.layout.toolbar)
         tytle.text = "Map"
@@ -215,8 +190,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
      * installed Google Play services and returned to the app.
      */
 
-
-    @SuppressLint("WrongViewCast")
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         val builder = CameraPosition.Builder()
@@ -301,28 +274,26 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         val monozkurikobo = LatLng(35.623355, 139.34100)
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("ものづくり工房"))
 
-
         mMap!!.setOnMarkerClickListener { marker ->
             val dialog = MapActivityDialog()
             // スタンプ詳細を渡す
             val args = Bundle()
-            dialog.setArguments(args)
+            dialog.arguments = args
             args.putString("marker_title",marker.title)
             //取得状況を渡す
+            var mlat = mMap.myLocation.latitude
+            var mlng = mMap.myLocation.longitude
+
+            args.putDouble("marker_mlat",mlat)
+            args.putDouble("marker_mlng",mlng)
+
+            // var result = Array<Double>(3,{0.0})
+
+           //Location.distanceBetween(mlat,mlng,katayanagikenkyujo.latitude,katayanagikenkyujo.longitude,result)
+
             //args.putString("syutoku", syutoku[desain])
             dialog.show(supportFragmentManager, "simple")
             false
         }
-        // override fun onMarkerClick(p0: Marker?) = false{
-
-        //}
-        //mMap.addMarker(MarkerOptions().position().title())
-
-        //mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
-        //    override fun onMarkerClick(p0: Marker?): Boolean {}
-        //})
-
-
     }
-
 }
