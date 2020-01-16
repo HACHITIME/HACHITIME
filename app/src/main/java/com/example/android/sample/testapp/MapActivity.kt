@@ -284,12 +284,12 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
             var mlat = mMap.myLocation.latitude
             var mlng = mMap.myLocation.longitude
 
-            args.putDouble("marker_mlat",mlat)
-            args.putDouble("marker_mlng",mlng)
-
-            // var result = Array<Double>(3,{0.0})
-
-           //Location.distanceBetween(mlat,mlng,katayanagikenkyujo.latitude,katayanagikenkyujo.longitude,result)
+            //args.putDouble("marker_mlat",mlat)
+            //args.putDouble("marker_mlng",mlng)
+            var results = FloatArray(3)
+            Location.distanceBetween(mlat, mlng, katayanagikenkyujo.latitude, katayanagikenkyujo.longitude, results)
+            var results_0 = results[0]
+            args.putFloat("stamp_result",results_0)
 
             //args.putString("syutoku", syutoku[desain])
             dialog.show(supportFragmentManager, "simple")
