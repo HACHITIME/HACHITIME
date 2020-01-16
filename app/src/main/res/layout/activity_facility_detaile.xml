@@ -24,8 +24,11 @@
 
     <TextView
             android:id="@+id/facilityName"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="36sp"
@@ -52,6 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
             android:textAlignment="viewStart"
@@ -78,14 +82,16 @@
 
     <ImageButton
             android:id="@+id/paccieIcon"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:background="@null"
             android:scaleType="fitXY"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/facilityImage"
             app:layout_constraintTop_toTopOf="@+id/facilityImage"
-            app:srcCompat="@drawable/facility_list_paccieicon" />
+            app:srcCompat="@drawable/facility_detaile_icon" />
 
     <!-- ツールバー -->
     <android.support.v7.widget.Toolbar

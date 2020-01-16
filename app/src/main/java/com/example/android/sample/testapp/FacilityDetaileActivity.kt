@@ -7,6 +7,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.nifcloud.mbaas.core.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -16,12 +20,12 @@ class FacilityDetaileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility_detaile)
+
         // タイトルを指定
         tytle.text = "施設詳細"
-
         // 変数・配列の作成
-        val stampImage = arrayListOf<String>()
-        val stampName = arrayListOf<String>()
+        val stampImage = arrayListOf<String>() // 取得したスタンプ画像
+        val stampName = arrayListOf<String>() // 取得したスタンプ名
         // パーツ を取得
         val facilityImage = findViewById<ImageView>(R.id.facilityImage) // 施設画像
         val facilityName = findViewById<TextView>(R.id.facilityName) // 施設名称
@@ -62,7 +66,12 @@ class FacilityDetaileActivity : AppCompatActivity() {
             "drawable",
             packageName
         )
-        facilityImage.setImageResource(imgId)
+        // facilityImage.setImageResource(imgId)
+        // 画像をまる角にして配置
+        Glide.with(facilityImage)
+            .load(imgId)
+            .transform(CenterCrop(),RoundedCorners(100)) //←この一行追加
+            .into(facilityImage)
         facilityName.setText(intent.getStringExtra("PICK_NAME"))
         facilityDetaile.setText(intent.getStringExtra("PICK_DETAILE"))
 

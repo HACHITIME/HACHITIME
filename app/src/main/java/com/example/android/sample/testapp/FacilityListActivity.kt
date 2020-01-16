@@ -16,9 +16,9 @@ class FacilityListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility_list)
+
         // タイトルを指定
         tytle.text = "施設一覧"
-
         // 変数・配列の作成
         val facilityId = arrayListOf<String>() // 施設ID
         val facilityName = arrayListOf<String>() // 施設名
@@ -57,7 +57,7 @@ class FacilityListActivity : AppCompatActivity() {
         list.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(application, FacilityDetaileActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = FLAG_ACTIVITY_CLEAR_TOP
             // 施設情報を渡す
             intent.putExtra("PICK_ID", facilityId[position])
             intent.putExtra("PICK_NAME", facilityName[position])
@@ -70,7 +70,7 @@ class FacilityListActivity : AppCompatActivity() {
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
@@ -78,7 +78,7 @@ class FacilityListActivity : AppCompatActivity() {
         map_btn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
@@ -86,7 +86,7 @@ class FacilityListActivity : AppCompatActivity() {
         stamp_btn.setOnClickListener {
             val intent = Intent(this, StampActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
@@ -94,7 +94,7 @@ class FacilityListActivity : AppCompatActivity() {
         info_btn.setOnClickListener {
             val intent = Intent(this, CampusInfoActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
@@ -102,7 +102,7 @@ class FacilityListActivity : AppCompatActivity() {
         bus_btn.setOnClickListener {
             val intent = Intent(this, BustimeActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }

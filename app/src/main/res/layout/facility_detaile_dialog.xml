@@ -41,7 +41,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/facility_detaile_desain_paccie" />
+                app:srcCompat="@drawable/facility_detaile_desain" />
 
         <TextView
                 android:id="@+id/stampName"
