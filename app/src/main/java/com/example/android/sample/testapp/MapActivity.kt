@@ -302,16 +302,13 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("Marker ものづくり工房"))
 
 
-        mMap!!.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
-            override fun onMarkerClick(marker: Marker): Boolean {
-                
-                AlertDialog.Builder(this@MapActivity)
-                    .setTitle(marker.title)
-                    .setView(R.layout.map_hopup)
-                    .show()
-                return false
-            }
-        })
+        mMap!!.setOnMarkerClickListener { marker ->
+            AlertDialog.Builder(this@MapActivity)
+                .setTitle(marker.title)
+                .setView(R.layout.map_hopup)
+                .show()
+            false
+        }
         // override fun onMarkerClick(p0: Marker?) = false{
 
         //}
