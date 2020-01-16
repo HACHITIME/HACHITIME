@@ -243,70 +243,80 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         //val addMarker = mMap.addMarker(MarkerOptions().position(school).title("Marker in School"))
 
         val kenkyutoA = LatLng(35.62535, 139.342350000005)
-        mMap.addMarker(MarkerOptions().position(kenkyutoA).title("Marker 研究棟A"))
+        mMap.addMarker(MarkerOptions().position(kenkyutoA).title("研究棟A"))
 
         val kenkyutoB = LatLng(35.625, 139.34180090000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoB).title("研究棟B"))
 
         val kenkyutoC = LatLng(35.624902, 139.343719)
-        mMap.addMarker(MarkerOptions().position(kenkyutoC).title("Marker 研究棟C"))
+        mMap.addMarker(MarkerOptions().position(kenkyutoC).title("研究棟C"))
 
         val kogitoA = LatLng(35.625735, 139.342700000005)
-        mMap.addMarker(MarkerOptions().position(kogitoA).title("Marker 講義棟A"))
+        mMap.addMarker(MarkerOptions().position(kogitoA).title("講義棟A"))
 
         val kogitoB = LatLng(35.624867, 139.34111000000005)
-        mMap.addMarker(MarkerOptions().position(kogitoB).title("Marker 講義棟B"))
+        mMap.addMarker(MarkerOptions().position(kogitoB).title("講義棟B"))
 
         val kogitoC = LatLng(35.6244367, 139.34160200000005)
-        mMap.addMarker(MarkerOptions().position(kogitoC).title("Marker 講義棟C"))
+        mMap.addMarker(MarkerOptions().position(kogitoC).title("講義棟C"))
 
         val kogitoD = LatLng(35.624865, 139.342700000005)
-        mMap.addMarker(MarkerOptions().position(kogitoD).title("Marker 講義棟D"))
+        mMap.addMarker(MarkerOptions().position(kogitoD).title("講義棟D"))
 
         val kogitoE = LatLng(35.6245867, 139.34223080000005)
-        mMap.addMarker(MarkerOptions().position(kogitoE).title("Marker 講義棟E"))
+        mMap.addMarker(MarkerOptions().position(kogitoE).title("講義棟E"))
 
         val kogijikkento = LatLng(35.62528, 139.343011200005)
-        mMap.addMarker(MarkerOptions().position(kogijikkento).title("Marker 講義実験棟"))
+        mMap.addMarker(MarkerOptions().position(kogijikkento).title("講義実験棟"))
 
         val jikkentoA = LatLng(35.625465, 139.343910)
-        mMap.addMarker(MarkerOptions().position(jikkentoA).title("Marker 実験棟A"))
+        mMap.addMarker(MarkerOptions().position(jikkentoA).title("実験棟A"))
 
         val jikkentoB = LatLng(35.624779, 139.340235)
-        mMap.addMarker(MarkerOptions().position(jikkentoB).title("Marker 実験棟B"))
+        mMap.addMarker(MarkerOptions().position(jikkentoB).title("実験棟B"))
 
         val katayanagihole = LatLng(35.624421, 139.342737)
-        mMap.addMarker(MarkerOptions().position(katayanagihole).title("Marker 片柳記念ホール"))
+        mMap.addMarker(MarkerOptions().position(katayanagihole).title("片柳記念ホール"))
 
         val mediahole = LatLng(35.624251, 139.34039)
-        mMap.addMarker(MarkerOptions().position(mediahole).title("Marker メディアホール"))
+        mMap.addMarker(MarkerOptions().position(mediahole).title("メディアホール"))
 
         val honbuto = LatLng(35.626309, 139.33933)
-        mMap.addMarker(MarkerOptions().position(honbuto).title("Marker 本部棟"))
+        mMap.addMarker(MarkerOptions().position(honbuto).title("本部棟"))
 
         val taikukan = LatLng(35.6257002, 139.345037)
-        mMap.addMarker(MarkerOptions().position(taikukan).title("Marker 体育館"))
+        mMap.addMarker(MarkerOptions().position(taikukan).title("体育館"))
 
         val koseito = LatLng(35.626004, 139.342093)
-        mMap.addMarker(MarkerOptions().position(koseito).title("Marker 厚生棟"))
+        mMap.addMarker(MarkerOptions().position(koseito).title("厚生棟"))
 
         val toshokanto = LatLng(35.625377, 139.34096)
-        mMap.addMarker(MarkerOptions().position(toshokanto).title("Marker 図書館棟"))
+        mMap.addMarker(MarkerOptions().position(toshokanto).title("図書館棟"))
 
         val katayanagikenkyujo = LatLng(35.627699, 139.339898)
-        mMap.addMarker(MarkerOptions().position(katayanagikenkyujo).title("Marker 片柳研究所"))
+        mMap.addMarker(MarkerOptions().position(katayanagikenkyujo).title("片柳研究所"))
 
         val tenjito = LatLng(35.625526, 139.339987)
-        mMap.addMarker(MarkerOptions().position(tenjito).title("Marker 展示棟"))
+        mMap.addMarker(MarkerOptions().position(tenjito).title("展示棟"))
         val monozkurikobo = LatLng(35.623355, 139.34100)
-        mMap.addMarker(MarkerOptions().position(monozkurikobo).title("Marker ものづくり工房"))
+        mMap.addMarker(MarkerOptions().position(monozkurikobo).title("ものづくり工房"))
 
 
         mMap!!.setOnMarkerClickListener { marker ->
-            AlertDialog.Builder(this@MapActivity)
+            val dialog = HopupDialog()
+            // スタンプ詳細を渡す
+            val args = Bundle()
+            dialog.setArguments(args)
+            args.putString("marker_title",marker.title)
+            //取得状況を渡す
+            //args.putString("syutoku", syutoku[desain])
+            dialog.show(supportFragmentManager, "simple")
+            /*AlertDialog.Builder(this@MapActivity)
                 .setTitle(marker.title)
                 .setView(R.layout.map_hopup)
                 .show()
+
+             */
             false
         }
         // override fun onMarkerClick(p0: Marker?) = false{
@@ -322,4 +332,3 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
     }
 
 }
-
