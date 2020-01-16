@@ -20,7 +20,6 @@ class InterviewListAdapter(
     private val answers: ArrayList<String> // 回答内容
 ) : BaseAdapter() {
     // 変数・配列の作成
-    val interviewListAdapter = arrayListOf<String>()
 
     // ビューホルダー
     private class ViewHolder(view: View) {
@@ -37,17 +36,6 @@ class InterviewListAdapter(
         val view = inflater.inflate(R.layout.interview_list_view, parent, false)
         view.tag = ViewHolder(view)
 
-        /*for (i in 0..studentIds.size-1) {
-            if (studentIds[i] == objects[position].getString("objectId")) {
-                // インタビュー内容を表示するためのViewを作成
-                val interviewDetaile = inflater.inflate(R.layout.interview_list_detaile_view, parent, false)
-                // interviewDetaile.findViewById<TextView>(R.id.question).text = questions[i]
-                // interviewDetaile.findViewById<TextView>(R.id.answer).text = answers[i]
-                view.interviewDetaileList.addView(interviewDetaile)
-
-            }
-        }*/
-
         return view
     }
 
@@ -63,7 +51,7 @@ class InterviewListAdapter(
         val studentSubject = objects[position].getString("subject")
 
         // viewの初期化
-        view.interviewDetaileList.removeAllViews()
+        viewHolder.interviewDetaileList.removeAllViews()
 
         for (i in 0..studentIds.size-1) {
             if (studentIds[i] == objects[position].getString("objectId")) {
@@ -72,7 +60,7 @@ class InterviewListAdapter(
                 val interviewDetaile = inflater.inflate(R.layout.interview_list_detaile_view, parent, false)
                 interviewDetaile.findViewById<TextView>(R.id.question).text = questions[i]
                 interviewDetaile.findViewById<TextView>(R.id.answer).text = answers[i]
-                view.interviewDetaileList.addView(interviewDetaile)
+                viewHolder.interviewDetaileList.addView(interviewDetaile)
 
             }
         }
