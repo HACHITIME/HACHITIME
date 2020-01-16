@@ -7,6 +7,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.nifcloud.mbaas.core.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -62,7 +66,12 @@ class FacilityDetaileActivity : AppCompatActivity() {
             "drawable",
             packageName
         )
-        facilityImage.setImageResource(imgId)
+        // facilityImage.setImageResource(imgId)
+        // 画像をまる角にして配置
+        Glide.with(facilityImage)
+            .load(imgId)
+            .transform(CenterCrop(),RoundedCorners(100)) //←この一行追加
+            .into(facilityImage)
         facilityName.setText(intent.getStringExtra("PICK_NAME"))
         facilityDetaile.setText(intent.getStringExtra("PICK_DETAILE"))
 
