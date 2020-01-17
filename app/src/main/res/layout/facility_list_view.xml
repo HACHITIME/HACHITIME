@@ -23,6 +23,10 @@
             android:id="@+id/facilityName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:autoSizeTextType="none"
+            android:scrollHorizontally="false"
             android:shadowColor="@android:color/black"
             android:shadowDx="1.5"
             android:shadowDy="1.5"
@@ -33,10 +37,10 @@
             android:textColor="@android:color/background_light"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/facilityImage"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/facilityImage"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="施設画像" />
 </android.support.constraint.ConstraintLayout>
 
