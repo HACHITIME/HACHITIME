@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.nifcloud.mbaas.core.NCMBObject
 import kotlinx.android.synthetic.main.interview_list_view.view.*
 import org.w3c.dom.Text
@@ -67,7 +70,12 @@ class InterviewListAdapter(
 
         // 学生画像・氏名・学科を配置
         val imgId = context.resources.getIdentifier(studentImage, "drawable", context.packageName) // 施設画像のIDを取得
-        viewHolder.studentImage.setImageResource(imgId) // 画像を配置
+        // viewHolder.studentImage.setImageResource(imgId) // 画像を配置
+        // 画像をまる角にして配置
+        Glide.with(viewHolder.studentImage)
+            .load(imgId)
+            .transform(CenterCrop(), RoundedCorners(1000)) //←この一行追加
+            .into(viewHolder.studentImage)
         viewHolder.studentName.text = studentName // 氏名を配置
         viewHolder.studentSubject.text = studentSubject // 学科名を配置
 

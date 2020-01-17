@@ -70,7 +70,7 @@ class FacilityDetaileActivity : AppCompatActivity() {
         // 画像をまる角にして配置
         Glide.with(facilityImage)
             .load(imgId)
-            .transform(CenterCrop(),RoundedCorners(100)) //←この一行追加
+            .transform(CenterCrop(),RoundedCorners(50)) //←この一行追加
             .into(facilityImage)
         facilityName.setText(intent.getStringExtra("PICK_NAME"))
         facilityDetaile.setText(intent.getStringExtra("PICK_DETAILE"))

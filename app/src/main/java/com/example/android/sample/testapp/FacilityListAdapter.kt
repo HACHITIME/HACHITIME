@@ -40,7 +40,6 @@ class FacilityListAdapter(
         val viewHolder = view.tag as ViewHolder
 
         // 施設名と施設画像を配置
-        viewHolder.facilityName.text = name[position] // 施設名を配置
         val imgId = context.resources.getIdentifier("facility_list_" + image[position], "drawable", context.packageName) // 施設画像のIDを取得
         // viewHolder.facilityImage.setImageResource(imgId) // 施設画像を配置
         // 画像をまる角にして配置
@@ -48,6 +47,7 @@ class FacilityListAdapter(
             .load(imgId)
             .transform(CenterCrop(),RoundedCorners(50)) //←この一行追加
             .into(viewHolder.facilityImage)
+        viewHolder.facilityName.text = name[position] // 施設名を配置
 
         return view
     }
