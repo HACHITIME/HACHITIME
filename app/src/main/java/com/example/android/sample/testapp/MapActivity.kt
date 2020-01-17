@@ -21,6 +21,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -201,6 +202,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         // builder.tilt(50f)
         // 地図の回転角を指定。
         builder.bearing(145f)//(345F)
+        
 
         // map is a GoogleMap object
         mMap.isMyLocationEnabled = true
