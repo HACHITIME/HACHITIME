@@ -281,13 +281,16 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
             dialog.arguments = args
             args.putString("marker_title",marker.title)
             //取得状況を渡す
-            var mlat = mMap.myLocation.latitude
-            var mlng = mMap.myLocation.longitude
+            var mylat = mMap.myLocation.latitude
+            var mylng = mMap.myLocation.longitude
+            
+            var fMarkerLat = marker.position.latitude
+            var fMarkerLng = marker.position.longitude
 
             //args.putDouble("marker_mlat",mlat)
             //args.putDouble("marker_mlng",mlng)
             var results = FloatArray(3)
-            Location.distanceBetween(mlat, mlng, katayanagikenkyujo.latitude, katayanagikenkyujo.longitude, results)
+            Location.distanceBetween(mylat, mylng, fMarkerLat, fMarkerLng, results)
             var results_0 = results[0]
             args.putFloat("stamp_result",results_0)
 
