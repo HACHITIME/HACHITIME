@@ -4,7 +4,29 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".StampActivity">
+        android:animateLayoutChanges="false">
+    <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:context=".MapActivity"
+            tools:layout_editor_absoluteX="-16dp" />
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:background="@drawable/toolbar_style"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
     <!--
     <ImageView
             android:id="@+id/modol_btn"
@@ -20,111 +42,10 @@
             app:layout_constraintVertical_bias="0.705"
             app:srcCompat="@drawable/toolbar_modol" />
      -->
-    <ImageView
-            android:id="@+id/MapImage"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scrollbars="horizontal|vertical"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:srcCompat="@drawable/map_image" />
-    <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toBottomOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.34"
-            app:layout_constraintStart_toEndOf="@id/MapImage"
-            app:layout_constraintTop_toTopOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.33999997"
-            app:srcCompat="@drawable/fukidasitecno" />
-    <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.453"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.68"
-            app:srcCompat="@drawable/fukidasi_desain" />
-    <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.62"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.73"
-            app:srcCompat="@drawable/fukidasiit" />
-    <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.76"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.82"
-            app:srcCompat="@drawable/fukidasaisports" />
-    <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.32"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.74"
-            app:srcCompat="@drawable/fukidasimusic" />
-    <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.82"
-            app:srcCompat="@drawable/fikidasai_iryou" />
-    <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="85dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toStartOf="@+id/MapImage"
-            app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toEndOf="@+id/MapImage"
-            app:layout_constraintTop_toBottomOf="@+id/MapImage"
-            app:layout_constraintVertical_bias="0.44"
-            app:srcCompat="@drawable/fukidasi_desain" />
-    <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:background="@drawable/toolbar_style"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toTopOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
     <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="87dp"
             android:background="#ffffff"
             android:orientation="horizontal"
             android:padding="10dp"
@@ -219,30 +140,4 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-    <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:background="@drawable/atonanko_style"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:text="あと7個 手に入れよう！"
-            android:textColor="#FFFFFF"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/MapImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-    <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="図書館棟取得"
-            app:layout_constraintBottom_toTopOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 </android.support.constraint.ConstraintLayout>

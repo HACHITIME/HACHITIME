@@ -43,7 +43,7 @@
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/facility_name2"
+                android:text="@string/facility_name"
                 android:textSize="30dp" />
 
         <LinearLayout

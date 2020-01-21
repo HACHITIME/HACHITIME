@@ -17,10 +17,8 @@
     <string name="info_btn">TODO</string>
     <string name="textView2">あとスタンプを7個集めると・・・</string>
 
-    <string name="facility_name"><u>研究棟B</u></string>
-    <string name="facility_name2"><u>施設名</u></string>
-
     <string name="title_activity_bustime">bustimeActivity</string>
 
-
+    <string name="facility_name"><u></u></string>
+    <string name="title_activity_map">Map</string>
 </resources>

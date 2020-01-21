@@ -3,6 +3,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         package="com.example.android.sample.testapp">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,6 +15,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -26,7 +32,10 @@
         <activity android:name=".FacilityListActivity" />
         <activity android:name=".StampActivity" />
         <activity android:name=".BustimeActivity" />
-        <activity android:name=".MapActivity"/>
+        <activity
+                android:name=".MapActivity"
+                android:label="Map"
+                />
         <activity android:name=".InterviewActivity" />
         <activity android:name=".DocumentActivity" />
         <activity android:name=".SubjectActivity" />
