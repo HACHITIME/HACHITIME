@@ -1,15 +1,24 @@
 package com.example.android.sample.testapp
 
+
+import android.Manifest
 import android.app.ActivityOptions
+import android.content.ContentValues
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_stamp.*
-import kotlinx.android.synthetic.main.map_hopup.*
-import kotlinx.android.synthetic.main.stamp_hopup.*
+import java.io.File
+import java.io.FileOutputStream
 
 
 open class StampActivity : AppCompatActivity() {
@@ -21,7 +30,7 @@ open class StampActivity : AppCompatActivity() {
     var sports=0
     var technology =0
     var goukei = 7-itcare-desain-kanngo-kurieita-music-sports-technology
-    val stampName = arrayListOf("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟")
+    val stampName = arrayListOf("展示棟","図書館棟","講義棟A","体育館","メディアホール","片柳記念ホール","片柳研究棟","")
     val syutoku= arrayListOf("獲得状況：未取得","取得状況：取得済み")
     /*interview(1)~(7)
     var syutoku_id=0
@@ -285,15 +294,6 @@ open class StampActivity : AppCompatActivity() {
             dialog.show(supportFragmentManager, "simple")
         }
 
-        if(goukei==0){
-            textView2.setText("特典画像をGET!!")
-        //半透明にする処理
-        }else{
-            //ちゃんと表示させる
-            textView2.setText("あとスタンプを"+goukei+"個ゲット")
-        }
-
-
         // ITぱっちぃの表示
         if (itcare==0){
             val imageView3 = findViewById<ImageView>(R.id.imageView3)
@@ -301,7 +301,7 @@ open class StampActivity : AppCompatActivity() {
 
  }else{
 
-            imageView2.setImageResource(R.drawable.fukidasimusic)
+            imageView2.setImageResource(R.drawable.fukidasi_music)
         }
 
         //デザインぱっちぃの表示
@@ -320,7 +320,7 @@ open class StampActivity : AppCompatActivity() {
 
         }else{
 
-            imageView6.setImageResource(R.drawable.fikidasai_iryou)
+            imageView6.setImageResource(R.drawable.fukidasi_iryou)
         }
         //クリエイティブぱっちぃの表示
         if ( kurieita==0){
@@ -338,7 +338,7 @@ open class StampActivity : AppCompatActivity() {
 
         }else{
 
-            imageView5.setImageResource(R.drawable.fukidasimusic)
+            imageView5.setImageResource(R.drawable.fukidasi_music)
         }
         //スポーツぱっちぃの表示
         if ( sports==0){
@@ -347,7 +347,7 @@ open class StampActivity : AppCompatActivity() {
 
         }else{
 
-            imageView2.setImageResource(R.drawable.fukidasaisports)
+            imageView2.setImageResource(R.drawable.fukidasisports)
         }
         //テクノロジーぱっちぃの表示
         if ( technology==0){
@@ -356,7 +356,7 @@ open class StampActivity : AppCompatActivity() {
 
         }else{
 
-            imageView.setImageResource(R.drawable.fukidasitecno)
+            imageView.setImageResource(R.drawable.fukidasi_tecno)
         }
 
 
@@ -387,6 +387,87 @@ open class StampActivity : AppCompatActivity() {
 
         }
 
+        button2.setOnClickListener {
+            itcare = 1
+            desain =1
+            kanngo=1
+            kurieita=1
+            music =1
+            sports=1
+            technology =1
+            goukei =0
+
+            textView2.setText("特典画像をGET!!")
+
+            /*
+            val dialog = CompleteDialog()
+            val args = Bundle()
+            dialog.setArguments(args)
+            args.putString("stamp_name", stampName[7])
+            dialog.show(supportFragmentManager, "simple")
+             */
+
+            imageView.setImageResource(R.drawable.fukidasi_tecno)
+            imageView2.setImageResource(R.drawable.fukidasi_crepachii)
+            imageView3.setImageResource(R.drawable.fukidasi_it)
+            imageView4.setImageResource(R.drawable.fukidasisports)
+            imageView5.setImageResource(R.drawable.fukidasi_music)
+            imageView6.setImageResource(R.drawable.fukidasi_iryou)
+            imageView7.setImageResource(R.drawable.fukidasi_desain)
+
+
+        }
+
+        button3.setOnClickListener {
+            itcare = 0
+            desain =0
+            kanngo=0
+            kurieita=0
+            music =0
+            sports=0
+            technology =0
+            goukei=7
+
+            textView2.setText("あとスタンプを"+goukei+"個ゲット")
+
+            imageView.setImageResource(R.drawable.unknown_tecno)
+            imageView2.setImageResource(R.drawable.unknown_crepachii)
+            imageView3.setImageResource(R.drawable.unknown_it)
+            imageView4.setImageResource(R.drawable.unknown_sports)
+            imageView5.setImageResource(R.drawable.unknown_music)
+            imageView6.setImageResource(R.drawable.unknown_iryou)
+            imageView7.setImageResource(R.drawable.unknown_desain)
+        }
+
+        textView2.setOnClickListener {
+            if(goukei==0){
+                /*
+                val dialog = CompleteDialog()
+                val args = Bundle()
+                dialog.setArguments(args)
+                args.putString("stamp_name", stampName[7])
+                dialog.show(supportFragmentManager, "simple")*/
+
+                val intent = Intent(this, CompleteActivity::class.java)
+                startActivity(intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+
+
+            }else{
+
+            }
+        }
+
+        if(goukei==0){
+            textView2.setText("特典画像をGET!!")
+            val dialog = CompleteDialog()
+            dialog.show(supportFragmentManager, "simple")
+            //半透明にする処理
+        }else{
+            //ちゃんと表示させる
+            textView2.setText("あとスタンプを"+goukei+"個ゲット")
+        }
+
 
 
         fun test(){
@@ -411,14 +492,13 @@ open class StampActivity : AppCompatActivity() {
         }
         //受け取った変数を入れる
         val ITpacchi = intent.getStringExtra("TEXT_KEY1")
-
-
-
-
-
     }
 
 
-
-
 }
+
+
+
+
+
+

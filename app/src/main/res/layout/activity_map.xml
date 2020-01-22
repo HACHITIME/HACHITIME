@@ -41,7 +41,7 @@
             app:layout_constraintStart_toEndOf="@id/MapImage"
             app:layout_constraintTop_toTopOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.33999997"
-            app:srcCompat="@drawable/fukidasitecno" />
+            app:srcCompat="@drawable/fukidasi_tecno" />
     <ImageView
             android:id="@+id/imageView2"
             android:layout_width="85dp"
@@ -63,7 +63,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.73"
-            app:srcCompat="@drawable/fukidasiit" />
+            app:srcCompat="@drawable/fukidasi_it" />
     <ImageView
             android:id="@+id/imageView4"
             android:layout_width="85dp"
@@ -74,7 +74,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.82"
-            app:srcCompat="@drawable/fukidasaisports" />
+            app:srcCompat="@drawable/fukidasisports" />
     <ImageView
             android:id="@+id/imageView5"
             android:layout_width="85dp"
@@ -85,7 +85,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.74"
-            app:srcCompat="@drawable/fukidasimusic" />
+            app:srcCompat="@drawable/fukidasi_music" />
     <ImageView
             android:id="@+id/imageView6"
             android:layout_width="85dp"
@@ -96,7 +96,7 @@
             app:layout_constraintStart_toEndOf="@+id/MapImage"
             app:layout_constraintTop_toBottomOf="@+id/MapImage"
             app:layout_constraintVertical_bias="0.82"
-            app:srcCompat="@drawable/fikidasai_iryou" />
+            app:srcCompat="@drawable/fukidasi_iryou" />
     <ImageView
             android:id="@+id/imageView7"
             android:layout_width="85dp"
