@@ -16,22 +16,12 @@ class SchooletwitterTimelineActivity : AppCompatActivity() {
         setContentView(R.layout.activity_schooletwitter_timeline)
 
         // 変数・配列の作成
-
+        
         // パーツを取得
         val timelineList = findViewById<ListView>(R.id.timelineList) // GridView「facilityList」のIDを取得
 
-
         getHomeTimeline(timelineList)
-        /*
-         val fab = findViewById(R.id.fab) as FloatingActionButton
 
-        fab.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view: View) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-            }
-        })
-        */
     }
 
 
