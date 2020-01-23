@@ -17,6 +17,19 @@ open class MapActivityDialog : DialogFragment() {
         //val sFacility = listOf("片柳研究所","展示棟","図書館棟","講義棟A","体育館","片柳記念ホール","メディアホール")
         // ダイアログを閉じる
         when {
+            arguments!!.getString("marker_title") == "研究棟A" ->{}
+            arguments!!.getString("marker_title") == "研究棟B" ->{}
+            arguments!!.getString("marker_title") == "研究棟C" ->{}
+            arguments!!.getString("marker_title") == "講義棟B" ->{}
+            arguments!!.getString("marker_title") == "講義棟C" ->{}
+            arguments!!.getString("marker_title") == "講義棟D" ->{}
+            arguments!!.getString("marker_title") == "講義棟E" ->{}
+            arguments!!.getString("marker_title") == "講義実験棟" ->{}
+            arguments!!.getString("marker_title") == "実験棟A" ->{}
+            arguments!!.getString("marker_title") == "実験棟B" ->{}
+            arguments!!.getString("marker_title") == "本部棟" ->{}
+            arguments!!.getString("marker_title") == "厚生棟" ->{}
+            arguments!!.getString("marker_title") == "ものづくり工房" ->{}
             arguments!!.getString("marker_title") == "片柳研究所" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
