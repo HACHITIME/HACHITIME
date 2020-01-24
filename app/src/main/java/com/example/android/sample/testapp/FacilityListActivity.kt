@@ -23,7 +23,7 @@ class FacilityListActivity : AppCompatActivity() {
         val facilityId = arrayListOf<String>() // 施設ID
         val facilityName = arrayListOf<String>() // 施設名
         val facilityImage = arrayListOf<String>() // 施設画像名
-        val facilityDetaile = arrayListOf<String>() // 施設詳細
+        // val facilityDetaile = arrayListOf<String>() // 施設詳細
         // パーツを取得
         val list = findViewById<GridView>(R.id.facilityList) // GridView「facilityList」のIDを取得
 
@@ -44,7 +44,7 @@ class FacilityListActivity : AppCompatActivity() {
                     facilityId.add(obj.getString("objectId"))
                     facilityName.add(obj.getString("facilityName"))
                     facilityImage.add(obj.getString("facilityImage"))
-                    facilityDetaile.add(obj.getString("facilityDetaile"))
+                    // facilityDetaile.add(obj.getString("facilityDetaile"))
                 }
                 // adapterを作成
                 val adapter = FacilityListAdapter(this, facilityName, facilityImage)
@@ -60,9 +60,9 @@ class FacilityListActivity : AppCompatActivity() {
             intent.flags = FLAG_ACTIVITY_CLEAR_TOP
             // 施設情報を渡す
             intent.putExtra("PICK_ID", facilityId[position])
-            intent.putExtra("PICK_NAME", facilityName[position])
-            intent.putExtra("PICK_IMAGE", facilityImage[position])
-            intent.putExtra("PICK_DETAILE", facilityDetaile[position])
+            // intent.putExtra("PICK_NAME", facilityName[position])
+            // intent.putExtra("PICK_IMAGE", facilityImage[position])
+            // intent.putExtra("PICK_DETAILE", facilityDetaile[position])
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
