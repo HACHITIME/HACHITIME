@@ -17,7 +17,7 @@
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="0dp"
-            android:layout_height="85dp"
+            android:layout_height="65dp"
             android:background="@drawable/toolbar_style"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
