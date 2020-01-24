@@ -39,8 +39,8 @@ open class MainActivity : AppCompatActivity() {
         //startActivity(intent)
 
         home_schoolbtn.setOnClickListener {
-            // val intent = Intent(this, FacilityListActivity::class.java)
-            val intent = Intent(this, SchooletwitterTimelineActivity::class.java)
+            val intent = Intent(this, FacilityListActivity::class.java)
+            // val intent = Intent(this, SchooletwitterTimelineActivity::class.java)
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
