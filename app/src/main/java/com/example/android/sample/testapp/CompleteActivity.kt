@@ -22,7 +22,6 @@ import kotlinx.android.synthetic.main.activity_complete.modol_btn
 import kotlinx.android.synthetic.main.activity_complete.school_btn
 import kotlinx.android.synthetic.main.activity_complete.stamp_btn
 import kotlinx.android.synthetic.main.activity_complete.tytle
-import kotlinx.android.synthetic.main.activity_stamp.*
 import java.io.File
 import java.io.FileOutputStream
 
