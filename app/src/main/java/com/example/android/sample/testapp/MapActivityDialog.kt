@@ -1,5 +1,8 @@
 package com.example.android.sample.testapp
+import android.app.ActivityOptions
 import android.app.Dialog
+import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.widget.Button
@@ -17,19 +20,148 @@ open class MapActivityDialog : DialogFragment() {
         //val sFacility = listOf("片柳研究所","展示棟","図書館棟","講義棟A","体育館","片柳記念ホール","メディアホール")
         // ダイアログを閉じる
         when {
-            arguments!!.getString("marker_title") == "研究棟A" ->{}
-            arguments!!.getString("marker_title") == "研究棟B" ->{}
-            arguments!!.getString("marker_title") == "研究棟C" ->{}
-            arguments!!.getString("marker_title") == "講義棟B" ->{}
-            arguments!!.getString("marker_title") == "講義棟C" ->{}
-            arguments!!.getString("marker_title") == "講義棟D" ->{}
-            arguments!!.getString("marker_title") == "講義棟E" ->{}
-            arguments!!.getString("marker_title") == "講義実験棟" ->{}
-            arguments!!.getString("marker_title") == "実験棟A" ->{}
-            arguments!!.getString("marker_title") == "実験棟B" ->{}
-            arguments!!.getString("marker_title") == "本部棟" ->{}
-            arguments!!.getString("marker_title") == "厚生棟" ->{}
-            arguments!!.getString("marker_title") == "ものづくり工房" ->{}
+            arguments!!.getString("marker_title") == "研究棟A" -> {
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "v4TFZW4AKhndmHiX")
+                    intent.putExtra("PICK_NAME", "研究棟A")
+                    /*
+                    intent.putExtra("PICK_IMAGE", "施設画像名")
+                    intent.putExtra("PICK_DETAILE", "施設詳細")
+                    */
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "研究棟B" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "pxYfmnDVQaS4Epye")
+                    intent.putExtra("PICK_NAME", "研究棟B")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "研究棟C" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "3JqunRKgWNimdMhP")
+                    intent.putExtra("PICK_NAME", "研究棟C")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "講義棟B" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "7zw3IJAfPYDWxvoi")
+                    intent.putExtra("PICK_NAME", "講義棟B")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "講義棟C" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "VxfsMDRtNUUTcOEo")
+                    intent.putExtra("PICK_NAME", "講義棟C")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "講義棟D" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "N9YOLyU6O5j4daDe")
+                    intent.putExtra("PICK_NAME", "講義棟D")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "講義棟E" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "tQwddOEtd2j5t4J3 ")
+                    intent.putExtra("PICK_NAME", "講義棟E")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "講義実験棟" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "xgxAog5LsJwIIit7")
+                    intent.putExtra("PICK_NAME", "講義実験棟")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "実験棟A" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "jJjrD4gAd0AsaPR")
+                    intent.putExtra("PICK_NAME", "実験棟A")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "実験棟B" ->{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "dxd8DcwSniUAraM")
+                    intent.putExtra("PICK_NAME", "実験棟B")
+                    startActivity(intent)
+                }
+            }
+            arguments!!.getString("marker_title") == "本部棟" ->{dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                var intent = Intent(context, FacilityDetaileActivity::class.java)
+                // 同一アクティビティ開始時、古い方を終了させる
+                intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                // 施設情報を渡す
+                intent.putExtra("PICK_ID", "3UvDK5LC5s0yKvNc")
+                intent.putExtra("PICK_NAME", "本部棟")
+                startActivity(intent)
+            } }
+            arguments!!.getString("marker_title") == "厚生棟" -> {
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                // 同一アクティビティ開始時、古い方を終了させる
+                intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                // 施設情報を渡す
+                intent.putExtra("PICK_ID", "1KjejoAC9MEOsg9j")
+                intent.putExtra("PICK_NAME", "厚生棟")
+                startActivity(intent)
+            } }
+            arguments!!.getString("marker_title") == "ものづくり工房" ->{dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                var intent = Intent(context, FacilityDetaileActivity::class.java)
+                // 同一アクティビティ開始時、古い方を終了させる
+                intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                // 施設情報を渡す
+                intent.putExtra("PICK_ID", "dc43FFLGa6nr5JBc")
+                intent.putExtra("PICK_NAME", "ものづくり工房")
+                startActivity(intent)
+            } }
             arguments!!.getString("marker_title") == "片柳研究所" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
@@ -39,15 +171,43 @@ open class MapActivityDialog : DialogFragment() {
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
                 }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "NiLUAhniq38XSfL5")
+                    intent.putExtra("PICK_NAME","片柳研究所")
+                    startActivity(intent)
+                }
             }
-            arguments!!.getString("marker_title") == "展示棟" -> {
+            arguments!!.getString("marker_title") == "鴻稜美術館" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
+
                     }else{
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
+                    dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                        var intent = Intent(context, FacilityDetaileActivity::class.java)
+                        // 同一アクティビティ開始時、古い方を終了させる
+                        intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                        // 施設情報を渡す
+                        intent.putExtra("PICK_ID", "pxYfmnDVQaS4Epye")
+                        intent.putExtra("PICK_NAME", "研究棟B")
+                        startActivity(intent)
+                    }
+                }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "P4hAb3UDYIjKFfbA ")
+                    intent.putExtra("PICK_NAME", "鴻稜美術館")
+                    startActivity(intent)
                 }
             }
             arguments!!.getString("marker_title") == "図書館棟" -> {
@@ -59,6 +219,15 @@ open class MapActivityDialog : DialogFragment() {
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
                 }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "tt3XNpZO3JylBCqC")
+                    intent.putExtra("PICK_NAME", "図書館棟")
+                    startActivity(intent)
+                }
             }
             arguments!!.getString("marker_title") == "講義棟A" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
@@ -68,6 +237,15 @@ open class MapActivityDialog : DialogFragment() {
                     }else{
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
+                }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "HaHObMQICo1pBiPl")
+                    intent.putExtra("PICK_NAME", "講義棟A")
+                    startActivity(intent)
                 }
             }
             arguments!!.getString("marker_title") == "体育館" -> {
@@ -79,6 +257,15 @@ open class MapActivityDialog : DialogFragment() {
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
                 }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "DvUuJrivVCmuBOWS")
+                    intent.putExtra("PICK_NAME", "体育館")
+                    startActivity(intent)
+                }
             }
             arguments!!.getString("marker_title") == "片柳記念ホール" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
@@ -89,6 +276,15 @@ open class MapActivityDialog : DialogFragment() {
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
                 }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "1qhddjmRklcPP0Nd")
+                    intent.putExtra("PICK_NAME", "片柳記念ホール")
+                    startActivity(intent)
+                }
             }
             arguments!!.getString("marker_title") == "メディアホール" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
@@ -98,6 +294,15 @@ open class MapActivityDialog : DialogFragment() {
                     }else{
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
+                }
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                    var intent = Intent(context, FacilityDetaileActivity::class.java)
+                    // 同一アクティビティ開始時、古い方を終了させる
+                    intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+                    // 施設情報を渡す
+                    intent.putExtra("PICK_ID", "vebWc4W4HMVOFbzg")
+                    intent.putExtra("PICK_NAME", "メディアホール")
+                    startActivity(intent)
                 }
             }
             //画像取得

@@ -270,7 +270,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         mMap.addMarker(MarkerOptions().position(katayanagikenkyujo).title("片柳研究所"))
 
         val tenjito = LatLng(35.625526, 139.339987)
-        mMap.addMarker(MarkerOptions().position(tenjito).title("展示棟"))
+        mMap.addMarker(MarkerOptions().position(tenjito).title("鴻稜美術館"))
+
         val monozkurikobo = LatLng(35.623355, 139.34100)
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("ものづくり工房"))
 
