@@ -20,8 +20,8 @@ open class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SchooltwitterLogin::class.java)
             startActivity(intent)
         } else {
-            val toast = Toast.makeText(this, "ログイン中", Toast.LENGTH_LONG)
-            toast.show()
+            // val toast = Toast.makeText(this, "ログイン中", Toast.LENGTH_LONG)
+            // toast.show()
 
             val intent = Intent(this@MainActivity, SchooletwitterTimelineActivity::class.java)
             startActivity(intent)
