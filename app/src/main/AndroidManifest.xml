@@ -27,7 +27,6 @@
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -57,10 +56,14 @@
                 android:screenOrientation="portrait" />
         <activity
                 android:name=".MapActivity"
-                android:label="Map" />
-        <activity android:name=".CompleteActivity" />
-        <activity android:name=".SchooletwitterTimelineActivity" />
-        <activity android:name=".SchooltwitterLogin">
+                android:label="Map"
+                android:screenOrientation="portrait" />
+        <activity android:name=".CompleteActivity"
+                android:screenOrientation="portrait"  />
+        <activity android:name=".SchooletwitterTimelineActivity"
+                android:screenOrientation="portrait"  />
+        <activity android:name=".SchooltwitterLogin"
+                android:screenOrientation="portrait" >
 
         </activity>
     </application>
