@@ -24,6 +24,9 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.toolbar.*
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
 
 class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
     private lateinit var mMap: GoogleMap
@@ -53,12 +56,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
-        //------------------------------------------------------------------------------
-
-        //-------------------------
-        //setContentView(R.layout.campasinfo)
-        //setContentView(R.layout.toolbar)
         tytle.text = "Map"
 
         school_btn.setOnClickListener {
@@ -108,7 +105,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
     }
 
-
     private fun locationStart() {
         Log.d("debug", "locationStart()")
 
@@ -155,7 +151,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
      * which is either PERMISSION_GRANTED or PERMISSION_DENIED. Never null.
      */
 
-
     override fun onRequestPermissionsResult(
         requestCode: Int, permissions: Array<String>, grantResults: IntArray
     ) {
@@ -201,6 +196,13 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         // builder.tilt(50f)
         // 地図の回転角を指定。
         builder.bearing(145f)//(345F)
+
+        val assetManager = resources.assets //アセット呼び出し
+        val inputStream = assetManager.open("googlemapStyle.json") //Jsonファイル
+        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+        val str: String = bufferedReader.readText() //データ
+
+        mMap.setMapStyle(MapStyleOptions(str))
 
         // map is a GoogleMap object
         mMap.isMyLocationEnabled = true
@@ -270,25 +272,26 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         mMap.addMarker(MarkerOptions().position(katayanagikenkyujo).title("片柳研究所"))
 
         val tenjito = LatLng(35.625526, 139.339987)
-        mMap.addMarker(MarkerOptions().position(tenjito).title("展示棟"))
+        mMap.addMarker(MarkerOptions().position(tenjito).title("鴻稜美術館"))
+
         val monozkurikobo = LatLng(35.623355, 139.34100)
         mMap.addMarker(MarkerOptions().position(monozkurikobo).title("ものづくり工房"))
 
         mMap!!.setOnMarkerClickListener { marker ->
             val dialog = MapActivityDialog()
-            // スタンプ詳細を渡す
+
             val args = Bundle()
             dialog.arguments = args
             args.putString("marker_title",marker.title)
-            //取得状況を渡す
+            //現在地を変数に入れる
             var mylat = mMap.myLocation.latitude
             var mylng = mMap.myLocation.longitude
 
+            //クリックしたマーカーの座標を入れる
             var fMarkerLat = marker.position.latitude
             var fMarkerLng = marker.position.longitude
 
-            //args.putDouble("marker_mlat",mlat)
-            //args.putDouble("marker_mlng",mlng)
+            //結果を配列に入れる
             var results = FloatArray(3)
             Location.distanceBetween(mylat, mylng, fMarkerLat, fMarkerLng, results)
             var results_0 = results[0]

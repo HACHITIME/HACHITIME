@@ -8,10 +8,10 @@
     <LinearLayout
             android:id="@+id/Hopup"
             android:layout_width="290dp"
-            android:layout_height="360dp"
+            android:layout_height="385dp"
             android:background="@drawable/map_hopup_style"
-            android:orientation="vertical"
             android:elevation="20dp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -19,15 +19,17 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <Button
-                android:id="@+id/Hopup_tytle"
+                android:id="@+id/hopup_tytle3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/map_hopup_style"
+                android:background="@drawable/map_hopuptytle_style"
                 android:fontFamily="sans-serif"
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textSize="30dp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         <ImageView
                 android:id="@+id/ImageViewArea"
@@ -65,7 +67,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/map_hopupbtn_style"
-                    android:text="道案内"
+                    android:text="道案内へ"
                     android:textSize="14dp" />
 
             <FrameLayout
@@ -94,12 +96,52 @@
             </FrameLayout>
         </LinearLayout>
 
-        <Button
-                android:id="@+id/close_btn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="@android:drawable/presence_offline" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+            <!--<FrameLayout
+                    android:id="@+id/Blank4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"></FrameLayout>-->
+
+            <Button
+                    android:id="@+id/Hopup_tytle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/map_hopupkakutokubtn_style"
+                    android:elegantTextHeight="false"
+                    android:fontFamily="sans-serif"
+                    android:freezesText="false"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+            <!--
+            <FrameLayout
+                    android:id="@+id/Blank5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"></FrameLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <Button
+                    android:id="@+id/close_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:drawable/presence_offline"
+                    android:foregroundGravity="center_horizontal" />
+        </LinearLayout>
 
     </LinearLayout>
 
