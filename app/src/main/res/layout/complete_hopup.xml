@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/Hopup"
+            android:layout_width="347dp"
+            android:layout_height="414dp"
+            android:background="@drawable/map_hopup_style"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/Hopup_tytle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/map_hopup_style"
+                android:backgroundTint="#00D50000"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="おめでとうございます🎊"
+                android:textColor="#DD2C00"
+                android:textSize="25dp" />
+
+        <ImageView
+                android:id="@+id/ImageViewArea"
+                android:layout_width="match_parent"
+                android:layout_height="244dp"
+                app:srcCompat="@drawable/godkamizeusu" />
+
+        <LinearLayout
+                android:id="@+id/button_area"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+            <FrameLayout
+                    android:id="@+id/Blank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"></FrameLayout>
+
+            <Button
+                    android:id="@+id/dl_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/map_hopupbtn_style"
+                    android:text="画像をDLする"
+                    android:textSize="14dp" />
+
+            <FrameLayout
+                    android:id="@+id/Blank3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/close_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/presence_offline" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
