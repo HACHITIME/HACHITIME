@@ -19,12 +19,6 @@ open class MainActivity : AppCompatActivity() {
         if (TwitterCore.getInstance().sessionManager.activeSession == null) {
             val intent = Intent(this, SchooltwitterLogin::class.java)
             startActivity(intent)
-        } else {
-            // val toast = Toast.makeText(this, "ログイン中", Toast.LENGTH_LONG)
-            // toast.show()
-
-            val intent = Intent(this@MainActivity, SchooletwitterTimelineActivity::class.java)
-            startActivity(intent)
         }
 
         // if (isValid){
@@ -61,6 +55,11 @@ open class MainActivity : AppCompatActivity() {
         }
         home_busbtn.setOnClickListener {
             val intent = Intent(this, BustimeActivity::class.java)
+            startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
+        twitter_button.setOnClickListener {
+            val intent = Intent(this, SchooletwitterTimelineActivity::class.java)
             startActivity(intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
