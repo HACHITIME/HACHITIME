@@ -26,10 +26,11 @@ open class HopupDialog : DialogFragment() {
         dialog.findViewById<TextView>(R.id.HanteiArea).setText(arguments!!.getString("syutoku"))
 
         dialog.findViewById<Button>(R.id.mapidou_btn).setOnClickListener(View.OnClickListener {
-            // ダイアログを閉じる
+            // ダイアログ
             val intent = Intent(context, MapActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
 
         })
 
