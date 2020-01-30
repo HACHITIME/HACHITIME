@@ -24,6 +24,9 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.toolbar.*
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
 
 class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
     private lateinit var mMap: GoogleMap
@@ -102,7 +105,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
     }
 
-
     private fun locationStart() {
         Log.d("debug", "locationStart()")
 
@@ -149,7 +151,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
      * which is either PERMISSION_GRANTED or PERMISSION_DENIED. Never null.
      */
 
-
     override fun onRequestPermissionsResult(
         requestCode: Int, permissions: Array<String>, grantResults: IntArray
     ) {
@@ -195,6 +196,13 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         // builder.tilt(50f)
         // 地図の回転角を指定。
         builder.bearing(145f)//(345F)
+
+        val assetManager = resources.assets //アセット呼び出し
+        val inputStream = assetManager.open("googlemapStyle.json") //Jsonファイル
+        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+        val str: String = bufferedReader.readText() //データ
+
+        mMap.setMapStyle(MapStyleOptions(str))
 
         // map is a GoogleMap object
         mMap.isMyLocationEnabled = true
