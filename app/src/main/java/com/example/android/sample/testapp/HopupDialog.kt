@@ -1,6 +1,8 @@
 
 package com.example.android.sample.testapp
+import android.app.ActivityOptions
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.view.View
@@ -23,6 +25,14 @@ open class HopupDialog : DialogFragment() {
 
         dialog.findViewById<TextView>(R.id.HanteiArea).setText(arguments!!.getString("syutoku"))
 
+        dialog.findViewById<Button>(R.id.mapidou_btn).setOnClickListener(View.OnClickListener {
+            // ダイアログを閉じる
+            val intent = Intent(context, MapActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+
+        })
+
 
 
 
@@ -31,6 +41,7 @@ open class HopupDialog : DialogFragment() {
             // ダイアログを閉じる
             dismiss()
         })
+
         return dialog
     }
 
