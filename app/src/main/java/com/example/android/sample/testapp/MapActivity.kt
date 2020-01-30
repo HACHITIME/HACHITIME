@@ -53,12 +53,6 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
-        //------------------------------------------------------------------------------
-
-        //-------------------------
-        //setContentView(R.layout.campasinfo)
-        //setContentView(R.layout.toolbar)
         tytle.text = "Map"
 
         school_btn.setOnClickListener {
@@ -277,19 +271,19 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         mMap!!.setOnMarkerClickListener { marker ->
             val dialog = MapActivityDialog()
-            // スタンプ詳細を渡す
+
             val args = Bundle()
             dialog.arguments = args
             args.putString("marker_title",marker.title)
-            //取得状況を渡す
+            //現在地を変数に入れる
             var mylat = mMap.myLocation.latitude
             var mylng = mMap.myLocation.longitude
 
+            //クリックしたマーカーの座標を入れる
             var fMarkerLat = marker.position.latitude
             var fMarkerLng = marker.position.longitude
 
-            //args.putDouble("marker_mlat",mlat)
-            //args.putDouble("marker_mlng",mlng)
+            //結果を配列に入れる
             var results = FloatArray(3)
             Location.distanceBetween(mylat, mylng, fMarkerLat, fMarkerLng, results)
             var results_0 = results[0]

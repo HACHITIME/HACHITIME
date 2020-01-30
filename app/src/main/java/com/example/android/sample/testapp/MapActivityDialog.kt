@@ -3,7 +3,10 @@ import android.app.ActivityOptions
 import android.app.Dialog
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.provider.Settings.Global.putInt
 import android.support.v4.app.DialogFragment
 import android.widget.Button
 import android.widget.TextView
@@ -167,6 +170,15 @@ open class MapActivityDialog : DialogFragment() {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
+                        /*val editor: SharedPreferences.Editor = PreferenceManager.getDefaultSharedPreferences(context).edit()
+                        editor.apply {
+                            //設定した名前に対して数値を保存する
+                            putInt("PREV_HEIGHT",height)
+                            putInt("PREV_WIDTH", width)
+                            //最後にコミットすると内容が決定されて保存される
+                            commit()
+                        }*/
+
                     }else{
                         Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
