@@ -106,16 +106,11 @@ class FacilityDetaileActivity : AppCompatActivity() {
 
         // 「マップで見る」ボタン投下時の処理
         mapMoveButton.setOnClickListener {
-            // テスト用メッセージ
-            Toast.makeText(this, "テストメッセージです", Toast.LENGTH_SHORT).show()
-
-            /** マップ画面完成後に実装 **/
-            /* 「マップ画面」へ遷移
-             val intent = Intent(application, 画面名::class.java)
+            // 「マップ画面」へ遷移
+             val intent = Intent(application, MapActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-             */
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
 

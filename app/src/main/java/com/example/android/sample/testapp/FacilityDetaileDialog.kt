@@ -34,7 +34,7 @@ class FacilityDetaileDialog : DialogFragment() {
         // 「マップ」ボタン投下時の処理
         dialog.findViewById<Button>(R.id.mapButton).setOnClickListener(View.OnClickListener {
             // マップ画面へ遷移
-            val intent = Intent(context, FacilityListActivity::class.java)
+            val intent = Intent(context, MapActivity::class.java)
             // 同一アクティビティ開始時、古い方を終了させる
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
