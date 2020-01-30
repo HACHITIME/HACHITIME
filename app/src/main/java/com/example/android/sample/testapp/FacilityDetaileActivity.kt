@@ -27,7 +27,7 @@ class FacilityDetaileActivity : AppCompatActivity() {
         val facilityName = arrayListOf<String>() // 取得した施設名
         val facilityImg = arrayListOf<String>() // 取得した施設画像
         val facilityDetaile = arrayListOf<String>() // 取得した施設詳細
-        val stampImage = arrayListOf<String>() // 取得したスタンプ画像
+        val stampImg = arrayListOf<String>() // 取得したスタンプ画像
         val stampName = arrayListOf<String>() // 取得したスタンプ名
         // パーツ を取得
         val facilityImgView = findViewById<ImageView>(R.id.facilityImage) // 施設画像
@@ -58,9 +58,10 @@ class FacilityDetaileActivity : AppCompatActivity() {
                     facilityName.add(obj.getString("facilityName"))
                     facilityImg.add(obj.getString("facilityImage"))
                     facilityDetaile.add(obj.getString("facilityDetaile"))
-                    stampImage.add(obj.getString("stampImg"))
                     stampName.add(obj.getString("stampName"))
+                    stampImg.add(obj.getString("stampImg"))
                 }
+
                 // 施設画像、施設名、施設詳細を表示
                 val imgId = resources.getIdentifier(
                     "facility_list_" + facilityImg[0],
@@ -76,8 +77,9 @@ class FacilityDetaileActivity : AppCompatActivity() {
                 facilityNameView.setText(facilityName[0])
                 facilityDetaileView.setText(facilityDetaile[0])
                 // 獲得できるスタンプがあればアイコンを表示
-                if (stampImage.size != 0)
+                if (stampName[0] != null) {
                     paccieIcon.visibility = View.VISIBLE
+                }
             }
         }
 
@@ -117,7 +119,7 @@ class FacilityDetaileActivity : AppCompatActivity() {
         // ぱっちぃアイコンタップ時の処理
         paccieIcon.setOnClickListener {
             val imgId = resources.getIdentifier(
-                "facility_detaile_" + stampImage[0],
+                "facility_detaile_" + stampImg[0],
                 "drawable",
                 packageName
             )
