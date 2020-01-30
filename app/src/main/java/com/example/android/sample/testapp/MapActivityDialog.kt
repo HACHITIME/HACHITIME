@@ -1,29 +1,24 @@
 package com.example.android.sample.testapp
-import android.app.ActivityOptions
 import android.app.Dialog
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
-import android.provider.Settings.Global.putInt
 import android.support.v4.app.DialogFragment
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
 open class MapActivityDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         // ダイアログの作成
-        val dialog = Dialog(getActivity())
+        val dialog = Dialog(activity)
         dialog.setContentView(R.layout.map_hopup)
         //施設名取得
         dialog.findViewById<TextView>(R.id.Facility_Name).text = arguments!!.getString("marker_title")
-        //スタンプボタン判定
-        //val sFacility = listOf("片柳研究所","展示棟","図書館棟","講義棟A","体育館","片柳記念ホール","メディアホール")
-        // ダイアログを閉じる
         when {
             arguments!!.getString("marker_title") == "研究棟A" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kenkyuto_a)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -31,14 +26,11 @@ open class MapActivityDialog : DialogFragment() {
                     // 施設情報を渡す
                     intent.putExtra("PICK_ID", "v4TFZW4AKhndmHiX")
                     intent.putExtra("PICK_NAME", "研究棟A")
-                    /*
-                    intent.putExtra("PICK_IMAGE", "施設画像名")
-                    intent.putExtra("PICK_DETAILE", "施設詳細")
-                    */
                     startActivity(intent)
                 }
             }
             arguments!!.getString("marker_title") == "研究棟B" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kenkyuto_b)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -50,6 +42,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "研究棟C" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kenkyuto_c)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -61,6 +54,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義棟B" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kogito_b)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -72,6 +66,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義棟C" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kogito_c)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -83,6 +78,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義棟D" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kogito_d)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -94,6 +90,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義棟E" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kogito_e)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -105,6 +102,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義実験棟" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kogijikkento)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -116,6 +114,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "実験棟A" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_jikkento_a)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -127,6 +126,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "実験棟B" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_jikkento_b)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
@@ -137,16 +137,19 @@ open class MapActivityDialog : DialogFragment() {
                     startActivity(intent)
                 }
             }
-            arguments!!.getString("marker_title") == "本部棟" ->{dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+            arguments!!.getString("marker_title") == "本部棟" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_honbuto)
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                 var intent = Intent(context, FacilityDetaileActivity::class.java)
                 // 同一アクティビティ開始時、古い方を終了させる
                 intent.flags = FLAG_ACTIVITY_CLEAR_TOP
                 // 施設情報を渡す
                 intent.putExtra("PICK_ID", "3UvDK5LC5s0yKvNc")
-                intent.putExtra("PICK_NAME", "本部棟")
+                    intent.putExtra("PICK_NAME", "本部棟")
                 startActivity(intent)
             } }
             arguments!!.getString("marker_title") == "厚生棟" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_koseto)
                 dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                 // 同一アクティビティ開始時、古い方を終了させる
@@ -156,7 +159,9 @@ open class MapActivityDialog : DialogFragment() {
                 intent.putExtra("PICK_NAME", "厚生棟")
                 startActivity(intent)
             } }
-            arguments!!.getString("marker_title") == "ものづくり工房" ->{dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+            arguments!!.getString("marker_title") == "ものづくり工房" ->{
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_monozukuri_kobo)
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
                 var intent = Intent(context, FacilityDetaileActivity::class.java)
                 // 同一アクティビティ開始時、古い方を終了させる
                 intent.flags = FLAG_ACTIVITY_CLEAR_TOP
@@ -166,6 +171,7 @@ open class MapActivityDialog : DialogFragment() {
                 startActivity(intent)
             } }
             arguments!!.getString("marker_title") == "片柳研究所" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_katayanagi_kenkyujo)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
@@ -194,6 +200,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "鴻稜美術館" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_bijyutukan)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
@@ -223,6 +230,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "図書館棟" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_tosyokanto)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
@@ -242,6 +250,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義棟A" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_kogito_a)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
@@ -261,6 +270,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "体育館" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_taiikukan)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
@@ -280,6 +290,7 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "片柳記念ホール" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_katayanagi_kinenhall)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
@@ -299,15 +310,16 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "メディアホール" -> {
+                dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(R.drawable.facility_list_mediahall)
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
-                dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
-                    if(arguments!!.getFloat("stamp_result") <= 100) {
-                        Toast.makeText(context,"取得に成功しました。", Toast.LENGTH_SHORT).show()
-                    }else{
-                        Toast.makeText(context,"取得に失敗しました", Toast.LENGTH_SHORT).show()
+                dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener {
+                    if (arguments!!.getFloat("stamp_result") <= 100) {
+                        Toast.makeText(context, "取得に成功しました。", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(context, "取得に失敗しました", Toast.LENGTH_SHORT).show()
                     }
                 }
-                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener{
+                dialog.findViewById<Button>(R.id.facilityDetail_btn).setOnClickListener {
                     var intent = Intent(context, FacilityDetaileActivity::class.java)
                     // 同一アクティビティ開始時、古い方を終了させる
                     intent.flags = FLAG_ACTIVITY_CLEAR_TOP
@@ -317,18 +329,7 @@ open class MapActivityDialog : DialogFragment() {
                     startActivity(intent)
                 }
             }
-            //画像取得
-            //dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(arguments!!.getInt("stamp_image"))
-            //獲得ID
-            //dialog.findViewById<TextView>(R.id.HanteiArea).setText(arguments!!.getInt("hantei"))
-            //dialog.findViewById<TextView>(R.id.Facility_Name).setText(arguments!!.getString("syutoku"))
-            // 「X」ボタン投下時の処理
         }
-        //画像取得
-        //dialog.findViewById<ImageView>(R.id.ImageViewArea).setImageResource(arguments!!.getInt("stamp_image"))
-        //獲得ID
-        //dialog.findViewById<TextView>(R.id.HanteiArea).setText(arguments!!.getInt("hantei"))
-        //dialog.findViewById<TextView>(R.id.Facility_Name).setText(arguments!!.getString("syutoku"))
         // 「X」ボタン投下時の処理
         dialog.findViewById<Button>(R.id.close_btn).setOnClickListener {
             // ダイアログを閉じる
