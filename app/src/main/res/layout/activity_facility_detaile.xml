@@ -4,16 +4,18 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:keepScreenOn="false"
         tools:context=".FacilityDetaileActivity">
 
     <!-- 表示内容 -->
+
     <ImageView
             android:id="@+id/facilityImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/facilityName"
@@ -26,6 +28,13 @@
             android:id="@+id/facilityName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="36sp"
@@ -47,20 +56,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/facilityName" />
 
-    <TextView
-            android:id="@+id/facilityDetaile"
+    <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
-            android:textAlignment="viewStart"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/mapMoveButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textBar"
-            tools:text="施設詳細" />
+            app:layout_constraintTop_toBottomOf="@+id/textBar">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/facilityDetaile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    tools:text="施設詳細" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
             android:id="@+id/mapMoveButton"
@@ -78,14 +99,16 @@
 
     <ImageButton
             android:id="@+id/paccieIcon"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:background="@null"
             android:scaleType="fitXY"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/facilityImage"
             app:layout_constraintTop_toTopOf="@+id/facilityImage"
-            app:srcCompat="@drawable/facility_list_paccieicon" />
+            app:srcCompat="@drawable/facility_detaile_icon" />
 
     <!-- ツールバー -->
     <android.support.v7.widget.Toolbar

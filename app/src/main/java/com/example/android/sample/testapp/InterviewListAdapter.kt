@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.nifcloud.mbaas.core.NCMBObject
 import kotlinx.android.synthetic.main.interview_list_view.view.*
 import org.w3c.dom.Text
@@ -20,7 +23,6 @@ class InterviewListAdapter(
     private val answers: ArrayList<String> // 回答内容
 ) : BaseAdapter() {
     // 変数・配列の作成
-    val interviewListAdapter = arrayListOf<String>()
 
     // ビューホルダー
     private class ViewHolder(view: View) {
@@ -37,17 +39,6 @@ class InterviewListAdapter(
         val view = inflater.inflate(R.layout.interview_list_view, parent, false)
         view.tag = ViewHolder(view)
 
-        /*for (i in 0..studentIds.size-1) {
-            if (studentIds[i] == objects[position].getString("objectId")) {
-                // インタビュー内容を表示するためのViewを作成
-                val interviewDetaile = inflater.inflate(R.layout.interview_list_detaile_view, parent, false)
-                // interviewDetaile.findViewById<TextView>(R.id.question).text = questions[i]
-                // interviewDetaile.findViewById<TextView>(R.id.answer).text = answers[i]
-                view.interviewDetaileList.addView(interviewDetaile)
-
-            }
-        }*/
-
         return view
     }
 
@@ -63,7 +54,7 @@ class InterviewListAdapter(
         val studentSubject = objects[position].getString("subject")
 
         // viewの初期化
-        view.interviewDetaileList.removeAllViews()
+        viewHolder.interviewDetaileList.removeAllViews()
 
         for (i in 0..studentIds.size-1) {
             if (studentIds[i] == objects[position].getString("objectId")) {
@@ -72,14 +63,19 @@ class InterviewListAdapter(
                 val interviewDetaile = inflater.inflate(R.layout.interview_list_detaile_view, parent, false)
                 interviewDetaile.findViewById<TextView>(R.id.question).text = questions[i]
                 interviewDetaile.findViewById<TextView>(R.id.answer).text = answers[i]
-                view.interviewDetaileList.addView(interviewDetaile)
+                viewHolder.interviewDetaileList.addView(interviewDetaile)
 
             }
         }
 
         // 学生画像・氏名・学科を配置
         val imgId = context.resources.getIdentifier(studentImage, "drawable", context.packageName) // 施設画像のIDを取得
-        viewHolder.studentImage.setImageResource(imgId) // 画像を配置
+        // viewHolder.studentImage.setImageResource(imgId) // 画像を配置
+        // 画像をまる角にして配置
+        Glide.with(viewHolder.studentImage)
+            .load(imgId)
+            .transform(CenterCrop(), RoundedCorners(1000)) //←この一行追加
+            .into(viewHolder.studentImage)
         viewHolder.studentName.text = studentName // 氏名を配置
         viewHolder.studentSubject.text = studentSubject // 学科名を配置
 

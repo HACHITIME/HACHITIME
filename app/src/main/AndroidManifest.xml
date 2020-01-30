@@ -18,35 +18,48 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SchooletwitterTimelineActivity"></activity>
 
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InterviewListActivity" />
-        <activity android:name=".CollegeListActivity" />
-        <activity android:name=".FacilityDetaileActivity" />
-        <activity android:name=".FacilityListActivity" />
-        <activity android:name=".StampActivity" />
-        <activity android:name=".BustimeActivity" />
+        <activity android:name=".InterviewListActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".CollegeListActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".FacilityDetaileActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".FacilityListActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".StampActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".BustimeActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".InterviewActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".DocumentActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".SubjectActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".CalenderActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".CampusInfoActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name=".ToolbarActivity"
+                android:screenOrientation="portrait" />
         <activity
                 android:name=".MapActivity"
                 android:label="Map" />
-        <activity android:name=".InterviewActivity" />
-        <activity android:name=".DocumentActivity" />
-        <activity android:name=".SubjectActivity" />
-        <activity android:name=".CalenderActivity" />
-        <activity android:name=".CampusInfoActivity" />
-        <activity android:name=".ToolbarActivity" />
         <activity android:name=".CompleteActivity" />
+        <activity android:name=".SchooletwitterTimelineActivity" />
         <activity android:name=".SchooltwitterLogin">
 
         </activity>
