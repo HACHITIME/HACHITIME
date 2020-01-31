@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.Settings.Global.putInt
 import android.support.v4.app.DialogFragment
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -166,7 +167,8 @@ open class MapActivityDialog : DialogFragment() {
                 startActivity(intent)
             } }
             arguments!!.getString("marker_title") == "片柳研究所" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
@@ -194,7 +196,8 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "鴻稜美術館" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
@@ -223,7 +226,8 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "図書館棟" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
@@ -242,7 +246,8 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "講義棟A" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
@@ -261,7 +266,8 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "体育館" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
@@ -280,7 +286,8 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "片柳記念ホール" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました", Toast.LENGTH_SHORT).show()
@@ -299,7 +306,8 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
             arguments!!.getString("marker_title") == "メディアホール" -> {
-                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
+                dialog.findViewById<Button>(R.id.Hopup_tytle).visibility = View.VISIBLE
                 dialog.findViewById<Button>(R.id.Hopup_tytle).setOnClickListener{
                     if(arguments!!.getFloat("stamp_result") <= 100) {
                         Toast.makeText(context,"取得に成功しました。", Toast.LENGTH_SHORT).show()

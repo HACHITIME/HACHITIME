@@ -107,18 +107,30 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"></FrameLayout>-->
 
+            <FrameLayout
+                    android:id="@+id/Blank5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"></FrameLayout>
+
             <Button
                     android:id="@+id/Hopup_tytle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/map_hopupkakutokubtn_style"
-                    android:elegantTextHeight="false"
+                    android:layout_weight="1"
+                    android:background="@drawable/map_hopupbtn_style"
                     android:fontFamily="sans-serif"
-                    android:freezesText="false"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:textSize="13dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+            <FrameLayout
+                    android:id="@+id/Blank6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"></FrameLayout>
 
             <!--
             <FrameLayout
