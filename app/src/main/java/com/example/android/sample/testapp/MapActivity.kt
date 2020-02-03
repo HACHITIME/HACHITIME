@@ -60,6 +60,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         school_btn.setOnClickListener {
             val intent = Intent(this, FacilityListActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(
                 intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
@@ -68,6 +70,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         map_btn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(
                 intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
@@ -76,6 +80,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         stamp_btn.setOnClickListener {
             val intent = Intent(this, StampActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(
                 intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
@@ -83,7 +89,9 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         }
 
         info_btn.setOnClickListener {
-            val intent = Intent(this, InfoActivity::class.java)
+            val intent = Intent(this, CampusInfoActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(
                 intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
@@ -92,6 +100,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
 
         bus_btn.setOnClickListener {
             val intent = Intent(this, BustimeActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(
                 intent,
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle()

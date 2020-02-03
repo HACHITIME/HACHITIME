@@ -62,12 +62,12 @@
                     android:layout_weight="1.5"></FrameLayout>
 
             <Button
-                    android:id="@+id/direction_btn"
+                    android:id="@+id/stampidou_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/map_hopupbtn_style"
-                    android:text="道案内へ"
+                    android:text="スタンプ画面へ"
                     android:textSize="14dp" />
 
             <FrameLayout

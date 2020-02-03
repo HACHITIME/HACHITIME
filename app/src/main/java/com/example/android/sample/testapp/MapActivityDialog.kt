@@ -315,6 +315,7 @@ open class MapActivityDialog : DialogFragment() {
                     intent.putExtra("PICK_NAME", "片柳記念ホール")
                     startActivity(intent)
                 }
+
             }
             arguments!!.getString("marker_title") == "メディアホール" -> {
                 dialog.findViewById<Button>(R.id.Hopup_tytle).text = "スタンプ取得する"
@@ -338,6 +339,15 @@ open class MapActivityDialog : DialogFragment() {
                 }
             }
         }
+        //「スタンプ画面へ」ボタン投下時の処理
+        dialog.findViewById<Button>(R.id.stampidou_btn).setOnClickListener{
+            var intent = Intent(context, StampActivity::class.java)
+            // 同一アクティビティ開始時、古い方を終了させる
+            intent.flags = FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+        }
+
+
         // 「X」ボタン投下時の処理
         dialog.findViewById<Button>(R.id.close_btn).setOnClickListener {
             // ダイアログを閉じる
