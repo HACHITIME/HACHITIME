@@ -79,10 +79,10 @@ class BustimeActivity : AppCompatActivity() {
             image.setImageResource(R.drawable.bustime_minamino_school)
         }
         b1.setOnClickListener {
-            image.setImageResource(R.drawable.bustime_school_minamino)
+            image.setImageResource(R.drawable.bustime_hachiouji_school)
         }
         b2.setOnClickListener {
-            image.setImageResource(R.drawable.bustime_hachiouji_school)
+            image.setImageResource(R.drawable.bustime_school_minamino)
         }
         b3.setOnClickListener {
             image.setImageResource(R.drawable.bustime_school_hachiouji)

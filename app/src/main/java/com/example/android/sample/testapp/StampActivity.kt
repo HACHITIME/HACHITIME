@@ -46,7 +46,7 @@ open class StampActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stamp)
-        tytle.text = "Stamp"
+        tytle.text = "スタンプラリー"
 
         //下のツールバー処理・戻るボタン処理
         school_btn.setOnClickListener {
