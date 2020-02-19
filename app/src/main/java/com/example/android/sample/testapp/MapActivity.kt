@@ -210,7 +210,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         mMap.moveCamera(update)
 
         val kenkyutoA = LatLng(35.62535, 139.342350000005)
-        mMap.addMarker(MarkerOptions().position(kenkyutoA).title("研究棟A").infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kenkyutoA.png)))
+        mMap.addMarker(MarkerOptions().position(kenkyutoA).title("研究棟A")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kenkyuto_a)))
 
         val kenkyutoB = LatLng(35.625, 139.34180090000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoB).title("研究棟B").infoWindowAnchor(30F,30F))
