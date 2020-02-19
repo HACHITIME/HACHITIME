@@ -213,62 +213,81 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         mMap.addMarker(MarkerOptions().position(kenkyutoA).title("研究棟A")
             .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kenkyuto_a)))
 
-        val kenkyutoB = LatLng(35.625, 139.34180090000005)
-        mMap.addMarker(MarkerOptions().position(kenkyutoB).title("研究棟B").infoWindowAnchor(30F,30F))
+        val kenkyutoB = LatLng(35.625, 139.34170100000105)
+        mMap.addMarker(MarkerOptions().position(kenkyutoB).title("研究棟B")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kenkyuto_b)))
 
-        val kenkyutoC = LatLng(35.624902, 139.343719)
-        mMap.addMarker(MarkerOptions().position(kenkyutoC).title("研究棟C").infoWindowAnchor(30F,30F))
+        val kenkyutoC = LatLng(35.624902, 139.343619)
+        mMap.addMarker(MarkerOptions().position(kenkyutoC).title("研究棟C")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kenkyuto_c)))
 
         val kogitoA = LatLng(35.625735, 139.342700000005)
-        mMap.addMarker(MarkerOptions().position(kogitoA).title("講義棟A").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(kogitoA).title("講義棟A")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kogito_a)))
 
         val kogitoB = LatLng(35.624867, 139.34111000000005)
-        mMap.addMarker(MarkerOptions().position(kogitoB).title("講義棟B").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(kogitoB).title("講義棟B")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kogito_b)))
 
-        val kogitoC = LatLng(35.6244367, 139.34160200000005)
-        mMap.addMarker(MarkerOptions().position(kogitoC).title("講義棟C").infoWindowAnchor(30F,30F))
+        val kogitoC = LatLng(35.6244367, 139.34150200000005)
+        mMap.addMarker(MarkerOptions().position(kogitoC).title("講義棟C")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kogito_c)))
 
         val kogitoD = LatLng(35.624865, 139.342700000005)
-        mMap.addMarker(MarkerOptions().position(kogitoD).title("講義棟D").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(kogitoD).title("講義棟D")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kogito_d)))
 
-        val kogitoE = LatLng(35.6245867, 139.34223080000005)
-        mMap.addMarker(MarkerOptions().position(kogitoE).title("講義棟E").infoWindowAnchor(30F,30F))
+        val kogitoE = LatLng(35.6245867, 139.34215050000005)
+        mMap.addMarker(MarkerOptions().position(kogitoE).title("講義棟E")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kogito_e)))
 
         val kogijikkento = LatLng(35.62528, 139.343011200005)
-        mMap.addMarker(MarkerOptions().position(kogijikkento).title("講義実験棟").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(kogijikkento).title("講義実験棟")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kogihikkento)))
 
-        val jikkentoA = LatLng(35.625465, 139.343910)
-        mMap.addMarker(MarkerOptions().position(jikkentoA).title("実験棟A").infoWindowAnchor(30F,30F))
+        val jikkentoA = LatLng(35.625565, 139.343800)
+        mMap.addMarker(MarkerOptions().position(jikkentoA).title("実験棟A")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_jikkento_a)))
 
-        val jikkentoB = LatLng(35.624779, 139.340235)
-        mMap.addMarker(MarkerOptions().position(jikkentoB).title("実験棟B").infoWindowAnchor(30F,30F))
+        val jikkentoB = LatLng(35.624789, 139.340125)
+        mMap.addMarker(MarkerOptions().position(jikkentoB).title("実験棟B")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_jikkento_b)))
 
         val katayanagihole = LatLng(35.624421, 139.342737)
-        mMap.addMarker(MarkerOptions().position(katayanagihole).title("片柳記念ホール").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(katayanagihole).title("片柳記念ホール")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_katayanagihole)))
 
         val mediahole = LatLng(35.624251, 139.34039)
-        mMap.addMarker(MarkerOptions().position(mediahole).title("メディアホール").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(mediahole).title("メディアホール")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_mediahole)))
 
-        val honbuto = LatLng(35.626309, 139.33933)
-        mMap.addMarker(MarkerOptions().position(honbuto).title("本部棟").infoWindowAnchor(30F,30F))
+        val honbuto = LatLng(35.6264399, 139.33926)
+        mMap.addMarker(MarkerOptions().position(honbuto).title("本部棟")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_honbuto)))
 
-        val taikukan = LatLng(35.6257002, 139.345037)
-        mMap.addMarker(MarkerOptions().position(taikukan).title("体育館").infoWindowAnchor(30F,30F))
+        val taikukan = LatLng(35.6259002, 139.344937)
+        mMap.addMarker(MarkerOptions().position(taikukan).title("体育館")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_taikukan)))
 
-        val koseito = LatLng(35.626004, 139.342093)
-        mMap.addMarker(MarkerOptions().position(koseito).title("厚生棟").infoWindowAnchor(30F,30F))
+        val koseito = LatLng(35.626114, 139.342083)
+        mMap.addMarker(MarkerOptions().position(koseito).title("厚生棟")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_koseito)))
 
-        val toshokanto = LatLng(35.625377, 139.34096)
-        mMap.addMarker(MarkerOptions().position(toshokanto).title("図書館棟").infoWindowAnchor(30F,30F))
+        val toshokanto = LatLng(35.625487, 139.34098)
+        mMap.addMarker(MarkerOptions().position(toshokanto).title("図書館棟")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_toshokanto)))
 
         val katayanagikenkyujo = LatLng(35.627699, 139.339898)
-        mMap.addMarker(MarkerOptions().position(katayanagikenkyujo).title("片柳研究所").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(katayanagikenkyujo).title("片柳研究所")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_katayanagikenkyujo)))
 
-        val tenjito = LatLng(35.625526, 139.339987)
-        mMap.addMarker(MarkerOptions().position(tenjito).title("鴻稜美術館").infoWindowAnchor(30F,30F))
+        val bizyutsukan = LatLng(35.625526, 139.339987)
+        mMap.addMarker(MarkerOptions().position(bizyutsukan).title("鴻稜美術館")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_bizyutsukan)))
 
         val monozkurikobo = LatLng(35.623355, 139.34100)
-        mMap.addMarker(MarkerOptions().position(monozkurikobo).title("ものづくり工房").infoWindowAnchor(30F,30F))
+        mMap.addMarker(MarkerOptions().position(monozkurikobo).title("ものづくり工房")
+            .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_monozkurikobo)))
 
         mMap!!.setOnMarkerClickListener { marker ->
             val dialog = MapActivityDialog()
