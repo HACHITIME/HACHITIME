@@ -209,6 +209,13 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback,LocationListener{
         // 回転角を地図に反映させる。
         mMap.moveCamera(update)
 
+        //----------------------------------------------------------
+        //Lat下げると右上、上げると左下
+        //Lng下げると右下、上げると左上
+        //Lat下げてLng上げると上
+        //Lat上げてLng下げると下
+        //両方下げると右、両方上げると左
+        //----------------------------------------------------------
         val kenkyutoA = LatLng(35.62535, 139.342350000005)
         mMap.addMarker(MarkerOptions().position(kenkyutoA).title("研究棟A")
             .infoWindowAnchor(30F,30F).icon(BitmapDescriptorFactory.fromResource(R.drawable.googlemap_kenkyuto_a)))
